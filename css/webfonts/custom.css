@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'MADEOkineSans';
+  src: url('made-okine-sans-regular.eot');
+  src: url('made-okine-sans-regular.eot?#iefix') format('embedded-opentype'),
+             url('made-okine-sans-regular.woff2') format('woff2'),
+       url('made-okine-sans-regular.woff') format('woff'),
+       url('made-okine-sans-regular.ttf') format('truetype'),
+       url('made-okine-sans-regular.svg#youworkforthem') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MADEOkineSans';
+  src: url('made-okine-sans-medium.eot');
+  src: url('made-okine-sans-medium.eot?#iefix') format('embedded-opentype'),
+             url('made-okine-sans-medium.woff2') format('woff2'),
+       url('made-okine-sans-medium.woff') format('woff'),
+       url('made-okine-sans-medium.ttf') format('truetype'),
+       url('made-okine-sans-medium.svg#youworkforthem') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MADEOkineSans';
+  src: url('made-okine-sans-light.eot');
+  src: url('made-okine-sans-light.eot?#iefix') format('embedded-opentype'),
+             url('made-okine-sans-light.woff2') format('woff2'),
+       url('made-okine-sans-light.woff') format('woff'),
+       url('made-okine-sans-light.ttf') format('truetype'),
+       url('made-okine-sans-light.svg#youworkforthem') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 400;
+    src: url('NotoSansCJKjp-Regular.woff2') format('woff2'),
+       url('NotoSansCJKjp-Regular.woff') format('woff'),
+       url('NotoSansCJKjp-Regular.ttf')  format('truetype'),
+         url('NotoSansCJKjp-Regular.eot') format('embedded-opentype');
+}
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 500;
+    src: url('NotoSansCJKjp-Medium.woff2') format('woff2'),
+       url('NotoSansCJKjp-Medium.woff') format('woff'),
+       url('NotoSansCJKjp-Medium.ttf')  format('truetype'),
+         url('NotoSansCJKjp-Medium.eot') format('embedded-opentype');
+}
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 700;
+    src: url('NotoSansCJKjp-Bold.woff2') format('woff2'),
+       url('NotoSansCJKjp-Bold.woff') format('woff'),
+       url('NotoSansCJKjp-Bold.ttf')  format('truetype'),
+         url('NotoSansCJKjp-Bold.eot') format('embedded-opentype');
+}
