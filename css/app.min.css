@@ -13271,6 +13271,9 @@ body.dark .loader {
   position: relative;
   display: table-cell;
   padding: 16px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6F767E;
   vertical-align: middle;
 }
 
@@ -13337,7 +13340,7 @@ body.dark .schedule__col:after {
 }
 
 @media only screen and (max-width: 1023px) {
-  .schedule__col:not(:first-child):not(:nth-child(3)) {
+  .schedule__col:not(:first-child):not(:nth-child(3)):not(:nth-child(4)) {
     display: none;
   }
 }
