@@ -5277,7 +5277,6 @@ body.dark .sidebar__top.active .sidebar__head {
 @media only screen and (max-width: 1259px) {
   .sidebar__item.visible:not(.wide) .sidebar__head {
     background: #EFEFEF;
-    box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.05), inset 0px 1px 1px #FFFFFF;
     color: #1A1D1F;
   }
 }
@@ -5293,7 +5292,6 @@ body.dark .sidebar__top.active .sidebar__head {
 @media only screen and (max-width: 1259px) {
   body.dark .sidebar__item.visible:not(.wide) .sidebar__head {
     background: #272B30;
-    box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.4), inset 0px 1px 1px rgba(255, 255, 255, 0.11);
     color: #FCFCFC;
   }
 
