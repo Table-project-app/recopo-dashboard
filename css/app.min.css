@@ -13,7 +13,7 @@
   --recopo-teal: #20c997;
   --recopo-cyan: #0dcaf0;
   --recopo-black: #000000;
-  --recopo-white: #ffffff;
+  --recopo-white: #FCFCFC;
   --recopo-gray: #7E8299;
   --recopo-gray-dark: #3F4254;
   --recopo-gray-100: #F9F9F9;
@@ -32,7 +32,7 @@
   --recopo-info: #7239ea;
   --recopo-warning: #ffc700;
   --recopo-danger: #f1416c;
-  --recopo-dark: #181C32;
+  --recopo-dark: #1A1D1F;
   --recopo-light-rgb: 249, 249, 249;
   --recopo-primary-rgb: 0, 158, 247;
   --recopo-secondary-rgb: 225, 227, 234;
@@ -20316,11 +20316,11 @@ body.dark .refunds .card__nav .card__link.active {
   letter-spacing: -0.03em;
   font-weight: 500;
   line-height: 1.45;
-  color: #6F767E;
+  color: var(--recopo-dark);
 }
 
 body.dark .qs__row:not(:first-child) .qs__col {
-  color: #6F767E;
+  color: var(--recopo-white);
 }
 
 @media only screen and (max-width: 767px) {
