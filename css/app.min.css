@@ -15393,7 +15393,7 @@ body.dark .message__content {
 
 @media only screen and (max-width: 767px) {
   .customer .card__head .form {
-    width: 64%;
+    width: 58%;
     margin: 0 0 0px;
   }
 }
