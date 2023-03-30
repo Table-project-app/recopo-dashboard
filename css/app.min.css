@@ -510,6 +510,7 @@ html {
 .nice-select.open .list {
   opacity: 1;
   pointer-events: auto;
+  width: 230px;
   -webkit-transform: scale(1) translateY(0);
   transform: scale(1) translateY(0);
 }
@@ -3731,6 +3732,12 @@ body.dark .select .option.selected {
   line-height: 40px;
 }
 
+@media only screen and (max-width: 767px) {
+  .select_small {
+    margin: 0 -8px 8px 0;
+  }
+}
+
 .select_small:before {
   width: 40px;
   background-size: 16px auto;
@@ -4069,6 +4076,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   right: -12px;
 }
 
+.text-gray {
+  color: var(--recopo-gray)
+}
+
 .text-right {
   text-align: right;
 }
@@ -4091,6 +4102,14 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 .mr-auto {
   margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: autp;
+}
+
+.mr-8 {
+  margin-right: 8px;
 }
 
 .mr-16 {
@@ -13276,10 +13295,6 @@ body.dark .loader {
   vertical-align: middle;
 }
 
-.schedule__col:nth-child(3) {
-  color: #6F767E;
-}
-
 @media only screen and (max-width: 1023px) {
   .schedule__col {
     display: block;
@@ -13329,7 +13344,6 @@ body.dark .schedule__col:after {
   font-size: 13px;
   font-weight: 500;
   border-radius: 0 8px 8px 0;
-  color: #6F767E;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -20322,7 +20336,6 @@ body.dark .refunds .card__nav .card__link.active {
   letter-spacing: -0.03em;
   font-weight: 500;
   line-height: 1.45;
-  color: var(--recopo-dark);
 }
 
 body.dark .qs__row:not(:first-child) .qs__col {

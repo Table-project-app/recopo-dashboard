@@ -324,6 +324,12 @@
           </svg>
           ホーム
         </a>
+        <a class="sidebar__item" href="reviews.html">
+          <svg class="icon icon-clipboard">
+            <use xlink:href="#icon-clipboard"></use>
+          </svg>
+          アンケート回答一覧
+        </a>
         <a class="sidebar__item" href="stores.html">
           <svg class="icon icon-store">
             <use xlink:href="#icon-store"></use>
@@ -690,123 +696,18 @@
         <div class="refunds card">
           <div class="card__head">
             <div class="title-orange card__title">直近のアンケート回答</div>
-            <div class="filters">
-              <button class="button-square-stroke button-small filters__head">
-                <svg class="icon icon-filter">
-                  <use xlink:href="#icon-filter"></use>
-                </svg>
-              </button>
-              <div class="filters__body">
-                <div class="filters__top">
-                  <div class="title-orange filters__title">フィルター条件を設定</div>
-                  <button class="filters__close">
-                    <svg class="icon icon-close">
-                      <use xlink:href="#icon-close"></use>
-                    </svg>
-                  </button>
-                </div>
-                <form class="form">
-                  <input class="form__input" type="text" name="search" placeholder="検索" required="required" autocomplete="off">
-                  <button class="form__button">
-                    <svg class="icon icon-search">
-                      <use xlink:href="#icon-search"></use>
-                    </svg>
-                  </button>
-                </form>
-                <div class="filters__group">
-                  <div class="filters__item">
-                    <div class="filters__item">
-                      <div class="filters__label">NPS</div>
-                      <div class="filters__range js-slider" data-min="1" data-max="10" data-start="1" data-end="10" data-step="1" data-tooltips="true" data-prefix=""></div>
-                    </div>
-                  </div>
-                  <div class="filters__item">
-                    <div class="field">
-                      <div class="field__label">回答日時</div>
-                      <div class="field__wrap">
-                        <select class="select">
-                          <option selected>直近7日</option>
-                          <option>直近30日</option>
-                          <option>直近1年</option>
-                          <option>全期間</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="filters__item">
-                    <div class="field">
-                      <div class="field__label">来店回数</div>
-                      <div class="field__wrap">
-                        <select class="select">
-                          <option selected>すべて</option>
-                          <option>はじめて</option>
-                          <option>2-3回目</option>
-                          <option>4回以上</option>
-                          <option>覚えていない</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="filters__item">
-                    <div class="field">
-                      <div class="field__label">評価項目</div>
-                      <div class="field__wrap">
-                        <select class="select">
-                          <option selected>すべて</option>
-                          <option>雰囲気#雰囲気･装飾</option>
-                          <option>雰囲気#音楽･ノイズ</option>
-                          <option>雰囲気#清潔感</option>
-                          <option>雰囲気#店内･席</option>
-                          <option>料理#見た目</option>
-                          <option>料理#分量</option>
-                          <option>料理#おすすめできるか</option>
-                          <option>料理#味</option>
-                          <option>立地#都心･繁華街にあるか</option>
-                          <option>立地#見つけやすいか</option>
-                          <option>立地#アクセスの良さ</option>
-                          <option>価格#コストパフォーマンス</option>
-                          <option>価格#割引について</option>
-                          <option>価格#水準</option>
-                          <option>サービス#接客</option>
-                          <option>サービス#駐車場の利便性</option>
-                          <option>サービス#入店までの待ち時間</option>
-                          <option>サービス#料理の提供時間</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="filters__item">
-                    <div class="filters__label">来店回数</div>
-                    <div class="filters__list">
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">はじめて</span></span>
-                      </label>
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">2-3回目</span></span>
-                      </label>
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">4回以上</span></span>
-                      </label>
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">覚えていない</span></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="filters__btns">
-                  <button class="button-stroke filters__button">リセット</button>
-                  <button class="button filters__button">適用する</button>
-                </div>
-              </div>
-              <div class="filters__overlay"></div>
-            </div>
+            <a class="button-stroke button-small card__button" href="reviews.html">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg><span>アンケート回答一覧へ</span>
+            </a>
           </div>
           <div class="qs__wrapper">
             <div class="qs__table">
               <div class="qs__row">
                 <div class="qs__col">回答内容</div>
                 <div class="qs__col">店舗</div>
-                <div class="qs__col text-end">回答日時</div>
+                <div class="qs__col text-gray text-end">回答日時</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -837,7 +738,7 @@
                     牛鍋 吉田屋<br>代々木店
                   </div>
                 </div>
-                <div class="qs__col text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -880,7 +781,7 @@
                     牛鍋 吉田屋<br>青山店
                   </div>
                 </div>
-                <div class="qs__col text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -911,7 +812,7 @@
                     牛鍋 吉田屋<br>丸の内店
                   </div>
                 </div>
-                <div class="qs__col text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -942,7 +843,7 @@
                     牛鍋 吉田屋<br>北新地店
                   </div>
                 </div>
-                <div class="qs__col text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -979,7 +880,7 @@
                     万吉スープカレー<br>京都駅前店
                   </div>
                 </div>
-                <div class="qs__col text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -1017,7 +918,7 @@
                     牛鍋 吉田屋<br>池袋店
                   </div>
                 </div>
-                <div class="qs__col text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -1048,7 +949,7 @@
                     万吉スープカレー<br>梅田店
                   </div>
                 </div>
-                <div class="qs__col text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -1085,7 +986,7 @@
                     牛鍋 吉田屋<br>北二条店
                   </div>
                 </div>
-                <div class="qs__col text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -1116,7 +1017,7 @@
                     牛鍋 吉田屋<br>八丁堀店
                   </div>
                 </div>
-                <div class="qs__col text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
             </div>
           </div>
@@ -1523,10 +1424,10 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 11.3333C10.7414 11.3333 12.3911 9.28866 13.122 8.06982C13.1387 8.04197 13.1433 8.01851 13.1433 7.99999C13.1433 7.98148 13.1387 7.95802 13.122 7.93017C12.3911 6.71133 10.7414 4.66666 8.00004 4.66666C5.25868 4.66666 3.60899 6.71133 2.87804 7.93017C2.86134 7.95802 2.85677 7.98148 2.85677 8C2.85677 8.01851 2.86134 8.04197 2.87804 8.06982C3.60899 9.28866 5.25868 11.3333 8.00004 11.3333ZM14.2655 8.75557C13.4733 10.0765 11.4767 12.6667 8.00004 12.6667C4.52336 12.6667 2.52676 10.0765 1.73457 8.75557C1.45306 8.28616 1.45306 7.71383 1.73457 7.24442C2.52676 5.92347 4.52336 3.33333 8.00004 3.33333C11.4767 3.33333 13.4733 5.92347 14.2655 7.24442C14.547 7.71383 14.547 8.28616 14.2655 8.75557Z"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 8.66667C8.36819 8.66667 8.66667 8.36819 8.66667 8C8.66667 7.63181 8.36819 7.33333 8 7.33333C7.63181 7.33333 7.33333 7.63181 7.33333 8C7.33333 8.36819 7.63181 8.66667 8 8.66667ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" />
       </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-link">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.33337 8C1.33337 6.15906 2.82576 4.66667 4.66671 4.66667H6.66671C7.0349 4.66667 7.33337 4.96515 7.33337 5.33334C7.33337 5.70153 7.0349 6.00001 6.66671 6.00001H4.66671C3.56214 6.00001 2.66671 6.89544 2.66671 8C2.66671 9.10457 3.56214 10 4.66671 10H6.66671C7.0349 10 7.33337 10.2985 7.33337 10.6667C7.33337 11.0349 7.0349 11.3333 6.66671 11.3333H4.66671C2.82576 11.3333 1.33337 9.84095 1.33337 8Z"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.66663 5.33334C8.66663 4.96515 8.9651 4.66667 9.33329 4.66667H11.3333C13.1742 4.66667 14.6666 6.15906 14.6666 8C14.6666 9.84095 13.1742 11.3333 11.3333 11.3333H9.33329C8.9651 11.3333 8.66663 11.0349 8.66663 10.6667C8.66663 10.2985 8.9651 10 9.33329 10H11.3333C12.4379 10 13.3333 9.10457 13.3333 8C13.3333 6.89544 12.4379 6.00001 11.3333 6.00001H9.33329C8.9651 6.00001 8.66663 5.70153 8.66663 5.33334Z" fill="#6F767E"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.33337 7.99999C5.33337 7.63181 5.63185 7.33333 6.00004 7.33333H10C10.3682 7.33333 10.6667 7.63181 10.6667 7.99999C10.6667 8.36818 10.3682 8.66666 10 8.66666H6.00004C5.63185 8.66666 5.33337 8.36818 5.33337 7.99999Z"/>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-clipboard">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.666672C8.73638 0.666672 9.33333 1.26363 9.33333 2.00001H12C13.1046 2.00001 14 2.89544 14 4.00001V12.6667C14 13.7712 13.1046 14.6667 12 14.6667H4C2.89543 14.6667 2 13.7712 2 12.6667V4.00001C2 2.89544 2.89543 2.00001 4 2.00001H6.66667C6.66667 1.26363 7.26362 0.666672 8 0.666672ZM5.33333 3.33334H4C3.63181 3.33334 3.33333 3.63182 3.33333 4.00001V12.6667C3.33333 13.0349 3.63181 13.3333 4 13.3333H12C12.3682 13.3333 12.6667 13.0349 12.6667 12.6667V4.00001C12.6667 3.63182 12.3682 3.33334 12 3.33334H10.6667V4.00001C10.6667 4.3682 10.3682 4.66667 10 4.66667H6C5.63181 4.66667 5.33333 4.3682 5.33333 4.00001V3.33334Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 7.33334C4.66663 6.96515 4.9651 6.66667 5.33329 6.66667L10.6666 6.66667C11.0348 6.66667 11.3333 6.96515 11.3333 7.33334C11.3333 7.70153 11.0348 8.00001 10.6666 8.00001L5.33329 8.00001C4.9651 8.00001 4.66663 7.70153 4.66663 7.33334Z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 10C4.66663 9.63181 4.9651 9.33333 5.33329 9.33333H7.99996C8.36815 9.33333 8.66663 9.63181 8.66663 10C8.66663 10.3682 8.36815 10.6667 7.99996 10.6667H5.33329C4.9651 10.6667 4.66663 10.3682 4.66663 10Z"/>
       </symbol>
     </svg>
   </div>
