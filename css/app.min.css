@@ -4105,6 +4105,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   margin-bottom: 32px;
 }
 
+.mb-16 {
+  margin-bottom: 16px;
+}
+
 .mt-32 {
   margin-top: 32px;
 }
@@ -19494,6 +19498,15 @@ body.dark .login {
   }
 }
 
+.error__col:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  background: #f96d2a;
+}
+
 .login__col:first-child {
   display: flex;
   justify-content: center;
@@ -19524,6 +19537,10 @@ body.dark .login__col:first-child {
   max-width: 212px;
 }
 
+.error__wrap {
+  max-width: 262px;
+}
+
 .login__preview {
   max-width: 180px;
   margin: 0 auto 40px;
@@ -19536,6 +19553,11 @@ body.dark .login__col:first-child {
 .login__subtitle {
   color: var(--recopo-white);
   margin-bottom: 48px;
+  text-align: center;
+}
+
+.error__subtitle {
+  color: var(--recopo-white);
   text-align: center;
 }
 
