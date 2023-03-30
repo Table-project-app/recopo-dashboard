@@ -13273,8 +13273,11 @@ body.dark .loader {
   padding: 16px 12px;
   font-size: 13px;
   font-weight: 500;
-  color: #6F767E;
   vertical-align: middle;
+}
+
+.schedule__col:nth-child(3) {
+  color: #6F767E;
 }
 
 @media only screen and (max-width: 1023px) {
