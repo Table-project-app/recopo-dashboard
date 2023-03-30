@@ -13358,7 +13358,7 @@ body.dark .schedule__col:after {
   display: block;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1023px) {
   .schedule__date {
     display: none;
   }
@@ -13509,8 +13509,14 @@ body.dark .schedule__empty {
 
 @media only screen and (max-width: 1023px) {
   .schedule__control {
+    top: 40%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .schedule__control {
     left: 124px;
-    margin-top: 20px;
+    margin-top: 34px;
     display: block;
   }
 }
