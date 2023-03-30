@@ -6313,7 +6313,7 @@ body.dark .card__sorting .card__link.active .icon {
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.4;
   color: #6F767E;
   transition: all .2s;
 }
@@ -21766,6 +21766,7 @@ body.dark .shop__profile {
 
 @media only screen and (max-width: 767px) {
   .store__info {
+    display: none;
     font-size: 13px;
     padding: 4px 0px 0px 18px;
   }
@@ -21783,6 +21784,7 @@ body.dark .shop__profile {
 
 @media only screen and (max-width: 767px) {
   .store__subinfo {
+    display: none;
     font-size: 13px;
     padding: 2px 0px 0px 0px;
   }
