@@ -3734,7 +3734,8 @@ body.dark .select .option.selected {
 
 @media only screen and (max-width: 767px) {
   .select_small {
-    margin: 0 -8px 8px 0;
+    margin: 0 -8px 4px 0;
+    line-height: 40px;
   }
 }
 
@@ -4077,7 +4078,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 .text-gray {
-  color: var(--recopo-gray)
+  color: var(--recopo-gray-500)
 }
 
 .text-right {
@@ -4170,7 +4171,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 @media only screen and (max-width: 1023px) {
   .tablet-show {
-    display: block !important;
+    display: block !important;}
+  .tablet-hide {
+    display: none !important;
   }
 }
 
@@ -17672,14 +17675,20 @@ body.dark .settings__item:not(:last-child) {
 
 .settings__profile {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.settings__img {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0px;
 }
 
 @media only screen and (max-width: 1023px) {
   .settings__profile {
-    margin-bottom: 0px;
+    margin-bottom: 32px;
   }
 }
 
@@ -17755,7 +17764,7 @@ body.dark .settings__item:not(:last-child) {
 
 @media only screen and (max-width: 767px) {
   .settings__file .settings__button {
-    padding: 0 10px;
+    padding: 0 14px;
   }
 }
 
@@ -20956,7 +20965,7 @@ body.dark .settings__button_33:first-child:hover {
 
 @media only screen and (max-width: 767px) {
   .settings__button_66 {
-    padding: 0 8px;
+    padding: 0 20px;
   }
 }
 
