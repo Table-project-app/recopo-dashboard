@@ -4099,11 +4099,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 .ml-auto {
-  margin-left: auto;
+  margin-left: auto !important;
 }
 
 .mr-auto {
-  margin-right: auto;
+  margin-right: auto !important;
 }
 
 .ml-auto {
@@ -4112,6 +4112,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 .mr-8 {
   margin-right: 8px;
+}
+
+.ml-8 {
+  margin-left: 8px;
 }
 
 .mr-16 {
@@ -15433,7 +15437,7 @@ body.dark .message__content {
 }
 
 .customer .card__head .form {
-  margin-left: auto;
+  margin-left: 8px;
 }
 
 @media only screen and (max-width: 1023px) {
