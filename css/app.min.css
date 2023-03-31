@@ -3735,7 +3735,7 @@ body.dark .select .option.selected {
 
 @media only screen and (max-width: 767px) {
   .select_small {
-    margin: 0 -8px 4px 0;
+    margin: 0 0px 4px 0;
     line-height: 40px;
   }
 }
@@ -20250,7 +20250,6 @@ body.dark .earning__row:nth-child(2n) .earning__col {
 
 @media only screen and (max-width: 767px) {
   .refunds .card__title {
-    margin: 0 0 16px;
   }
 }
 
