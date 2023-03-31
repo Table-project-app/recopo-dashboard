@@ -591,52 +591,74 @@
           <div class="products__head">
             <div class="title-purple products__title">抽選の景品</div>
           </div>
-          <div class="field">
-            <div class="field__label">景品の名前
-              <div class="tooltip required" title="お客さまにも表示される景品のタイトルです">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
+          <div id="form_repeater_raffle">
+            <div class="form-group">
+              <div data-repeater-list="form_repeater_raffle">
+                <div data-repeater-item class="mb-32">
+                  <div class="row">
+                    <div class="field">
+                      <div class="field__label">景品の名前
+                        <div class="tooltip required" title="お客さまにも表示される景品のタイトルです">
+                          <svg class="icon icon-info">
+                            <use xlink:href="#icon-info"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="field__wrap">
+                        <input class="field__input" type="text" name="title" placeholder="お客さまにも表示される景品のタイトルです" value="はずれ" required>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="field__label">景品の説明
+                        <div class="tooltip" title="お客さまにも表示される景品の説明です。">
+                          <svg class="icon icon-info">
+                            <use xlink:href="#icon-info"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="field__wrap">
+                        <input class="field__input" type="text" name="title" placeholder="お客さまにも表示される景品の説明です。" value="">
+                      </div>
+                    </div>
+                    <div class="raffle-group">
+                      <div class="field raffle__item">
+                        <div class="field__label">当選率
+                          <div class="tooltip" title="当選率を1~100(%)で指定してください。この景品がハズレ景品の場合は空欄にしてください">
+                            <svg class="icon icon-info">
+                              <use xlink:href="#icon-info"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="field__wrap">
+                          <input class="field__input" type="text" name="title" placeholder="当選率を1~100(%)で指定してください。この景品がハズレ景品の場合は空欄にしてください" value="90">
+                        </div>
+                      </div>
+                      <div class="field raffle__item">
+                        <div class="field__label">最大当選数
+                          <div class="tooltip" title="1週間(月曜日~日曜日)で出るあたり本数の上限値です。この景品がハズレ景品の場合は空欄にしてください">
+                            <svg class="icon icon-info">
+                              <use xlink:href="#icon-info"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="field__wrap">
+                          <input class="field__input" type="text" name="title" placeholder="1週間(月曜日~日曜日)で出るあたり本数の上限値です。この景品がハズレ景品の場合は空欄にしてください" value="10">
+                        </div>
+                      </div>
+                    </div>                    
+                    <div class="">
+                      <a href="javascript:;" data-repeater-delete class="button-stroke-red panel__button">
+                        削除
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="field__wrap">
-              <input class="field__input" type="text" name="title" placeholder="お客さまにも表示される景品のタイトルです" value="はずれ" required>
-            </div>
-          </div>
-          <div class="field">
-            <div class="field__label">景品の説明
-              <div class="tooltip" title="お客さまにも表示される景品の説明です。">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="field__wrap">
-              <input class="field__input" type="text" name="title" placeholder="お客さまにも表示される景品の説明です。" value="">
-            </div>
-          </div>
-          <div class="field">
-            <div class="field__label">当選率
-              <div class="tooltip" title="当選率を1~100(%)で指定してください。この景品がハズレ景品の場合は空欄にしてください">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="field__wrap">
-              <input class="field__input" type="text" name="title" placeholder="当選率を1~100(%)で指定してください。この景品がハズレ景品の場合は空欄にしてください" value="90">
-            </div>
-          </div>
-          <div class="field">
-            <div class="field__label">最大当選数
-              <div class="tooltip" title="1週間(月曜日~日曜日)で出るあたり本数の上限値です。この景品がハズレ景品の場合は空欄にしてください">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="field__wrap">
-              <input class="field__input" type="text" name="title" placeholder="1週間(月曜日~日曜日)で出るあたり本数の上限値です。この景品がハズレ景品の場合は空欄にしてください" value="10">
+            <div class="sidebar__foot">
+              <a href="javascript:;" data-repeater-create class="button panel__button">
+                景品を追加
+              </a>
             </div>
           </div>
         </div>
@@ -669,6 +691,24 @@
   <script src="js/charts.js"></script>
   <script src="js/demo.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/lib/formrepeater.bundle.js"></script>
+  <script>
+    $('#form_repeater_raffle').repeater({
+      initEmpty: false,
+
+      defaultValues: {
+        'text-input': 'foo'
+      },
+
+      show: function() {
+        $(this).slideDown();
+      },
+
+      hide: function(deleteElement) {
+        $(this).slideUp(deleteElement);
+      }
+    });
+  </script>
   <!-- svg sprite-->
   <div style="display: none">
     <svg width="0" height="0">
@@ -934,17 +974,17 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M2 7.99121C2 4.68814 4.68814 2 7.99122 2C11.3119 2 14 4.68814 14 7.99121C14 11.3119 11.3119 14 7.99122 14C4.68814 14 2 11.3119 2 7.99121ZM6.31187 7.46384C6.72767 7.46384 7.06474 7.12748 7.06474 6.71256C7.06474 6.29764 6.72767 5.96128 6.31187 5.96128C5.89607 5.96128 5.559 6.29764 5.559 6.71256C5.559 7.12748 5.89607 7.46384 6.31187 7.46384ZM10.4869 6.71256C10.4869 7.12748 10.1498 7.46384 9.73399 7.46384C9.31819 7.46384 8.98112 7.12748 8.98112 6.71256C8.98112 6.29764 9.31819 5.96128 9.73399 5.96128C10.1498 5.96128 10.4869 6.29764 10.4869 6.71256ZM7.11748 10.0634C7.40454 9.9447 7.71221 9.88363 8.02293 9.88363C8.33364 9.88363 8.64132 9.94471 8.92838 10.0634C9.21544 10.182 9.47627 10.3559 9.69598 10.5752C9.90219 10.781 10.2365 10.781 10.4427 10.5752C10.6489 10.3694 10.6489 10.0358 10.4427 9.83C10.125 9.5129 9.74771 9.26136 9.33252 9.08974C8.91733 8.91813 8.47233 8.8298 8.02293 8.8298C7.57353 8.8298 7.12853 8.91813 6.71334 9.08974C6.29815 9.26136 5.9209 9.5129 5.60313 9.83C5.39692 10.0358 5.39692 10.3694 5.60313 10.5752C5.80933 10.7809 6.14367 10.7809 6.34988 10.5752C6.56958 10.3559 6.83042 10.182 7.11748 10.0634Z" />
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-show">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 11.3333C10.7414 11.3333 12.3911 9.28866 13.122 8.06982C13.1387 8.04197 13.1433 8.01851 13.1433 7.99999C13.1433 7.98148 13.1387 7.95802 13.122 7.93017C12.3911 6.71133 10.7414 4.66666 8.00004 4.66666C5.25868 4.66666 3.60899 6.71133 2.87804 7.93017C2.86134 7.95802 2.85677 7.98148 2.85677 8C2.85677 8.01851 2.86134 8.04197 2.87804 8.06982C3.60899 9.28866 5.25868 11.3333 8.00004 11.3333ZM14.2655 8.75557C13.4733 10.0765 11.4767 12.6667 8.00004 12.6667C4.52336 12.6667 2.52676 10.0765 1.73457 8.75557C1.45306 8.28616 1.45306 7.71383 1.73457 7.24442C2.52676 5.92347 4.52336 3.33333 8.00004 3.33333C11.4767 3.33333 13.4733 5.92347 14.2655 7.24442C14.547 7.71383 14.547 8.28616 14.2655 8.75557Z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 11.3333C10.7414 11.3333 12.3911 9.28866 13.122 8.06982C13.1387 8.04197 13.1433 8.01851 13.1433 7.99999C13.1433 7.98148 13.1387 7.95802 13.122 7.93017C12.3911 6.71133 10.7414 4.66666 8.00004 4.66666C5.25868 4.66666 3.60899 6.71133 2.87804 7.93017C2.86134 7.95802 2.85677 7.98148 2.85677 8C2.85677 8.01851 2.86134 8.04197 2.87804 8.06982C3.60899 9.28866 5.25868 11.3333 8.00004 11.3333ZM14.2655 8.75557C13.4733 10.0765 11.4767 12.6667 8.00004 12.6667C4.52336 12.6667 2.52676 10.0765 1.73457 8.75557C1.45306 8.28616 1.45306 7.71383 1.73457 7.24442C2.52676 5.92347 4.52336 3.33333 8.00004 3.33333C11.4767 3.33333 13.4733 5.92347 14.2655 7.24442C14.547 7.71383 14.547 8.28616 14.2655 8.75557Z" />
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 8.66667C8.36819 8.66667 8.66667 8.36819 8.66667 8C8.66667 7.63181 8.36819 7.33333 8 7.33333C7.63181 7.33333 7.33333 7.63181 7.33333 8C7.33333 8.36819 7.63181 8.66667 8 8.66667ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" />
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-clipboard">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.666672C8.73638 0.666672 9.33333 1.26363 9.33333 2.00001H12C13.1046 2.00001 14 2.89544 14 4.00001V12.6667C14 13.7712 13.1046 14.6667 12 14.6667H4C2.89543 14.6667 2 13.7712 2 12.6667V4.00001C2 2.89544 2.89543 2.00001 4 2.00001H6.66667C6.66667 1.26363 7.26362 0.666672 8 0.666672ZM5.33333 3.33334H4C3.63181 3.33334 3.33333 3.63182 3.33333 4.00001V12.6667C3.33333 13.0349 3.63181 13.3333 4 13.3333H12C12.3682 13.3333 12.6667 13.0349 12.6667 12.6667V4.00001C12.6667 3.63182 12.3682 3.33334 12 3.33334H10.6667V4.00001C10.6667 4.3682 10.3682 4.66667 10 4.66667H6C5.63181 4.66667 5.33333 4.3682 5.33333 4.00001V3.33334Z" />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 7.33334C4.66663 6.96515 4.9651 6.66667 5.33329 6.66667L10.6666 6.66667C11.0348 6.66667 11.3333 6.96515 11.3333 7.33334C11.3333 7.70153 11.0348 8.00001 10.6666 8.00001L5.33329 8.00001C4.9651 8.00001 4.66663 7.70153 4.66663 7.33334Z"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 10C4.66663 9.63181 4.9651 9.33333 5.33329 9.33333H7.99996C8.36815 9.33333 8.66663 9.63181 8.66663 10C8.66663 10.3682 8.36815 10.6667 7.99996 10.6667H5.33329C4.9651 10.6667 4.66663 10.3682 4.66663 10Z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 7.33334C4.66663 6.96515 4.9651 6.66667 5.33329 6.66667L10.6666 6.66667C11.0348 6.66667 11.3333 6.96515 11.3333 7.33334C11.3333 7.70153 11.0348 8.00001 10.6666 8.00001L5.33329 8.00001C4.9651 8.00001 4.66663 7.70153 4.66663 7.33334Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 10C4.66663 9.63181 4.9651 9.33333 5.33329 9.33333H7.99996C8.36815 9.33333 8.66663 9.63181 8.66663 10C8.66663 10.3682 8.36815 10.6667 7.99996 10.6667H5.33329C4.9651 10.6667 4.66663 10.3682 4.66663 10Z" />
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-chevron-forward">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.36189 12.8047C5.10154 12.5444 5.10154 12.1223 5.36189 11.8619L9.22382 8L5.36189 4.13807C5.10154 3.87772 5.10154 3.45561 5.36189 3.19526C5.62224 2.93491 6.04435 2.93491 6.3047 3.19526L10.1666 7.05719C10.6873 7.57789 10.6873 8.42211 10.1666 8.94281L6.3047 12.8047C6.04435 13.0651 5.62224 13.0651 5.36189 12.8047Z"/>
-      </symbol>      
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.36189 12.8047C5.10154 12.5444 5.10154 12.1223 5.36189 11.8619L9.22382 8L5.36189 4.13807C5.10154 3.87772 5.10154 3.45561 5.36189 3.19526C5.62224 2.93491 6.04435 2.93491 6.3047 3.19526L10.1666 7.05719C10.6873 7.57789 10.6873 8.42211 10.1666 8.94281L6.3047 12.8047C6.04435 13.0651 5.62224 13.0651 5.36189 12.8047Z" />
+      </symbol>
     </svg>
   </div>
 </body>
