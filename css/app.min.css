@@ -3535,7 +3535,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 body {
   min-width: 375px;
   background: #F4F4F4;
-  font-family: 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
+  font-family: YakuHanJP_Noto, 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
   font-feature-settings: "palt";
   font-size: 14px;
   font-weight: 600;
@@ -3568,7 +3568,7 @@ button {
 button,
 input,
 textarea {
-  font-family: 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
+  font-family: YakuHanJP_Noto, 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
   letter-spacing: -0.02em;
 }
 
@@ -4221,7 +4221,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .h2,
 .h3,
 .h4 {
-  font-family: 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
+  font-family: YakuHanJP_Noto, 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
   font-feature-settings: "palt";
   font-weight: 700;
 }
@@ -5086,7 +5086,7 @@ body.dark .sidebar {
   padding: 0 12px;
   border-radius: 12px;
   white-space: nowrap;
-  font-family: 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
+  font-family: YakuHanJP_Noto, 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
   font-feature-settings: "palt";
   font-size: 14px;
   font-weight: 600;
@@ -9832,7 +9832,7 @@ body.dark .editor .richText-redo:not(.is-disabled):hover {
   border: none !important;
   background: none;
   border-radius: 0 0 10px 10px;
-  font-family: 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
+  font-family: YakuHanJP_Noto, 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
   color: #33383F;
 }
 
@@ -12143,7 +12143,7 @@ body.dark .field__label {
   border-radius: 12px;
   border: 2px solid transparent;
   background: #F4F4F4;
-  font-family: 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
+  font-family: YakuHanJP_Noto, 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.6;
@@ -13010,7 +13010,7 @@ body.dark .panel__info span {
 }
 
 .panel__btns .panel__button {
-  font-family: 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
+  font-family: YakuHanJP_Noto, 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
   letter-spacing: -0.04em;
   font-weight: 600;
   margin-right: 8px;
@@ -13840,7 +13840,7 @@ body.dark .calendar__head:hover {
   border: none;
   box-shadow: none;
   pointer-events: none;
-  font-family: 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
+  font-family: YakuHanJP_Noto, 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
   font-size: 14px;
   font-weight: 600;
   color: #1A1D1F;
@@ -14040,7 +14040,7 @@ body.dark .calendar__close .icon {
   background: none;
   z-index: 20;
   overflow: hidden;
-  font-family: 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
+  font-family: YakuHanJP_Noto, 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
 }
 
 @media only screen and (max-width: 767px) {
@@ -19776,7 +19776,7 @@ body.dark .login__top {
   border: 2px solid transparent;
   background: #EFEFEF;
   text-align: center;
-  font-family: 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
+  font-family: YakuHanJP_Noto, 'MADEOkineSans', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
   font-size: 48px;
   font-weight: 600;
   color: #1A1D1F;
