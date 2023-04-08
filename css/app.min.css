@@ -13819,8 +13819,8 @@ body.dark .calendar__item.active .calendar__head .icon {
 }
 
 .calendar__head .icon {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
   margin-right: 12px;
   fill: #6F767E;
