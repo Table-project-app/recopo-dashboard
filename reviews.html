@@ -578,14 +578,6 @@
             </div>
             <div class="card__select mr-8">
               <select class="select select_small">
-                <option selected>全ステータス</option>
-                <option>未処理</option>
-                <option>確認済み</option>
-                <option>エスカレート</option>
-              </select>
-            </div>
-            <div class="card__select mr-8">
-              <select class="select select_small">
                 <option selected>並び替え</option>
                 <option>NPS ↓</option>
                 <option>NPS ↑</option>
@@ -593,7 +585,15 @@
                 <option>回答日時 ↑</option>
               </select>
             </div>
-            <div class="filters mobile-hide tablet-hide">
+            <form class="form mobile-hide tablet-hide">
+              <input class="form__input" type="text" name="search" placeholder="検索" required="required" autocomplete="off">
+              <button class="form__button">
+                <svg class="icon icon-search">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+            <div class="filters mobile-hide tablet-hide ml-8">
               <button class="button-square-stroke button-small filters__head">
                 <svg class="icon icon-filter">
                   <use xlink:href="#icon-filter"></use>
@@ -608,14 +608,6 @@
                     </svg>
                   </button>
                 </div>
-                <form class="form">
-                  <input class="form__input" type="text" name="search" placeholder="検索" required="required" autocomplete="off">
-                  <button class="form__button">
-                    <svg class="icon icon-search">
-                      <use xlink:href="#icon-search"></use>
-                    </svg>
-                  </button>
-                </form>
                 <div class="filters__group">
                   <div class="filters__item">
                     <div class="filters__item">
@@ -662,7 +654,7 @@
               </div>
               <div class="filters__overlay"></div>
             </div>
-            <button class="button-small card__button button-stroke ml-auto mobile-hide tablet-hide">
+            <button class="button-small card__button button-stroke ml-auto mobile-hide tablet-hide ml-16">
               <svg class="icon icon-download">
                 <use xlink:href="#icon-download"></use>
               </svg>
