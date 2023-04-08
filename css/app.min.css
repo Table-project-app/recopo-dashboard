@@ -513,7 +513,7 @@ html {
 .nice-select.open .list {
   opacity: 1;
   pointer-events: auto;
-  width: 220px;
+  width: 230px;
   -webkit-transform: scale(1) translateY(0);
   transform: scale(1) translateY(0);
 }
@@ -10784,7 +10784,7 @@ body.dark .activity__link.active {
 
 .form {
   position: relative;
-  width: 240px;
+  width: 180px;
 }
 
 .form__input {
