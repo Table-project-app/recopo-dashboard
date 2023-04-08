@@ -4471,6 +4471,11 @@ body.dark .button-square-stroke {
   color: #FCFCFC;
 }
 
+.status-purple-light {
+  background: var(--recopo-purple);
+  color: #FCFCFC;
+}
+
 .status-gray-light {
   background: var(--recopo-gray-500);
   color: #FCFCFC;
@@ -4478,6 +4483,11 @@ body.dark .button-square-stroke {
 
 .status-red-light {
   background: var(--recopo-pink);
+  color: #FCFCFC;
+}
+
+.status-yellow-light {
+  background: var(--recopo-yellow);
   color: #FCFCFC;
 }
 

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>アンケート回答一覧 - Recopoダッシュボード</title>
+  <title>ホーム - Recopoダッシュボード</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -319,13 +319,13 @@
       </button>
       <a class="sidebar__logo" href="index.html"><img class="some-icon" src="img/logo-dark.svg" alt="Recopo"><img class="some-icon-dark" src="img/logo-light.svg" alt="Recopo"></a>
       <div class="sidebar__menu">
-        <a class="sidebar__item" href="index.html">
+        <a class="sidebar__item active" href="index.html">
           <svg class="icon icon-home">
             <use xlink:href="#icon-home"></use>
           </svg>
           ホーム
         </a>
-        <a class="sidebar__item active" href="reviews.html">
+        <a class="sidebar__item" href="reviews.html">
           <svg class="icon icon-clipboard">
             <use xlink:href="#icon-clipboard"></use>
           </svg>
@@ -539,139 +539,188 @@
     <div class="page__inner">
       <div class="page__container">
         <div class="page__title h3">
-          <svg class="icon icon-clipboard">
-            <use xlink:href="#icon-clipboard"></use>
+          <svg class="icon icon-category">
+            <use xlink:href="#icon-category"></use>
           </svg>
-          <div class="h3">アンケート回答一覧</div>
+          <div class="h3">ダッシュボード</div>
         </div>
-        <div class="refunds card">
-          <div class="card__head">
-            <div class="card__select mr-8">
-              <select class="select select_small">
-                <option selected>全ブランド</option>
-                <option>牛鍋 吉田屋</option>
-                <option>万吉カレーうどん</option>
-              </select>
-            </div>
-            <div class="card__select mr-8">
-              <select class="select select_small">
-                <option selected>すべての評価項目</option>
-                <option>雰囲気#雰囲気･装飾</option>
-                <option>雰囲気#音楽･ノイズ</option>
-                <option>雰囲気#清潔感</option>
-                <option>雰囲気#店内･席</option>
-                <option>料理#見た目</option>
-                <option>料理#分量</option>
-                <option>料理#おすすめできるか</option>
-                <option>料理#味</option>
-                <option>立地#都心･繁華街にあるか</option>
-                <option>立地#見つけやすいか</option>
-                <option>立地#アクセスの良さ</option>
-                <option>価格#コストパフォーマンス</option>
-                <option>価格#割引について</option>
-                <option>価格#水準</option>
-                <option>サービス#接客</option>
-                <option>サービス#駐車場の利便性</option>
-                <option>サービス#入店までの待ち時間</option>
-                <option>サービス#料理の提供時間</option>
-              </select>
-            </div>
-            <div class="card__select mr-8">
-              <select class="select select_small">
-                <option selected>並び替え</option>
-                <option>NPS ↓</option>
-                <option>NPS ↑</option>
-                <option>回答日時 ↓</option>
-                <option>回答日時 ↑</option>
-              </select>
-            </div>
-            <form class="form mobile-hide tablet-hide">
-              <input class="form__input" type="text" name="search" placeholder="検索" required="required" autocomplete="off">
-              <button class="form__button">
-                <svg class="icon icon-search">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
-              </button>
-            </form>
-            <div class="filters mobile-hide tablet-hide ml-8">
-              <button class="button-square-stroke button-small filters__head">
-                <svg class="icon icon-filter">
-                  <use xlink:href="#icon-filter"></use>
-                </svg>
-              </button>
-              <div class="filters__body">
-                <div class="filters__top">
-                  <div class="title-orange filters__title">フィルター条件を設定</div>
-                  <button class="filters__close">
-                    <svg class="icon icon-close">
-                      <use xlink:href="#icon-close"></use>
-                    </svg>
-                  </button>
+        <div class="page__row">
+          <div class="page__col">
+            <div class="card">
+              <div class="card__head">
+                <div class="title-orange card__title">サマリー</div>
+                <div class="card__select">
+                  <select class="select select_small">
+                    <option selected>直近7日</option>
+                    <option>直近30日</option>
+                    <option>直近3ヶ月</option>
+                    <option>直近1年</option>
+                    <option>全期間</option>
+                  </select>
                 </div>
-                <div class="filters__group">
-                  <div class="filters__item">
-                    <div class="filters__item">
-                      <div class="filters__label">NPS</div>
-                      <div class="filters__range js-slider" data-min="1" data-max="10" data-start="1" data-end="10" data-step="1" data-tooltips="true" data-prefix=""></div>
+                <div class="card__select ml-8">
+                  <select class="select select_small">
+                    <option selected>単位: 日</option>
+                    <option>単位: 週</option>
+                    <option>単位: 月</option>
+                  </select>
+                </div>
+                <button class="button-small card__button button-stroke ml-16 mobile-hide">
+                  <svg class="icon icon-download">
+                    <use xlink:href="#icon-download"></use>
+                  </svg>
+                  回答ダウンロード
+                </button>
+              </div>
+              <div class="overview js-tabs">
+                <div class="overview__nav"><a class="overview__link js-tabs-link active" href="#">
+                    <div class="overview__icon_orange">
+                      <svg class="icon icon-activity">
+                        <use xlink:href="#icon-activity"></use>
+                      </svg>
                     </div>
-                  </div>
-                  <div class="filters__item">
-                    <div class="field">
-                      <div class="field__label">回答日時</div>
-                      <div class="field__wrap">
-                        <select class="select">
-                          <option selected>直近7日</option>
-                          <option>直近30日</option>
-                          <option>直近3ヶ月</option>
-                          <option>直近1年</option>
-                          <option>全期間</option>
-                        </select>
+                    <div class="overview__details">
+                      <div class="overview__subtitle">NPS
+                        <div class="tooltip" title="NPS (Net Promoter Score)は､顧客満足度を測定するための指標の一つ">
+                          <svg class="icon icon-info">
+                            <use xlink:href="#icon-info"></use>
+                          </svg>
+                        </div>
                       </div>
+                      <div class="overview__counter">8.5</div>
+                    </div>
+                    <div class="balance background negative">
+                      <svg class="icon icon-arrow-bottom">
+                        <use xlink:href="#icon-arrow-bottom"></use>
+                      </svg>3.8%
+                    </div></a><a class="overview__link js-tabs-link" href="#">
+                    <div class="overview__icon_red">
+                      <svg class="icon icon-message">
+                        <use xlink:href="#icon-message"></use>
+                      </svg>
+                    </div>
+                    <div class="overview__details">
+                      <div class="overview__subtitle">回答数
+                        <div class="tooltip" title="期間中の合計アンケート回答回収数">
+                          <svg class="icon icon-info">
+                            <use xlink:href="#icon-info"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="overview__counter">512</div>
+                    </div>
+                    <div class="balance background positive">
+                      <svg class="icon icon-arrow-top">
+                        <use xlink:href="#icon-arrow-top"></use>
+                      </svg>2.7%
+                    </div></a></div>
+                <div class="overview__container">
+                  <div class="overview__item js-tabs-item" style="display: block;">
+                    <div class="overview__chart">
+                      <div id="nps-chart"></div>
                     </div>
                   </div>
-                  <div class="filters__item">
-                    <div class="filters__label">来店回数</div>
-                    <div class="filters__list">
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">はじめて</span></span>
-                      </label>
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">2-3回目</span></span>
-                      </label>
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">4回以上</span></span>
-                      </label>
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">覚えていない</span></span>
-                      </label>
+                  <div class="overview__item js-tabs-item">
+                    <div class="overview__chart">
+                      <div id="answer-chart"></div>
+                      <div id="product-views-small"></div>
                     </div>
                   </div>
-                </div>
-                <div class="filters__btns">
-                  <button class="button-stroke filters__button">リセット</button>
-                  <button class="button filters__button">適用する</button>
                 </div>
               </div>
-              <div class="filters__overlay"></div>
             </div>
-            <button class="button-small card__button button-stroke ml-auto mobile-hide tablet-hide ml-16">
-              <svg class="icon icon-download">
-                <use xlink:href="#icon-download"></use>
-              </svg>
-              回答ダウンロード
-            </button>
+          </div>
+          <div class="page__col">
+            <div class="transactions card">
+              <div class="card__head">
+                <div class="title-gray card__title">利用状況</div>
+                <a class="button-small card__button button-stroke" href="members.html">
+                  <svg class="icon icon-add">
+                    <use xlink:href="#icon-add"></use>
+                  </svg>
+                  メンバー招待
+                </a>
+              </div>
+              <div class="usage">
+                <div class="usage__legend">
+                  <div class="usage__indicator usage__indicator_mobile">
+                    <svg class="icon icon-store">
+                      <use xlink:href="#icon-store"></use>
+                    </svg>
+                    <div class="usage__title">店舗数</div>
+                    <div class="h4 total__title">49</div>
+                  </div>
+                  <div class="usage__indicator usage__indicator_tablet">
+                    <svg class="icon icon-list">
+                      <use xlink:href="#icon-list"></use>
+                    </svg>
+                    <div class="usage__title">店舗グループ</div>
+                    <div class="h4 total__title">2</div>
+                  </div>
+                  <div class="usage__indicator usage__indicator_desktop">
+                    <svg class="icon icon-profile-circle">
+                      <use xlink:href="#icon-profile-circle"></use>
+                    </svg>
+                    <div class="usage__title">メンバー</div>
+                    <div class="h4 total__title">5</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__head">
+                <div class="title-purple card__title">来店回数</div>
+                <div class="card__select mobile-hide">
+                  <select class="select select_small">
+                    <option selected>直近7日</option>
+                    <option>直近30日</option>
+                    <option>直近3ヶ月</option>
+                    <option>直近1年</option>
+                    <option>全期間</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card__chart card__chart_new-customers">
+                <div id="visits-chart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__head">
+            <div class="title-yellow card__title">評価項目別分析</div>
+            <select class="select select_small">
+              <option>直近7日</option>
+              <option>直近30日</option>
+              <option selected>直近3ヶ月</option>
+              <option>直近1年</option>
+              <option>全期間</option>
+            </select>
+          </div>
+          <div class="card__chart card__chart_evaluation-analysis">
+            <div id="evaluation-analysis"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__head">
+            <div class="title-orange card__title">直近のアンケート回答</div>
+            <a class="button-stroke button-small card__button" href="reviews.html">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg><span>回答一覧</span>
+            </a>
           </div>
           <div class="qs__wrapper">
             <div class="qs__table">
               <div class="qs__row">
                 <div class="qs__col">回答内容</div>
                 <div class="qs__col">店舗</div>
-                <div class="qs__col text-end">来店回数</div>
+                <div class="qs__col text-gray text-end">回答日時</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
                   <div class="qs__item">
-                    <div class="score__number score__middle">
+                    <div class="score__number score__high">
                       8
                     </div>
                     <div class="qs__details">
@@ -697,9 +746,7 @@
                     牛鍋 吉田屋<br>代々木店
                   </div>
                 </div>
-                <div class="qs__col text-end">
-                  <div class="status-purple-light press__distribution">はじめて</div>
-                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -742,9 +789,7 @@
                     牛鍋 吉田屋<br>青山店
                   </div>
                 </div>
-                <div class="qs__col text-end">
-                  <div class="status-orange-light press__distribution">2-3回目</div>
-                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -775,9 +820,7 @@
                     牛鍋 吉田屋<br>丸の内店
                   </div>
                 </div>
-                <div class="qs__col text-end">
-                  <div class="status-red-light press__distribution">覚えていない</div>
-                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -808,9 +851,7 @@
                     牛鍋 吉田屋<br>北新地店
                   </div>
                 </div>
-                <div class="qs__col text-end">
-                  <div class="status-red-light press__distribution">覚えていない</div>
-                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -847,9 +888,7 @@
                     万吉スープカレー<br>京都駅前店
                   </div>
                 </div>
-                <div class="qs__col text-end">
-                  <div class="status-yellow-light press__distribution">4回以上</div>
-                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -887,9 +926,7 @@
                     牛鍋 吉田屋<br>池袋店
                   </div>
                 </div>
-                <div class="qs__col text-end">
-                  <div class="status-orange-light press__distribution">2-3回目</div>
-                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -920,9 +957,7 @@
                     万吉スープカレー<br>梅田店
                   </div>
                 </div>
-                <div class="qs__col text-end">
-                  <div class="status-purple-light press__distribution">はじめて</div>
-                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -959,9 +994,7 @@
                     牛鍋 吉田屋<br>北二条店
                   </div>
                 </div>
-                <div class="qs__col text-end">
-                  <div class="status-yellow-light press__distribution">4回以上</div>
-                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -992,9 +1025,7 @@
                     牛鍋 吉田屋<br>八丁堀店
                   </div>
                 </div>
-                <div class="qs__col text-end">
-                  <div class="status-orange-light press__distribution">2-3回目</div>
-                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
               </div>
             </div>
           </div>
@@ -1033,6 +1064,13 @@
                   </svg>
                   雰囲気#店内･席
                 </div>
+              </div>
+              <div class="description__box">
+                <div class="description__info">改善レコメンド</div>
+                <ul class="description__list">
+                  <li>混雑状況に合わせてテーブルをフレキシブルに移動してレイアウトする</li>
+                  <li>テーブル間にパーティションを設置する</li>
+                </ul>
               </div>
             </div>
             <div class="description__col">
@@ -1090,7 +1128,15 @@
                   <div class="description__label">回答送信日時</div>
                   <div class="description__content">2023/2/13 17:51</div>
                 </li>
+                <li>
+                  <div class="description__label">ステータス</div>
+                  <div class="description__status_unprocessed">未処理</div>
+                </li>
               </ul>
+              <div class="description__btns">
+                <button class="button-stroke description__button">対応不要</button>
+                <button class="button description__button">エスカレートする</button>
+              </div>
             </div>
           </div>
         </div>
@@ -1391,7 +1437,6 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 7.33334C4.66663 6.96515 4.9651 6.66667 5.33329 6.66667L10.6666 6.66667C11.0348 6.66667 11.3333 6.96515 11.3333 7.33334C11.3333 7.70153 11.0348 8.00001 10.6666 8.00001L5.33329 8.00001C4.9651 8.00001 4.66663 7.70153 4.66663 7.33334Z"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 10C4.66663 9.63181 4.9651 9.33333 5.33329 9.33333H7.99996C8.36815 9.33333 8.66663 9.63181 8.66663 10C8.66663 10.3682 8.36815 10.6667 7.99996 10.6667H5.33329C4.9651 10.6667 4.66663 10.3682 4.66663 10Z"/>
       </symbol>
-      
     </svg>
   </div>
 </body>
