@@ -549,7 +549,7 @@
             <div class="card">
               <div class="card__head">
                 <div class="title-orange card__title">サマリー</div>
-                <div class="card__select mobile-hide">
+                <div class="card__select">
                   <select class="select select_small">
                     <option selected>直近7日</option>
                     <option>直近30日</option>
@@ -558,7 +558,14 @@
                     <option>全期間</option>
                   </select>
                 </div>
-                <button class="button-small card__button button-stroke ml-16">
+                <div class="card__select ml-8">
+                  <select class="select select_small">
+                    <option selected>単位: 日</option>
+                    <option>単位: 週</option>
+                    <option>単位: 月</option>
+                  </select>
+                </div>
+                <button class="button-small card__button button-stroke ml-16 mobile-hide">
                   <svg class="icon icon-download">
                     <use xlink:href="#icon-download"></use>
                   </svg>
@@ -713,7 +720,7 @@
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
                   <div class="qs__item">
-                    <div class="score__number">
+                    <div class="score__number score__high">
                       8
                     </div>
                     <div class="qs__details">
@@ -744,7 +751,7 @@
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
                   <div class="qs__item">
-                    <div class="score__number">
+                    <div class="score__number score__low">
                       4
                     </div>
                     <div class="qs__details">
@@ -787,7 +794,7 @@
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
                   <div class="qs__item">
-                    <div class="score__number">
+                    <div class="score__number score__high">
                       9
                     </div>
                     <div class="qs__details">
@@ -818,7 +825,7 @@
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
                   <div class="qs__item">
-                    <div class="score__number">
+                    <div class="score__number score__low">
                       4
                     </div>
                     <div class="qs__details">
@@ -849,7 +856,7 @@
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
                   <div class="qs__item">
-                    <div class="score__number">
+                    <div class="score__number score__low">
                       3
                     </div>
                     <div class="qs__details">
@@ -886,7 +893,7 @@
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
                   <div class="qs__item">
-                    <div class="score__number">
+                    <div class="score__number score__high">
                       10
                     </div>
                     <div class="qs__details">
@@ -924,7 +931,7 @@
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
                   <div class="qs__item">
-                    <div class="score__number">
+                    <div class="score__number score__high">
                       9
                     </div>
                     <div class="qs__details">
@@ -955,7 +962,7 @@
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
                   <div class="qs__item">
-                    <div class="score__number">
+                    <div class="score__number score__high">
                       9
                     </div>
                     <div class="qs__details">
@@ -992,7 +999,7 @@
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
                   <div class="qs__item">
-                    <div class="score__number">
+                    <div class="score__number score__middle">
                       7
                     </div>
                     <div class="qs__details">

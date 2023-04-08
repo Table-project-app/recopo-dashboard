@@ -8,6 +8,8 @@
   --recopo-pink: #FF507C;
   --recopo-red: #dc3545;
   --recopo-orange: #F96D29;
+  --recopo-orange-1000: #C3501B;
+  --recopo-orange-1100: #843612;
   --recopo-yellow: #FFA50E;
   --recopo-green: #1EC569;
   --recopo-teal: #20c997;
@@ -16521,7 +16523,6 @@ body.dark .quality__item:not(:first-child) {
 .score__number {
   font-size: 34px;
   color: #FCFCFC;
-  background-color: var(--recopo-orange);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16529,6 +16530,16 @@ body.dark .quality__item:not(:first-child) {
   height: 80px;
   margin-right: 20px;
   border-radius: 8px;
+}
+
+.score__high {
+  background-color: var(--recopo-orange);
+}
+.score__middle {
+  background-color: var(--recopo-orange-1000);
+}
+.score__low {
+  background-color: var(--recopo-orange-1100);
 }
 
 @media only screen and (max-width: 767px) {
