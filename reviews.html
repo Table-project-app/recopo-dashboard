@@ -555,7 +555,7 @@
             </div>
             <div class="card__select mr-8">
               <select class="select select_small">
-                <option selected>すべての評価項目</option>
+                <option selected>全評価項目</option>
                 <option>雰囲気#雰囲気･装飾</option>
                 <option>雰囲気#音楽･ノイズ</option>
                 <option>雰囲気#清潔感</option>
@@ -594,15 +594,7 @@
                 <option>回答日時 ↑</option>
               </select>
             </div>
-            <form class="form mobile-hide tablet-hide">
-              <input class="form__input" type="text" name="search" placeholder="検索" required="required" autocomplete="off">
-              <button class="form__button">
-                <svg class="icon icon-search">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
-              </button>
-            </form>
-            <div class="filters mobile-hide tablet-hide ml-8">
+            <div class="filters mobile-hide tablet-hide">
               <button class="button-square-stroke button-small filters__head">
                 <svg class="icon icon-filter">
                   <use xlink:href="#icon-filter"></use>
@@ -639,6 +631,30 @@
                     </div>
                   </div>
                   <div class="filters__item">
+                    <div class="calendar js-calendar">
+                      <div class="calendar__list">
+                        <div class="field__label">日時範囲指定</div>
+                        <div class="calendar__item calendar__item_date js-calendar-item">
+                          <div class="calendar__head js-calendar-head">
+                            <svg class="icon icon-calendar">
+                              <use xlink:href="#icon-calendar"></use>
+                            </svg>
+                            <div class="calendar__details">
+                              <input class="calendar__value js-date-range" type="text" data-single-month="true" data-container=".js-date-container">
+                            </div>
+                          </div>
+                          <div class="calendar__body js-calendar-body">
+                            <div class="calendar__container js-date-container"></div>
+                            <div class="calendar__foot">
+                              <button class="button-stroke button-small calendar__button js-date-clear">クリア</button>
+                              <button class="button-small calendar__button js-calendar-close">閉じる</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
                     <div class="filters__label">来店回数</div>
                     <div class="filters__list">
                       <label class="checkbox checkbox_reverse">
@@ -657,12 +673,19 @@
                   </div>
                 </div>
                 <div class="filters__btns">
-                  <button class="button-stroke filters__button">リセット</button>
                   <button class="button filters__button">適用する</button>
                 </div>
               </div>
               <div class="filters__overlay"></div>
             </div>
+            <form class="form mobile-hide tablet-hide ml-8">
+              <input class="form__input" type="text" name="search" placeholder="検索" required="required" autocomplete="off">
+              <button class="form__button">
+                <svg class="icon icon-search">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </button>
+            </form>
             <button class="button-small card__button button-stroke ml-auto mobile-hide tablet-hide ml-16">
               <svg class="icon icon-download">
                 <use xlink:href="#icon-download"></use>

@@ -444,7 +444,6 @@ $('.products__row, .statistics__row').mouseleave(function () {
 
 // tags
 
-
 $('[name=tags]').tagify(); 
 
 // product checked
@@ -519,7 +518,6 @@ $('.summary .checkbox__input').on('change', function () {
 
 // dateRangePicker
 
-
 (function () {
   var dateRange = $('.js-date-range');
 
@@ -533,11 +531,12 @@ $('.summary .checkbox__input').on('change', function () {
       _this.dateRangePicker({
         inline: true,
         autoClose: true,
-        format: 'DD MMMM, YYYY',
+        format: 'YYYY MM/DD',
         separator: ' - ',
         showShortcuts: false,
         container: container,
-        singleDate: true,
+        singleDate: false,
+        language:'ja',
         singleMonth: single,
         showTopbar: false,
         stickyMonths: true,
@@ -554,7 +553,7 @@ $('.summary .checkbox__input').on('change', function () {
         }
       });
 
-      _this.data('dateRangePicker').setStart('2022-01-20');
+      _this.data('dateRangePicker').setStart('2023-04-10');
 
       clear.on('click', function () {
         _this.data('dateRangePicker').setStart(new Date());
