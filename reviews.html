@@ -548,14 +548,14 @@
           <div class="card__head">
             <div class="card__select mr-8">
               <select class="select select_small">
-                <option selected>全ブランド</option>
+                <option selected>ブランド</option>
                 <option>牛鍋 吉田屋</option>
                 <option>万吉カレーうどん</option>
               </select>
             </div>
             <div class="card__select mr-8">
               <select class="select select_small">
-                <option selected>全評価項目</option>
+                <option selected>評価項目</option>
                 <option>雰囲気#雰囲気･装飾</option>
                 <option>雰囲気#音楽･ノイズ</option>
                 <option>雰囲気#清潔感</option>
@@ -574,6 +574,14 @@
                 <option>サービス#駐車場の利便性</option>
                 <option>サービス#入店までの待ち時間</option>
                 <option>サービス#料理の提供時間</option>
+              </select>
+            </div>
+            <div class="card__select mr-8">
+              <select class="select select_small">
+                <option selected>評価+/-</option>
+                <option>評価ポジティブ</option>
+                <option>評価フラット</option>
+                <option>評価マイナス</option>
               </select>
             </div>
             <div class="card__select mr-8">
@@ -610,6 +618,14 @@
                     </svg>
                   </button>
                 </div>
+                <form class="form">
+                  <input class="form__input" type="text" name="search" placeholder="検索" required="required" autocomplete="off">
+                  <button class="form__button">
+                    <svg class="icon icon-search">
+                      <use xlink:href="#icon-search"></use>
+                    </svg>
+                  </button>
+                </form>
                 <div class="filters__group">
                   <div class="filters__item">
                     <div class="filters__item">
@@ -679,14 +695,6 @@
               </div>
               <div class="filters__overlay"></div>
             </div>
-            <form class="form mobile-hide tablet-hide ml-8">
-              <input class="form__input" type="text" name="search" placeholder="検索" required="required" autocomplete="off">
-              <button class="form__button">
-                <svg class="icon icon-search">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
-              </button>
-            </form>
             <button class="button-small card__button button-stroke ml-auto mobile-hide tablet-hide ml-16">
               <svg class="icon icon-download">
                 <use xlink:href="#icon-download"></use>

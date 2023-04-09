@@ -4471,9 +4471,19 @@ body.dark .button-square-stroke {
   color: #FCFCFC;
 }
 
+body.dark .status-orange-light {
+  background: var(--recopo-orange);
+  color: #1B1D1F;
+}
+
 .status-purple-light {
   background: var(--recopo-purple);
   color: #FCFCFC;
+}
+
+body.dark .status-purple-light {
+  background: var(--recopo-purple);
+  color: #1B1D1F;
 }
 
 .status-gray-light {
@@ -4486,9 +4496,19 @@ body.dark .button-square-stroke {
   color: #FCFCFC;
 }
 
+body.dark .status-red-light {
+  background: var(--recopo-pink);
+  color: #1B1D1F;
+}
+
 .status-yellow-light {
   background: var(--recopo-yellow);
   color: #FCFCFC;
+}
+
+body.dark .status-yellow-light {
+  background: var(--recopo-yellow);
+  color: #1B1D1F;
 }
 
 .status-green {
@@ -10466,6 +10486,17 @@ body.dark .share__input {
   border-radius: 12px;
   color: #1A1D1F;
 }
+body.dark .demography__item_1 {
+  display: block;
+  flex: 0 0 calc(33.333% - 12px);
+  border: 1px solid;
+  border-color: #272B30;
+  width: calc(33.333% - 12px);
+  margin: 0 6px;
+  padding: 26px 24px;
+  border-radius: 12px;
+  color: #1A1D1F;
+}
 
 .demography__item_2 {
   display: block;
@@ -10478,12 +10509,34 @@ body.dark .share__input {
   border-radius: 12px;
   color: #1A1D1F;
 }
+body.dark .demography__item_2 {
+  display: block;
+  flex: 0 0 calc(33.333% - 12px);
+  border: 1px solid;
+  border-color: #272B30;
+  width: calc(33.333% - 12px);
+  margin: 0 6px;
+  padding: 28px;
+  border-radius: 12px;
+  color: #1A1D1F;
+}
 
 .demography__item_3 {
   display: block;
   flex: 0 0 calc(33.333% - 12px);
   border: 1px solid;
   border-color: #EFEFEF;
+  width: calc(33.333% - 12px);
+  margin: 0 6px;
+  padding: -5px 0px;
+  border-radius: 12px;
+  color: #1A1D1F;
+}
+body.dark .demography__item_3 {
+  display: block;
+  flex: 0 0 calc(33.333% - 12px);
+  border: 1px solid;
+  border-color: #272B30;
   width: calc(33.333% - 12px);
   margin: 0 6px;
   padding: -5px 0px;
