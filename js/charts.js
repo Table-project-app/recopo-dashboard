@@ -67,6 +67,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           value: 0.6
         }
       }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
     }
   };
   var chart = document.querySelector('#evaluation-analysis');
@@ -125,6 +130,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       tooltip: {
         enabled: false
       }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
     }
   };
   var chart = document.querySelector('#answer-chart');
@@ -182,6 +192,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       tooltip: {
         enabled: false
       }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
     }
   };
   var chart = document.querySelector('#nps-chart');
@@ -223,6 +238,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           type: 'darken',
           value: 0.8
         }
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
       }
     }
   };
@@ -266,6 +286,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           value: 0.8
         }
       }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
     }
   };
   var chart = document.querySelector('#age-chart');
@@ -308,6 +333,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           value: 0.8
         }
       }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
     }
   };
   var chart = document.querySelector('#gender-chart');
@@ -349,6 +379,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           type: 'darken',
           value: 0.8
         }
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+       console.log(config.dataPointIndex)
       }
     }
   };
