@@ -574,16 +574,28 @@
           <div class="card__head">
             <div class="title-red card__title">店舗グループの作成</div>
           </div>
-          <div class="field">
-            <div class="field__label">店舗グループ名
-              <div class="tooltip required" title="店舗グループの名前です。お客さまには表示されません">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
+          <div class="settings__row">
+            <div class="field">
+              <div class="field__label">店舗グループ名
+                <div class="tooltip required" title="店舗グループの名前です。お客さまには表示されません">
+                  <svg class="icon icon-info">
+                    <use xlink:href="#icon-info"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="field__wrap">
+                <input class="field__input" type="text" name="title" placeholder="店舗グループの名前です。お客さまには表示されません" value="" required>
               </div>
             </div>
-            <div class="field__wrap">
-              <input class="field__input" type="text" name="title" placeholder="店舗グループの名前です。お客さまには表示されません" value="" required>
+            <div class="field">
+              <div class="field__label">グループタイプ
+              </div>
+              <div class="field__wrap">
+                <select class="select">
+                  <option>エリア</option>
+                  <option>SV</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="field">
