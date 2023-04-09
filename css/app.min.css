@@ -22517,11 +22517,11 @@ body.dark .score_text_p {
 }
 
 .score_text_n {
-  color: #A8ADB1;
+  color: #9A9FA5;
 }
 
 body.dark .score_text_n {
-  color: #A8ADB1;
+  color: #9A9FA5;
 }
 
 @media only screen and (max-width: 767px) {
