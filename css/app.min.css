@@ -6238,7 +6238,7 @@ body.dark .card {
 
 .card__chart_new-customers {
   height: 184px;
-  margin-top: -10px;
+  margin-top: 0px;
   margin-bottom: -34px;
 }
 
@@ -7945,6 +7945,16 @@ body.dark .overview__link.active {
   display: flex;
   align-items: center;
   vertical-align: middle;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  color: #6F767E;
+}
+
+.demography__subtitle {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
   margin: -10px 0 0px -10px;
   font-size: 13px;
   font-weight: 600;
@@ -7952,7 +7962,7 @@ body.dark .overview__link.active {
   color: #6F767E;
 }
 
-.overview__subtitle_3 {
+.demography__subtitle_3 {
   display: flex;
   align-items: center;
   vertical-align: middle;
