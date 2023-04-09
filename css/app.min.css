@@ -15651,7 +15651,7 @@ body.dark .message__content {
   background: var(--recopo-white);
   top: 0px;
   flex-shrink: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 body.dark .customer__row:first-child {
@@ -15659,7 +15659,7 @@ body.dark .customer__row:first-child {
   background: var(--recopo-dark);
   top: 0px;
   flex-shrink: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -15771,6 +15771,8 @@ body.dark .customer__col:after {
 
 .customer__row:first-child .customer__col:first-child {
   background: var(--recopo-white);
+  position: sticky;
+  top: 0;
   z-index: 2;
 }
 
@@ -15781,26 +15783,26 @@ body.dark .customer__row:first-child .customer__col:first-child {
 
 .customer__row:not(:first-child) .customer__col:first-child {
   background: var(--recopo-white);
-  z-index: 2;
+  z-index: 1;
 }
 
 body.dark .customer__row:not(:first-child) .customer__col:first-child {
   background: var(--recopo-dark);
-  z-index: 2;
+  z-index: 1;
 }
 
 .customer__row:not(:first-child) .customer__col:first-child:hover {
   background: #F4F4F4;
   border-radius: 8px;
   transition: all .2s;
-  z-index: 2;
+  z-index: 1;
 }
 
 body.dark .customer__row:not(:first-child) .customer__col:first-child:hover {
   background: #272B30;
   border-radius: 8px;
   transition: all .2s;
-  z-index: 2;
+  z-index: 1;
 }
 
 
