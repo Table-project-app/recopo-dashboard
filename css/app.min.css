@@ -15813,7 +15813,6 @@ body.dark .customer__row:not(:first-child) .customer__col:first-child:hover {
   }
   .customer__col:nth-child(3), .customer__col:nth-child(4) {
     margin-left: auto;
-    padding-left: 16px;
     min-width: 50px;
     display: block !important;
   }
@@ -22513,6 +22512,20 @@ body.dark .column__btns .column__button_follow.active {
   color: var(--recopo-yellow);
 }
 
+body.dark .score_text_p {
+  color: var(--recopo-yellow);
+}
+
 .score_text_n {
   color: #A8ADB1;
+}
+
+body.dark .score_text_n {
+  color: #A8ADB1;
+}
+
+@media only screen and (max-width: 767px) {
+  .refunds .card__select {
+    margin: 0px;
+  }
 }

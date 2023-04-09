@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>店舗一覧 - Recopoダッシュボード</title>
+  <title>店舗グループ - Recopoダッシュボード</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -343,13 +343,13 @@
           </svg>
           選択式アンケートスコア
         </a>
-        <a class="sidebar__item" href="groups.html">
+        <a class="sidebar__item active" href="groups.html">
           <svg class="icon icon-category">
             <use xlink:href="#icon-category"></use>
           </svg>
           店舗グループ
         </a>
-        <a class="sidebar__item active" href="stores.html">
+        <a class="sidebar__item" href="stores.html">
           <svg class="icon icon-store">
             <use xlink:href="#icon-store"></use>
           </svg>
@@ -560,7 +560,7 @@
           <svg class="icon icon-store">
             <use xlink:href="#icon-store"></use>
           </svg>
-          <div class="h3">店舗一覧</div>
+          <div class="h3">店舗グループ</div>
         </div>
         <div class="refunds customer card">
           <div class="card__head">
@@ -571,15 +571,14 @@
                 <option>万吉カレーうどん</option>
               </select>
             </div>
-            <form class="form mobile-hide tablet-hide mr-8">
-              <input class="form__input" type="text" name="search" placeholder="店舗名で検索" required="required" autocomplete="off">
-              <button class="form__button">
-                <svg class="icon icon-search">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
-              </button>
-            </form>
-            <div class="card__select mr-8">
+            <div class="card__select ml-8">
+              <select class="select select_small">
+                <option selected>グループタイプ</option>
+                <option>エリア</option>
+                <option>SV</option>
+              </select>
+            </div>
+            <div class="card__select ml-auto mr-8">
               <select class="select select_small">
                 <option selected>直近7日</option>
                 <option>直近30日</option>
@@ -599,10 +598,6 @@
                 <option>回答数 ↑</option>
               </select>
             </div>
-            <a class="button-stroke button-small card__button ml-16 mobile-hide tablet-hide ml-auto" data-popup=".js-popup-addstore">
-              <svg class="icon icon-add">
-                <use xlink:href="#icon-add"></use>
-              </svg><span>新規追加</span></a>
           </div>
 
           <div class="table-responsive">
@@ -611,7 +606,7 @@
                 <div class="customer__wrapper">
                   <div class="customer__table">
                     <div class="customer__row">
-                      <div class="customer__col" style="text-align:left !important">店舗名</div>
+                      <div class="customer__col" style="text-align:left !important">グループ名</div>
                       <div class="customer__col">回答数</div>
                       <div class="customer__col">NPS</div>
                       <div class="customer__col">総合スコア</div>
@@ -639,8 +634,8 @@
                         <div class="customer__item">
                           <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
                           <div class="customer__description" style="text-align:left !important">
-                            <div class="customer__user">牛鍋 吉田屋 八丁堀店</div>
-                            <div class="customer__login">東京都の店舗</div>
+                            <div class="customer__user">牛鍋 吉田屋 - 東京都</div>
+                            <div class="customer__login">エリア</div>
                           </div>
                         </div>
                       </div>
@@ -676,8 +671,8 @@
                         <div class="customer__item">
                           <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
                           <div class="customer__description" style="text-align:left !important">
-                            <div class="customer__user">牛鍋 吉田屋 青山店</div>
-                            <div class="customer__login">東京都の店舗</div>
+                            <div class="customer__user">牛鍋 吉田屋 - 京都府</div>
+                            <div class="customer__login">エリア</div>
                           </div>
                         </div>
                       </div>
@@ -712,8 +707,8 @@
                         <div class="customer__item">
                           <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
                           <div class="customer__description" style="text-align:left !important">
-                            <div class="customer__user">牛鍋 吉田屋 池袋店</div>
-                            <div class="customer__login">東京都の店舗</div>
+                            <div class="customer__user">牛鍋 吉田屋 - 大阪府</div>
+                            <div class="customer__login">エリア</div>
                           </div>
                         </div>
                       </div>
@@ -748,8 +743,8 @@
                         <div class="customer__item">
                           <div class="customer__avatar"><img src="img/content/mankichi.jpg" alt="万吉スープカレー"></div>
                           <div class="customer__description" style="text-align:left !important">
-                            <div class="customer__user">万吉スープカレー 心斎橋店</div>
-                            <div class="customer__login">大阪府の店舗</div>
+                            <div class="customer__user">万吉スープカレー - 東京都</div>
+                            <div class="customer__login">エリア</div>
                           </div>
                         </div>
                       </div>
@@ -782,10 +777,10 @@
                     <a class="customer__row" href="store.html">
                       <div class="customer__col">
                         <div class="customer__item">
-                          <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
+                          <div class="customer__avatar"><img src="img/content/mankichi.jpg" alt="万吉カレーうどん"></div>
                           <div class="customer__description" style="text-align:left !important">
-                            <div class="customer__user">牛鍋 吉田屋 丸の内店</div>
-                            <div class="customer__login">東京都の店舗</div>
+                            <div class="customer__user">万吉スープカレー - 京都府</div>
+                            <div class="customer__login">エリア</div>
                           </div>
                         </div>
                       </div>
@@ -818,10 +813,10 @@
                     <a class="customer__row" href="store.html">
                       <div class="customer__col">
                         <div class="customer__item">
-                          <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
+                          <div class="customer__avatar"><img src="img/content/mankichi.jpg" alt="万吉カレーうどん"></div>
                           <div class="customer__description" style="text-align:left !important">
-                            <div class="customer__user">万吉スープカレー 梅田店</div>
-                            <div class="customer__login">大阪府の店舗</div>
+                            <div class="customer__user">万吉スープカレー - 大阪府</div>
+                            <div class="customer__login">エリア</div>
                           </div>
                         </div>
                       </div>
@@ -857,8 +852,8 @@
                         <div class="customer__item">
                           <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
                           <div class="customer__description" style="text-align:left !important">
-                            <div class="customer__user">牛鍋 吉田屋 代々木店</div>
-                            <div class="customer__login">東京都の店舗</div>
+                            <div class="customer__user">牛鍋 吉田屋 - SV1</div>
+                            <div class="customer__login">SV</div>
                           </div>
                         </div>
                       </div>
@@ -892,10 +887,10 @@
                     <a class="customer__row" href="store.html">
                       <div class="customer__col">
                         <div class="customer__item">
-                          <div class="customer__avatar"><img src="img/content/mankichi.jpg" alt="万吉スープカレー"></div>
+                          <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
                           <div class="customer__description" style="text-align:left !important">
-                            <div class="customer__user">万吉スープカレー 京都駅前店</div>
-                            <div class="customer__login">京都府の店舗</div>
+                            <div class="customer__user">牛鍋 吉田屋 - SV2</div>
+                            <div class="customer__login">SV</div>
                           </div>
                         </div>
                       </div>
@@ -929,10 +924,10 @@
                     <a class="customer__row" href="store.html">
                       <div class="customer__col">
                         <div class="customer__item">
-                          <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
+                          <div class="customer__avatar"><img src="img/content/mankichi.jpg" alt="万吉スープカレー"></div>
                           <div class="customer__description" style="text-align:left !important">
-                            <div class="customer__user">牛鍋 吉田屋 北新地店</div>
-                            <div class="customer__login">大阪府の店舗</div>
+                            <div class="customer__user">万吉カレーうどん - SV1</div>
+                            <div class="customer__login">SV</div>
                           </div>
                         </div>
                       </div>
