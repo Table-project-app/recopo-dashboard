@@ -3875,7 +3875,7 @@ body.dark .apexcharts-canvas .apexcharts-ycrosshairs.apexcharts-active {
 }
 
 .apexcharts-canvas .apexcharts-legend-series {
-  margin-top: 6px !important;
+  margin-top: 4px !important;
 }
 
 .apexcharts-canvas .apexcharts-legend-text {
@@ -6238,7 +6238,14 @@ body.dark .card {
 
 .card__chart_new-customers {
   height: 184px;
-  margin-bottom: -30px;
+  margin-top: -10px;
+  margin-bottom: -34px;
+}
+
+.card__chart_demography {
+  height: 164px;
+  font-size: 8px !important;
+  margin-bottom: -14px;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -7938,7 +7945,18 @@ body.dark .overview__link.active {
   display: flex;
   align-items: center;
   vertical-align: middle;
-  margin-bottom: 4px;
+  margin: -10px 0 0px -10px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  color: #6F767E;
+}
+
+.overview__subtitle_3 {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  margin: 20px 0 0 20px;
   font-size: 13px;
   font-weight: 600;
   line-height: 1;
@@ -10389,13 +10407,13 @@ body.dark .share__input {
   height: 24px;
 }
 
-.stock__list {
+.demography__list {
   display: flex;
   margin: 0 -6px;
 }
 
 @media only screen and (max-width: 1023px) {
-  .stock__list {
+  .demography__list {
     margin: 0 -24px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -10403,12 +10421,12 @@ body.dark .share__input {
     scrollbar-width: none;
   }
 
-  .stock__list::-webkit-scrollbar {
+  .demography__list::-webkit-scrollbar {
     display: none;
   }
 
-  .stock__list:before,
-  .stock__list:after {
+  .demography__list:before,
+  .demography__list:after {
     content: "";
     flex-shrink: 0;
     width: 24px;
@@ -10417,58 +10435,99 @@ body.dark .share__input {
 }
 
 @media only screen and (max-width: 767px) {
-  .stock__list {
+  .demography__list {
     margin: 0 -16px;
   }
 
-  .stock__list:before,
-  .stock__list:after {
+  .demography__list:before,
+  .demography__list:after {
     width: 16px;
   }
 }
 
-.stock__item {
+.demography__item_1 {
   display: block;
   flex: 0 0 calc(33.333% - 12px);
+  border: 1px solid;
+  border-color: #EFEFEF;
   width: calc(33.333% - 12px);
   margin: 0 6px;
-  padding: 32px;
+  padding: 26px 24px;
+  border-radius: 12px;
+  color: #1A1D1F;
+}
+
+.demography__item_2 {
+  display: block;
+  flex: 0 0 calc(33.333% - 12px);
+  border: 1px solid;
+  border-color: #EFEFEF;
+  width: calc(33.333% - 12px);
+  margin: 0 6px;
+  padding: 28px;
+  border-radius: 12px;
+  color: #1A1D1F;
+}
+
+.demography__item_3 {
+  display: block;
+  flex: 0 0 calc(33.333% - 12px);
+  border: 1px solid;
+  border-color: #EFEFEF;
+  width: calc(33.333% - 12px);
+  margin: 0 6px;
+  padding: -5px 0px;
   border-radius: 12px;
   color: #1A1D1F;
 }
 
 @media only screen and (max-width: 1023px) {
-  .stock__item {
-    flex: 0 0 295px;
-    width: 295px;
+  .demography__item_1 {
+    flex: 0 0 315px;
+    width: 315px;
+    margin: 0 12px 0 0;
+  }
+  .demography__item_2 {
+    flex: 0 0 315px;
+    width: 315px;
+    margin: 0 12px 0 0;
+  }
+  .demography__item_3 {
+    flex: 0 0 315px;
+    width: 315px;
     margin: 0;
   }
 
-  .stock__item:not(:last-child) {
-    margin-right: 12px;
-  }
 }
 
 @media only screen and (max-width: 767px) {
-  .stock__item {
-    flex: 0 0 285px;
-    width: 285px;
+  .demography__item_1 {
+    flex: 0 0 315px;
+    width: 315px;
+  }
+  .demography__item_2 {
+    flex: 0 0 315px;
+    width: 315px;
+  }
+  .demography__item_3 {
+    flex: 0 0 315px;
+    width: 315px;
   }
 }
 
-body.dark .stock__item {
+body.dark .demography__item {
   color: #EFEFEF;
 }
 
-body.dark .stock__item:nth-child(2n+1) {
+body.dark .demography__item:nth-child(2n+1) {
   background: rgba(167, 170, 247, 0.15) !important;
 }
 
-body.dark .stock__item:nth-child(2n) {
+body.dark .demography__item:nth-child(2n) {
   background: rgba(177, 229, 252, 0.1) !important;
 }
 
-.stock__icon {
+.demography__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10479,25 +10538,25 @@ body.dark .stock__item:nth-child(2n) {
   background: #1A1D1F;
 }
 
-.stock__icon .icon {
+.demography__icon .icon {
   width: 24px;
   height: 24px;
   fill: #FCFCFC;
 }
 
-body.dark .stock__icon {
+body.dark .demography__icon {
   background: #FCFCFC;
 }
 
-body.dark .stock__icon .icon {
+body.dark .demography__icon .icon {
   fill: #1A1D1F;
 }
 
-.stock__line {
+.demography__line {
   display: flex;
 }
 
-.stock__category {
+.demography__category {
   display: flex;
   align-items: center;
   margin-bottom: 4px;
@@ -10507,19 +10566,19 @@ body.dark .stock__icon .icon {
   color: #33383F;
 }
 
-body.dark .stock__category {
+body.dark .demography__category {
   color: #EFEFEF;
 }
 
-.stock .tooltip .icon {
+.demography .tooltip .icon {
   fill: #33383F;
 }
 
-body.dark .stock .tooltip .icon {
+body.dark .demography .tooltip .icon {
   fill: #EFEFEF;
 }
 
-.stock__counter {
+.demography__counter {
   margin-bottom: 4px;
   font-size: 48px;
   font-weight: 600;
@@ -10527,7 +10586,7 @@ body.dark .stock .tooltip .icon {
   letter-spacing: -.03em;
 }
 
-.stock__indicator {
+.demography__indicator {
   display: inline-flex;
   align-items: center;
   border-radius: 8px;
@@ -10536,18 +10595,18 @@ body.dark .stock .tooltip .icon {
   color: #6F767E;
 }
 
-body.dark .stock__indicator {
+body.dark .demography__indicator {
   background: #1A1D1F;
 }
 
-.stock__indicator span {
+.demography__indicator span {
   margin-left: 4px;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.33333;
 }
 
-.stock__chart {
+.demography__chart {
   width: 80px;
   height: 80px;
   margin-left: auto;

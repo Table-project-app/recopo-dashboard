@@ -200,7 +200,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       type: 'donut'
     },
     legend: {
-      show: true
+      show: true,
+      onItemClick: {
+        toggleDataSeries: true
+      }
     },
     dataLabels: {
       enabled: false
@@ -208,7 +211,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     plotOptions: {
       pie: {
         donut: {
-          size: '58%'
+          size: '54%'
         }
       }
     },
@@ -224,6 +227,132 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   };
   var chart = document.querySelector('#visits-chart');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// age
+
+(function() {
+  var options = {
+    series: [94, 120, 79, 28, 2],
+    chart: {
+      type: 'donut',
+    },
+    legend: {
+      show: true,
+      onItemClick: {
+        toggleDataSeries: true
+      },
+    },
+    dataLabels: {
+      enabled: false
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '54%'
+        }
+      }
+    },
+    labels: ['10-24歳', '25-39歳', '40-54歳', '55-69歳', '70歳-'],
+    colors: ['#C63DC6', '#F96D29', '#FFA50E', '#FF507C', '#10C268'],
+    states: {
+      hover: {
+        filter: {
+          type: 'darken',
+          value: 0.8
+        }
+      }
+    }
+  };
+  var chart = document.querySelector('#age-chart');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// gender
+
+(function() {
+  var options = {
+    series: [263, 239, 4],
+    chart: {
+      type: 'donut'
+    },
+    legend: {
+      show: true,
+      onItemClick: {
+        toggleDataSeries: true
+      },
+    },
+    dataLabels: {
+      enabled: false
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '54%'
+        }
+      }
+    },
+    labels: ['男性', '女性', '無回答'],
+    colors: ['#F96D29', '#FF507C', '#A8ADB1'],
+    states: {
+      hover: {
+        filter: {
+          type: 'darken',
+          value: 0.8
+        }
+      }
+    }
+  };
+  var chart = document.querySelector('#gender-chart');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// occupation
+
+(function() {
+  var options = {
+    series: [94, 34, 45, 49, 28, 2],
+    chart: {
+      type: 'donut',
+    },
+    legend: {
+      show: true,
+      onItemClick: {
+        toggleDataSeries: true
+      },
+    },
+    dataLabels: {
+      enabled: false
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '54%'
+        }
+      }
+    },
+    labels: ['会社員', '会社役員･自営業', 'パート･アルバイト', '学生', '専業主婦･主夫', '無職'],
+    colors: ['#C63DC6', '#F96D29', '#FFA50E', '#FF507C', '#10C268', '#A8ADB1'],
+    states: {
+      hover: {
+        filter: {
+          type: 'darken',
+          value: 0.8
+        }
+      }
+    }
+  };
+  var chart = document.querySelector('#occupation-chart');
 
   if (chart != null) {
     new ApexCharts(chart, options).render();
