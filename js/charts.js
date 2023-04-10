@@ -654,7 +654,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       show: true,
       position: 'right',
     },
-    colors: ['rgba(154, 159, 165, .6)', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29'],
+    colors: ['rgba(154, 159, 165, .6)', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29'],
     series: [{
       name: '全グループ平均',
       data: [8.5, 7.7, 7.2, 7.5, 8.1, 8.7, 6.9]
