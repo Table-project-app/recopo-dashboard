@@ -897,3 +897,90 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     new ApexCharts(chart, options).render();
   }
 })(); 
+
+// Select chart store comparison
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: true,
+      position: 'right',
+    },
+    colors: ['rgba(154, 159, 165, .6)', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6'],
+    series: [{
+      name: '全グループ平均',
+      data: [85, 77, 72, 75, 81, 87, 69]
+      }, {
+      name: '牛鍋 吉田屋 八丁堀店',
+      data: [65, 67, 72, 65, 81, 87, 79]
+      }, {
+      name: '牛鍋 吉田屋 青山店',
+      data: [82, 87, 82, 95, 59, 95, 89]
+      }, {
+      name: '牛鍋 吉田屋 池袋店',
+      data: [75, 77, 92, 55, 71, 67, 69]
+      }, {
+      name: '牛鍋 吉田屋 丸の内店',
+      data: [65, 67, 82, 96, 81, 87, 58]
+      }, {
+      name: '牛鍋 吉田屋 代々木店',
+      data: [65, 97, 82, 59, 81, 84, 79]
+      }, {
+      name: '牛鍋 吉田屋 北新地店',
+      data: [73, 79, 62, 65, 82, 97, 87]
+      }, {
+      name: '万吉カレーうどん 心斎橋店',
+      data: [85, 87, 82, 95, 91, 87, 89]
+      }, {
+      name: '万吉カレーうどん 京都駅前店',
+      data: [92, 87, 92, 95, 91, 87, 69]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'Inter, sans-serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#select-comp-store');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 

@@ -15892,7 +15892,7 @@ body.dark .customer__row:not(:first-child) .score__col:first-child:hover {
     min-width: 240px;
     display: block;
   }
-  .customer__col:nth-child(3), .customer__col:nth-child(4) {
+  .customer__col:nth-child(3) {
     margin-left: auto;
     min-width: 50px;
     display: block !important;
