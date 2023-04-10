@@ -562,6 +562,60 @@
           </svg>
           <div class="h3">店舗グループ</div>
         </div>
+        <div class="card js-tabs">
+          <div class="card__head">
+            <div class="mr-auto">
+              <button class="products__link js-tabs-link active">NPS</button>
+              <button class="products__link js-tabs-link">総合スコア</button>
+              <button class="products__link js-tabs-link">回答数</button>
+            </div>
+            <div class="card__select">
+              <select class="select select_small">
+                <option selected>ブランド</option>
+                <option>牛鍋 吉田屋</option>
+                <option>万吉カレーうどん</option>
+              </select>
+            </div>
+            <div class="card__select ml-8">
+              <select class="select select_small">
+                <option selected>グループタイプ</option>
+                <option>エリア</option>
+                <option>SV</option>
+              </select>
+            </div>
+            <select class="select select_small ml-8">
+              <option selected>直近7日</option>
+              <option>直近30日</option>
+              <option>直近3ヶ月</option>
+              <option>直近1年</option>
+              <option>全期間</option>
+            </select>
+            <select class="select select_small ml-8">
+              <option selected>日単位</option>
+              <option>週単位</option>
+              <option>月単位</option>
+            </select>
+          </div>
+          <div class="overview">
+            <div class="overview__container">
+              <div class="overview__item js-tabs-item" style="display: block;">
+                <div class="comparison__chart">
+                  <div id="nps-comp-group"></div>
+                </div>
+              </div>
+              <div class="overview__item js-tabs-item">
+                <div class="comparison__chart">
+                  <div id="score-comp-group"></div>
+                </div>
+              </div>
+              <div class="overview__item js-tabs-item" style="display: block;">
+                <div class="comparison__chart">
+                  <div id="reviews-comp-group"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="refunds customer card">
           <div class="card__head">
             <div class="card__select">

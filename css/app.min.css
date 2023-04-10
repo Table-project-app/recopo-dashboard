@@ -8060,6 +8060,17 @@ body.dark .overview .balance {
   }
 }
 
+.comparison__chart {
+  width: auto;
+  height: 286px;
+}
+
+@media only screen and (max-width: 767px) {
+  .overview__chart {
+    height: 296px;
+  }
+}
+
 .overview__chart_snapshot {
   height: 329px;
   margin-left: -10px;

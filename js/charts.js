@@ -393,3 +393,507 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     new ApexCharts(chart, options).render();
   }
 })(); 
+
+// NPS chart group comparison
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: true,
+      position: 'right',
+    },
+    colors: ['rgba(154, 159, 165, .6)', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29'],
+    series: [{
+      name: '全グループ平均',
+      data: [6.5, 5.7, 6.2, 7.5, 8.1, 6.7, 5.9]
+      }, {
+      name: '牛鍋 吉田屋 - 東京都',
+      data: [6.5, 6.7, 5.2, 3.5, 6.1, 9.7, 4.9]
+      }, {
+      name: '牛鍋 吉田屋 - 京都府',
+      data: [8.5, 8.7, 8.2, 9.5, 9.1, 8.7, 8.9]
+      }, {
+      name: '牛鍋 吉田屋 - 大阪府',
+      data: [5.5, 7.7, 9.2, 5.5, 5.1, 4.7, 6.9]
+      }, {
+      name: '万吉カレーうどん - 東京都',
+      data: [7.5, 6.7, 8.2, 6.5, 7.1, 5.7, 9.9]
+      }, {
+      name: '万吉カレーうどん - 京都府',
+      data: [4.5, 5.7, 3.2, 6.5, 6.1, 7.7, 7.9]
+      }, {
+      name: '万吉カレーうどん - 大阪府',
+      data: [7.5, 6.7, 5.2, 4.5, 3.1, 4.7, 5.9]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'Inter, sans-serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#nps-comp-group');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// Score chart group comparison
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: true,
+      position: 'right',
+    },
+    colors: ['rgba(154, 159, 165, .6)', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E'],
+    series: [{
+      name: '全グループ平均',
+      data: [85, 77, 72, 75, 81, 87, 69]
+      }, {
+      name: '牛鍋 吉田屋 - 東京都',
+      data: [65, 67, 72, 65, 81, 87, 79]
+      }, {
+      name: '牛鍋 吉田屋 - 京都府',
+      data: [85, 87, 82, 95, 91, 87, 89]
+      }, {
+      name: '牛鍋 吉田屋 - 大阪府',
+      data: [75, 77, 92, 55, 71, 67, 69]
+      }, {
+      name: '万吉カレーうどん - 東京都',
+      data: [75, 67, 82, 65, 71, 77, 99]
+      }, {
+      name: '万吉カレーうどん - 京都府',
+      data: [65, 57, 62, 65, 81, 77, 79]
+      }, {
+      name: '万吉カレーうどん - 大阪府',
+      data: [75, 67, 72, 65, 81, 87, 79]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'Inter, sans-serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#score-comp-group');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// Reviews chart group comparison
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: true,
+      position: 'right',
+    },
+    colors: ['rgba(154, 159, 165, .6)', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C'],
+    series: [{
+      name: '全グループ平均',
+      data: [84, 57, 62, 75, 81, 67, 59]
+      }, {
+      name: '牛鍋 吉田屋 - 東京都',
+      data: [65, 67, 52, 35, 61, 97, 49]
+      }, {
+      name: '牛鍋 吉田屋 - 京都府',
+      data: [85, 87, 82, 95, 91, 87, 89]
+      }, {
+      name: '牛鍋 吉田屋 - 大阪府',
+      data: [55, 77, 92, 55, 51, 47, 69]
+      }, {
+      name: '万吉カレーうどん - 東京都',
+      data: [75, 67, 82, 65, 71, 57, 99]
+      }, {
+      name: '万吉カレーうどん - 京都府',
+      data: [45, 57, 32, 65, 61, 77, 79]
+      }, {
+      name: '万吉カレーうどん - 大阪府',
+      data: [75, 67, 52, 45, 31, 47, 59]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'Inter, sans-serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#reviews-comp-group');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// NPS chart store comparison
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: true,
+      position: 'right',
+    },
+    colors: ['rgba(154, 159, 165, .6)', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29'],
+    series: [{
+      name: '全グループ平均',
+      data: [8.5, 7.7, 7.2, 7.5, 8.1, 8.7, 6.9]
+      }, {
+      name: '牛鍋 吉田屋 八丁堀店',
+      data: [6.5, 6.7, 7.2, 6.5, 8.1, 8.7, 7.9]
+      }, {
+      name: '牛鍋 吉田屋 青山店',
+      data: [8.2, 8.7, 8.2, 9.5, 5.9, 9.5, 8.9]
+      }, {
+      name: '牛鍋 吉田屋 池袋店',
+      data: [7.5, 7.7, 9.2, 5.5, 7.1, 6.7, 6.9]
+      }, {
+      name: '牛鍋 吉田屋 丸の内店',
+      data: [6.5, 6.7, 8.2, 9.6, 8.1, 8.7, 5.8]
+      }, {
+      name: '牛鍋 吉田屋 代々木店',
+      data: [6.5, 9.7, 8.2, 5.9, 8.1, 8.4, 7.9]
+      }, {
+      name: '牛鍋 吉田屋 北新地店',
+      data: [7.3, 7.9, 6.2, 6.5, 8.2, 9.7, 8.7]
+      }, {
+      name: '万吉カレーうどん 心斎橋店',
+      data: [8.5, 8.7, 8.2, 9.5, 9.1, 8.7, 8.9]
+      }, {
+      name: '万吉カレーうどん 京都駅前店',
+      data: [9.2, 8.7, 9.2, 9.5, 9.1, 8.7, 6.9]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'Inter, sans-serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#nps-comp-store');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// Score chart store comparison
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: true,
+      position: 'right',
+    },
+    colors: ['rgba(154, 159, 165, .6)', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E'],
+    series: [{
+      name: '全グループ平均',
+      data: [85, 77, 72, 75, 81, 87, 69]
+      }, {
+      name: '牛鍋 吉田屋 八丁堀店',
+      data: [65, 67, 72, 65, 81, 87, 79]
+      }, {
+      name: '牛鍋 吉田屋 青山店',
+      data: [82, 87, 82, 95, 59, 95, 89]
+      }, {
+      name: '牛鍋 吉田屋 池袋店',
+      data: [75, 77, 92, 55, 71, 67, 69]
+      }, {
+      name: '牛鍋 吉田屋 丸の内店',
+      data: [65, 67, 82, 96, 81, 87, 58]
+      }, {
+      name: '牛鍋 吉田屋 代々木店',
+      data: [65, 97, 82, 59, 81, 84, 79]
+      }, {
+      name: '牛鍋 吉田屋 北新地店',
+      data: [73, 79, 62, 65, 82, 97, 87]
+      }, {
+      name: '万吉カレーうどん 心斎橋店',
+      data: [85, 87, 82, 95, 91, 87, 89]
+      }, {
+      name: '万吉カレーうどん 京都駅前店',
+      data: [92, 87, 92, 95, 91, 87, 69]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'Inter, sans-serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#score-comp-store');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// Reviews chart store comparison
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: true,
+      position: 'right',
+    },
+    colors: ['rgba(154, 159, 165, .6)', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C'],
+    series: [{
+      name: '全グループ平均',
+      data: [85, 77, 72, 75, 81, 87, 69]
+      }, {
+      name: '牛鍋 吉田屋 八丁堀店',
+      data: [65, 67, 72, 65, 81, 87, 79]
+      }, {
+      name: '牛鍋 吉田屋 青山店',
+      data: [82, 87, 82, 95, 59, 95, 89]
+      }, {
+      name: '牛鍋 吉田屋 池袋店',
+      data: [75, 77, 92, 55, 71, 67, 69]
+      }, {
+      name: '牛鍋 吉田屋 丸の内店',
+      data: [65, 67, 82, 96, 81, 87, 58]
+      }, {
+      name: '牛鍋 吉田屋 代々木店',
+      data: [65, 97, 82, 59, 81, 84, 79]
+      }, {
+      name: '牛鍋 吉田屋 北新地店',
+      data: [73, 79, 62, 65, 82, 97, 87]
+      }, {
+      name: '万吉カレーうどん 心斎橋店',
+      data: [85, 87, 82, 95, 91, 87, 89]
+      }, {
+      name: '万吉カレーうどん 京都駅前店',
+      data: [92, 87, 92, 95, 91, 87, 69]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'Inter, sans-serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#reviews-comp-store');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
