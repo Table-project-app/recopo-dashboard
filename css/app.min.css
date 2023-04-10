@@ -6254,7 +6254,7 @@ body.dark .card {
 }
 
 .card__chart_select-analysis {
-  height: 360px;
+  height: 300px;
   margin-left: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -8069,7 +8069,7 @@ body.dark .overview .balance {
 
 .comparison__chart {
   width: auto;
-  height: 286px;
+  height: 300px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -15918,6 +15918,7 @@ body.dark .customer__row:not(:first-child) .score__col:first-child:hover {
   }
   .score__col {
     display: none;
+    padding: 0;
   }
 }
 
@@ -19330,7 +19331,6 @@ body.dark .creators {
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #EFEFEF;
 }
 
 @media only screen and (max-width: 767px) {
@@ -19340,7 +19340,6 @@ body.dark .creators {
 }
 
 body.dark .creators__head {
-  border-color: #272B30;
 }
 
 .creators__nav {

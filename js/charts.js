@@ -656,7 +656,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     colors: ['rgba(154, 159, 165, .6)', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29'],
     series: [{
-      name: '全グループ平均',
+      name: '全店舗平均',
       data: [8.5, 7.7, 7.2, 7.5, 8.1, 8.7, 6.9]
       }, {
       name: '牛鍋 吉田屋 八丁堀店',
@@ -743,7 +743,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     colors: ['rgba(154, 159, 165, .6)', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E'],
     series: [{
-      name: '全グループ平均',
+      name: '全店舗平均',
       data: [85, 77, 72, 75, 81, 87, 69]
       }, {
       name: '牛鍋 吉田屋 八丁堀店',
@@ -830,7 +830,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     colors: ['rgba(154, 159, 165, .6)', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C'],
     series: [{
-      name: '全グループ平均',
+      name: '全店舗平均',
       data: [85, 77, 72, 75, 81, 87, 69]
       }, {
       name: '牛鍋 吉田屋 八丁堀店',
@@ -917,7 +917,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     colors: ['rgba(154, 159, 165, .6)', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6'],
     series: [{
-      name: '全グループ平均',
+      name: '全店舗平均',
       data: [85, 77, 72, 75, 81, 87, 69]
       }, {
       name: '牛鍋 吉田屋 八丁堀店',
