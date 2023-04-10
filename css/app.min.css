@@ -19364,6 +19364,12 @@ body.dark .creators__head {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .products__link {
+    flex-grow: 1;
+  }
+}
+
 .creators__link:hover,
 .creators__link.active {
   color: #1A1D1F;
