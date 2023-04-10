@@ -4531,6 +4531,16 @@ body.dark .status-orange {
   color: #1A1D1F;
 }
 
+.status-pink {
+  background: var(--recopo-pink);
+  color: #FCFCFC;
+}
+
+body.dark .status-pink {
+  background: var(--recopo-pink);
+  color: #1A1D1F;
+}
+
 .status-red {
   background: #FFE7E4;
   color: var(--recopo-pink);
@@ -4547,7 +4557,12 @@ body.dark .status-red {
 
 .status-purple {
   background: var(--recopo-purple);
-  color: #8E59FF;
+  color: #FCFCFC;
+}
+
+body.dark .status-purple {
+  background: var(--recopo-purple);
+  color: #1B1D1F;
 }
 
 .status-blue {
@@ -22522,6 +22537,14 @@ body.dark .score_text_p {
 
 body.dark .score_text_n {
   color: #9A9FA5;
+}
+
+.score_text_s {
+  color: var(--recopo-purple);
+}
+
+body.dark .score_text_s {
+  color: var(--recopo-purple);
 }
 
 @media only screen and (max-width: 767px) {
