@@ -748,103 +748,11 @@
         <div class="refunds card">
           <div class="card__head">
             <div class="title-orange card__title">直近のアンケート回答</div>
-            <div class="filters">
-              <button class="button-square-stroke button-small filters__head">
-                <svg class="icon icon-filter">
-                  <use xlink:href="#icon-filter"></use>
-                </svg>
-              </button>
-              <div class="filters__body">
-                <div class="filters__top">
-                  <div class="title-orange filters__title">フィルター条件を設定</div>
-                  <button class="filters__close">
-                    <svg class="icon icon-close">
-                      <use xlink:href="#icon-close"></use>
-                    </svg>
-                  </button>
-                </div>
-                <form class="form">
-                  <input class="form__input" type="text" name="search" placeholder="検索" required="required" autocomplete="off">
-                  <button class="form__button">
-                    <svg class="icon icon-search">
-                      <use xlink:href="#icon-search"></use>
-                    </svg>
-                  </button>
-                </form>
-                <div class="filters__group">
-                  <div class="filters__item">
-                    <div class="filters__item">
-                      <div class="filters__label">NPS</div>
-                      <div class="filters__range js-slider" data-min="1" data-max="10" data-start="1" data-end="10" data-step="1" data-tooltips="true" data-prefix=""></div>
-                    </div>
-                  </div>
-                  <div class="filters__item">
-                    <div class="field">
-                      <div class="field__label">回答日時</div>
-                      <div class="field__wrap">
-                        <select class="select">
-                          <option selected>直近7日</option>
-                          <option>直近30日</option>
-                          <option>直近3ヶ月</option>
-                          <option>直近1年</option>
-                          <option>全期間</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="filters__item">
-                    <div class="field">
-                      <div class="field__label">評価項目</div>
-                      <div class="field__wrap">
-                        <select class="select">
-                          <option selected>すべて</option>
-                          <option>雰囲気#雰囲気･装飾</option>
-                          <option>雰囲気#音楽･ノイズ</option>
-                          <option>雰囲気#清潔感</option>
-                          <option>雰囲気#店内･席</option>
-                          <option>料理#見た目</option>
-                          <option>料理#分量</option>
-                          <option>料理#おすすめできるか</option>
-                          <option>料理#味</option>
-                          <option>立地#都心･繁華街にあるか</option>
-                          <option>立地#見つけやすいか</option>
-                          <option>立地#アクセスの良さ</option>
-                          <option>価格#コストパフォーマンス</option>
-                          <option>価格#割引について</option>
-                          <option>価格#水準</option>
-                          <option>サービス#接客</option>
-                          <option>サービス#駐車場の利便性</option>
-                          <option>サービス#入店までの待ち時間</option>
-                          <option>サービス#料理の提供時間</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="filters__item">
-                    <div class="filters__label">来店回数</div>
-                    <div class="filters__list">
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">はじめて</span></span>
-                      </label>
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">2-3回目</span></span>
-                      </label>
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">4回以上</span></span>
-                      </label>
-                      <label class="checkbox checkbox_reverse">
-                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">覚えていない</span></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="filters__btns">
-                  <button class="button-stroke filters__button">リセット</button>
-                  <button class="button filters__button">適用する</button>
-                </div>
-              </div>
-              <div class="filters__overlay"></div>
-            </div>
+            <a class="button-stroke button-small card__button" href="store-reviews.html">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg><span>回答一覧</span>
+            </a>
           </div>
           <div class="qs__wrapper">
             <div class="qs__table">

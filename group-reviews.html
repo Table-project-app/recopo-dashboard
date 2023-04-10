@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>東京都の店舗 - 牛鍋 吉田屋 - Recopoダッシュボード</title>
+  <title>アンケート回答一覧 - 東京都の店舗 - 牛鍋 吉田家 - Recopoダッシュボード</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -562,202 +562,213 @@
           </svg>
           <div class="h3">牛鍋 吉田家</div>
           <div class="store__info">
-            東京都の店舗
+            <a href="group.html">東京都の店舗</a>
           </div>
-        </div>
-        <div class="page__row">
-          <div class="page__col">
-            <div class="card">
-              <div class="card__head">
-                <div class="title-orange card__title">サマリー</div>
-                <div class="card__select">
-                  <select class="select select_small">
-                    <option selected>直近7日</option>
-                    <option>直近30日</option>
-                    <option>直近3ヶ月</option>
-                    <option>直近1年</option>
-                    <option>全期間</option>
-                  </select>
-                </div>
-                <div class="card__select ml-8">
-                  <select class="select select_small">
-                    <option selected>単位: 日</option>
-                    <option>単位: 週</option>
-                    <option>単位: 月</option>
-                  </select>
-                </div>
-                <button class="button-small card__button button-stroke ml-16 mobile-hide">
-                  <svg class="icon icon-download">
-                    <use xlink:href="#icon-download"></use>
-                  </svg>
-                  回答ダウンロード
-                </button>
-              </div>
-              <div class="overview js-tabs">
-                <div class="overview__nav"><a class="overview__link js-tabs-link active" href="#">
-                    <div class="overview__icon_orange">
-                      <svg class="icon icon-activity">
-                        <use xlink:href="#icon-activity"></use>
-                      </svg>
-                    </div>
-                    <div class="overview__details">
-                      <div class="overview__subtitle">NPS
-                        <div class="tooltip" title="NPS (Net Promoter Score)は､顧客満足度を測定するための指標の一つ">
-                          <svg class="icon icon-info">
-                            <use xlink:href="#icon-info"></use>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="overview__counter">8.5</div>
-                    </div>
-                    <div class="balance background negative">
-                      <svg class="icon icon-arrow-bottom">
-                        <use xlink:href="#icon-arrow-bottom"></use>
-                      </svg>3.8%
-                    </div></a><a class="overview__link js-tabs-link" href="#">
-                    <div class="overview__icon_red">
-                      <svg class="icon icon-message">
-                        <use xlink:href="#icon-message"></use>
-                      </svg>
-                    </div>
-                    <div class="overview__details">
-                      <div class="overview__subtitle">回答数
-                        <div class="tooltip" title="期間中の合計アンケート回答回収数">
-                          <svg class="icon icon-info">
-                            <use xlink:href="#icon-info"></use>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="overview__counter">512</div>
-                    </div>
-                    <div class="balance background positive">
-                      <svg class="icon icon-arrow-top">
-                        <use xlink:href="#icon-arrow-top"></use>
-                      </svg>2.7%
-                    </div></a></div>
-                <div class="overview__container">
-                  <div class="overview__item js-tabs-item" style="display: block;">
-                    <div class="overview__chart">
-                      <div id="nps-chart"></div>
-                    </div>
-                  </div>
-                  <div class="overview__item js-tabs-item">
-                    <div class="overview__chart">
-                      <div id="answer-chart"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="page__col">
-            <div class="transactions card">
-              <div class="card__head">
-                <div class="title-gray card__title">利用状況</div>
-                <a class="button-small card__button button-stroke" href="group-edit.html">
-                  <svg class="icon icon-edit">
-                    <use xlink:href="#icon-edit"></use>
-                  </svg>
-                  グループ編集
-                </a>
-              </div>
-              <div class="usage">
-                <div class="usage__legend">
-                  <div class="usage__indicator usage__indicator_mobile">
-                    <svg class="icon icon-store">
-                      <use xlink:href="#icon-store"></use>
-                    </svg>
-                    <div class="usage__title">店舗数</div>
-                    <div class="h4 total__title">13</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <div class="title-purple card__title">来店回数</div>
-                <div class="card__select mobile-hide">
-                  <select class="select select_small">
-                    <option selected>直近7日</option>
-                    <option>直近30日</option>
-                    <option>直近3ヶ月</option>
-                    <option>直近1年</option>
-                    <option>全期間</option>
-                  </select>
-                </div>
-              </div>
-              <div class="card__chart card__chart_new-customers">
-                <div id="visits-chart"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__head">
-            <div class="title-red card__title">回答者属性</div>
-            <div class="card__select">
-              <select class="select select_small">
-                <option selected>直近7日</option>
-                <option>直近30日</option>
-                <option>直近3ヶ月</option>
-                <option>直近1年</option>
-                <option>全期間</option>
-              </select>
-            </div>
-          </div>
-          <div class="demography">
-            <div class="demography__list">
-              <div class="demography__item_1">
-                <div class="demography__subtitle">年齢</div>
-                <div class="card__chart card__chart_demography">
-                  <div id="age-chart"></div>
-                </div>
-              </div>
-              <div class="demography__item_2">
-                <div class="demography__subtitle">性別</div>
-                <div class="card__chart card__chart_demography">
-                  <div id="gender-chart"></div>
-                </div>
-              </div>
-              <div class="demography__item_3">
-                <div class="demography__subtitle_3">職業</div>
-                <div class="card__chart card__chart_demography">
-                  <div id="occupation-chart"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__head">
-            <div class="title-yellow card__title">評価項目別分析</div>
-            <select class="select select_small">
-              <option>直近7日</option>
-              <option>直近30日</option>
-              <option selected>直近3ヶ月</option>
-              <option>直近1年</option>
-              <option>全期間</option>
-            </select>
-          </div>
-          <div class="card__chart card__chart_evaluation-analysis">
-            <div id="evaluation-analysis"></div>
+          <div class="store__subinfo">
+            <svg class="icon icon-chevron-forward">
+              <use xlink:href="#icon-chevron-forward"></use>
+            </svg>
+            アンケート回答一覧
           </div>
         </div>
         <div class="refunds card">
           <div class="card__head">
-            <div class="title-orange card__title">直近のアンケート回答</div>
-            <a class="button-stroke button-small card__button" href="group-reviews.html">
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right"></use>
-              </svg><span>回答一覧</span>
-            </a>
+            <div class="card__select mr-8">
+              <select class="select select_small">
+                <option selected>評価項目</option>
+                <option>雰囲気#雰囲気･装飾</option>
+                <option>雰囲気#音楽･ノイズ</option>
+                <option>雰囲気#清潔感</option>
+                <option>雰囲気#店内･席</option>
+                <option>料理#見た目</option>
+                <option>料理#分量</option>
+                <option>料理#おすすめできるか</option>
+                <option>料理#味</option>
+                <option>立地#都心･繁華街にあるか</option>
+                <option>立地#見つけやすいか</option>
+                <option>立地#アクセスの良さ</option>
+                <option>価格#コストパフォーマンス</option>
+                <option>価格#割引について</option>
+                <option>価格#水準</option>
+                <option>サービス#接客</option>
+                <option>サービス#駐車場の利便性</option>
+                <option>サービス#入店までの待ち時間</option>
+                <option>サービス#料理の提供時間</option>
+              </select>
+            </div>
+            <div class="card__select mr-8">
+              <select class="select select_small">
+                <option selected>評価+/-</option>
+                <option>評価ポジティブ</option>
+                <option>評価フラット</option>
+                <option>評価マイナス</option>
+              </select>
+            </div>
+            <div class="card__select mr-8">
+              <select class="select select_small">
+                <option selected>キーワード</option>
+                <option>味付け</option>
+                <option>駐車場</option>
+                <option>記念日</option>
+                <option>照明</option>
+                <option>音響</option>
+              </select>
+            </div>
+            <div class="card__select mr-8">
+              <select class="select select_small">
+                <option selected>並び替え</option>
+                <option>NPS ↓</option>
+                <option>NPS ↑</option>
+                <option>回答日時 ↓</option>
+                <option>回答日時 ↑</option>
+              </select>
+            </div>
+            <div class="filters mobile-hide tablet-hide">
+              <button class="button-square-stroke button-small filters__head">
+                <svg class="icon icon-filter">
+                  <use xlink:href="#icon-filter"></use>
+                </svg>
+              </button>
+              <div class="filters__body">
+                <div class="filters__top">
+                  <div class="title-orange filters__title">フィルター条件を設定</div>
+                  <button class="filters__close">
+                    <svg class="icon icon-close">
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <form class="form">
+                  <input class="form__input" type="text" name="search" placeholder="検索" required="required" autocomplete="off">
+                  <button class="form__button">
+                    <svg class="icon icon-search">
+                      <use xlink:href="#icon-search"></use>
+                    </svg>
+                  </button>
+                </form>
+                <div class="filters__group">
+                  <div class="filters__item">
+                    <div class="field">
+                      <div class="field__wrap">
+                        <select class="select">
+                          <option selected>回答期間</option>
+                          <option>直近7日</option>
+                          <option>直近30日</option>
+                          <option>直近3ヶ月</option>
+                          <option>直近1年</option>
+                          <option>全期間</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
+                    <div class="calendar js-calendar">
+                      <div class="calendar__list">
+                        <div class="field__label">日時範囲指定</div>
+                        <div class="calendar__item calendar__item_date js-calendar-item">
+                          <div class="calendar__head js-calendar-head">
+                            <svg class="icon icon-calendar">
+                              <use xlink:href="#icon-calendar"></use>
+                            </svg>
+                            <div class="calendar__details">
+                              <input class="calendar__value js-date-range" type="text" data-single-month="true" data-container=".js-date-container">
+                            </div>
+                          </div>
+                          <div class="calendar__body js-calendar-body">
+                            <div class="calendar__container js-date-container"></div>
+                            <div class="calendar__foot">
+                              <button class="button-stroke button-small calendar__button js-date-clear">クリア</button>
+                              <button class="button-small calendar__button js-calendar-close">閉じる</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
+                    <div class="filters__item">
+                      <div class="filters__label">NPS</div>
+                      <div class="filters__range js-slider" data-min="1" data-max="10" data-start="1" data-end="10" data-step="1" data-tooltips="true" data-prefix=""></div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
+                    <div class="field">
+                      <div class="field__wrap">
+                        <select class="select">
+                          <option selected>年齢</option>
+                          <option>10-24歳</option>
+                          <option>25-39歳</option>
+                          <option>40-54歳</option>
+                          <option>55-69歳</option>
+                          <option>70歳-</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
+                    <div class="field">
+                      <div class="field__wrap">
+                        <select class="select">
+                          <option selected>性別</option>
+                          <option>男性</option>
+                          <option>女性</option>
+                          <option>無回答</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
+                    <div class="field">
+                      <div class="field__wrap">
+                        <select class="select">
+                          <option selected>職業</option>
+                          <option>会社員</option>
+                          <option>会社役員･自営業</option>
+                          <option>パート･アルバイト</option>
+                          <option>学生</option>
+                          <option>専業主婦･主夫</option>
+                          <option>無職</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item">
+                    <div class="filters__label">来店回数</div>
+                    <div class="filters__list">
+                      <label class="checkbox checkbox_reverse">
+                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">はじめて</span></span>
+                      </label>
+                      <label class="checkbox checkbox_reverse">
+                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">2-3回目</span></span>
+                      </label>
+                      <label class="checkbox checkbox_reverse">
+                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">4回以上</span></span>
+                      </label>
+                      <label class="checkbox checkbox_reverse">
+                        <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">覚えていない</span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filters__btns">
+                  <button class="button filters__button">適用する</button>
+                </div>
+              </div>
+              <div class="filters__overlay"></div>
+            </div>
+            <button class="button-small card__button button-stroke ml-auto mobile-hide tablet-hide ml-16">
+              <svg class="icon icon-download">
+                <use xlink:href="#icon-download"></use>
+              </svg>
+              ダウンロード
+            </button>
           </div>
           <div class="qs__wrapper">
             <div class="qs__table">
               <div class="qs__row">
                 <div class="qs__col">回答内容</div>
                 <div class="qs__col">店舗</div>
-                <div class="qs__col text-end">回答日時</div>
+                <div class="qs__col text-end">来店回数</div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -788,7 +799,9 @@
                     牛鍋 吉田屋<br>代々木店
                   </div>
                 </div>
-                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-end">
+                  <div class="status-purple-light press__distribution">はじめて</div>
+                </div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -831,7 +844,9 @@
                     牛鍋 吉田屋<br>青山店
                   </div>
                 </div>
-                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-end">
+                  <div class="status-orange-light press__distribution">2-3回目</div>
+                </div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -862,7 +877,42 @@
                     牛鍋 吉田屋<br>丸の内店
                   </div>
                 </div>
-                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-end">
+                  <div class="status-red-light press__distribution">覚えていない</div>
+                </div>
+              </div>
+              <div class="qs__row" data-popup=".js-popup-qs">
+                <div class="qs__col">
+                  <div class="qs__item">
+                    <div class="score__number score__low">
+                      4
+                    </div>
+                    <div class="qs__details">
+                      <div class="qs__comment">トイレの洗面台に汚物のようなものが放置されており、気分が悪くなりました。定期的にチェックしてほしいです。床に落ちているゴミも少し気になりました。料理は普通に美味しかったです。</div>
+                      <div class="balance background plus">
+                        <svg class="icon icon-good">
+                          <use xlink:href="#icon-good"></use>
+                        </svg>
+                        料理#味
+                      </div>
+                      <div class="balance background minus">
+                        <svg class="icon icon-bad">
+                          <use xlink:href="#icon-bad"></use>
+                        </svg>
+                        雰囲気#清潔感
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="qs__col">
+                  <div class="qs__user">
+                    <div class="qs__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉野家"></div>
+                    牛鍋 吉田屋<br>北新地店
+                  </div>
+                </div>
+                <div class="qs__col text-end">
+                  <div class="status-red-light press__distribution">覚えていない</div>
+                </div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -900,7 +950,48 @@
                     牛鍋 吉田屋<br>池袋店
                   </div>
                 </div>
-                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-end">
+                  <div class="status-orange-light press__distribution">2-3回目</div>
+                </div>
+              </div>
+              <div class="qs__row" data-popup=".js-popup-qs">
+                <div class="qs__col">
+                  <div class="qs__item">
+                    <div class="score__number score__high">
+                      9
+                    </div>
+                    <div class="qs__details">
+                      <div class="qs__comment">ランチですごく混んでいてびっくりしたけど、満足できて待った甲斐があった。子供もピザが美味しいと言っていた。今度ママ友と来たいと思います。</div>
+                      <div class="balance background plus">
+                        <svg class="icon icon-good">
+                          <use xlink:href="#icon-good"></use>
+                        </svg>
+                        料理#おすすめできるか
+                      </div>
+                      <div class="balance background plus">
+                        <svg class="icon icon-good">
+                          <use xlink:href="#icon-good"></use>
+                        </svg>
+                        料理#味
+                      </div>
+                      <div class="balance background minus">
+                        <svg class="icon icon-bad">
+                          <use xlink:href="#icon-bad"></use>
+                        </svg>
+                        サービス#入店までの待ち時間
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="qs__col">
+                  <div class="qs__user">
+                    <div class="qs__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉野家"></div>
+                    牛鍋 吉田屋<br>北二条店
+                  </div>
+                </div>
+                <div class="qs__col text-end">
+                  <div class="status-yellow-light press__distribution">4回以上</div>
+                </div>
               </div>
               <div class="qs__row" data-popup=".js-popup-qs">
                 <div class="qs__col">
@@ -931,7 +1022,9 @@
                     牛鍋 吉田屋<br>八丁堀店
                   </div>
                 </div>
-                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
+                <div class="qs__col text-end">
+                  <div class="status-orange-light press__distribution">2-3回目</div>
+                </div>
               </div>
             </div>
           </div>
@@ -1336,6 +1429,7 @@
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-leaderboard">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 8V5.33333C10.6667 4.22876 9.77128 3.33333 8.66671 3.33333H7.33337C6.2288 3.33333 5.33337 4.22876 5.33337 5.33333V6.66667H3.33337C2.2288 6.66667 1.33337 7.5621 1.33337 8.66667V12C1.33337 12.3682 1.63185 12.6667 2.00004 12.6667H14C14.3682 12.6667 14.6667 12.3682 14.6667 12V10C14.6667 8.89543 13.7713 8 12.6667 8H10.6667ZM8.66671 4.66667H7.33337C6.96518 4.66667 6.66671 4.96514 6.66671 5.33333V11.3333H9.33337V5.33333C9.33337 4.96514 9.0349 4.66667 8.66671 4.66667ZM10.6667 9.33333V11.3333H13.3334V10C13.3334 9.63181 13.0349 9.33333 12.6667 9.33333H10.6667ZM3.33337 8H5.33337V11.3333H2.66671V8.66667C2.66671 8.29848 2.96518 8 3.33337 8Z"/>
       </symbol>
+      
     </svg>
   </div>
 </body>
