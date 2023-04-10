@@ -19815,10 +19815,19 @@ body.dark .login__col:first-child {
 
 .login__preview {
   max-width: 180px;
-  margin: 0 auto 40px;
+  margin: 0 auto 60px;
 }
 
 .login__preview img {
+  width: 100%;
+}
+
+.login__product {
+  max-width: 180px;
+  margin: 0 auto 10px;
+}
+
+.login__product img {
   width: 100%;
 }
 
