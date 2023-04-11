@@ -4460,7 +4460,7 @@ body.dark .button-square-stroke {
 
 [class^="status"] {
   display: inline-block;
-  padding: 2px 8px;
+  padding: 2px 8px 3px;
   border-radius: 6px;
   font-size: 20px;
   line-height: 22px;
