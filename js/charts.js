@@ -69,9 +69,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     },
     events: {
-      dataPointMouseEnter: function(event) {
-         event.path[0].style.cursor = "pointer";
-      },
       dataPointSelection: function(event, chartContext, config) {
         console.log(config.dataPointIndex)
       },

@@ -22672,3 +22672,11 @@ body.dark .score_text_s {
     margin: 0px;
   }
 }
+
+.apexcharts-pie {
+  cursor: pointer;
+} 
+
+.apexcharts-bar-series {
+  cursor: pointer;
+} 
