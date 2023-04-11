@@ -4908,7 +4908,7 @@ body.dark .page__title .icon {
   height: 16px;
   margin-left: 4px;
   margin-bottom: 4px;
-  fill: var(--recopo-gray);
+  fill: var(--recopo-gray-500);
 }
 
 @media only screen and (max-width: 767px) {
