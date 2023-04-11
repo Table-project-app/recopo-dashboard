@@ -3881,6 +3881,7 @@ body.dark .apexcharts-canvas .apexcharts-ycrosshairs.apexcharts-active {
 
 .apexcharts-canvas .apexcharts-legend-text {
   font-weight: 600 !important;
+  line-height: 1.4;
   color: #1A1D1F !important;
 }
 
@@ -6299,9 +6300,9 @@ body.dark .card {
 }
 
 .card__chart_demography {
-  height: 164px;
+  height: 150px;
   font-size: 8px !important;
-  margin-bottom: -14px;
+  margin-bottom: 0px;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -10529,7 +10530,7 @@ body.dark .share__input {
   border-color: #EFEFEF;
   width: calc(33.333% - 12px);
   margin: 0 6px;
-  padding: 26px 24px;
+  padding: 26px 20px;
   border-radius: 12px;
   color: #1A1D1F;
 }
@@ -10575,7 +10576,7 @@ body.dark .demography__item_2 {
   border-color: #EFEFEF;
   width: calc(33.333% - 12px);
   margin: 0 6px;
-  padding: -5px 0px;
+  padding: 0px;
   border-radius: 12px;
   color: #1A1D1F;
 }

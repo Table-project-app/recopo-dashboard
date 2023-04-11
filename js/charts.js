@@ -69,9 +69,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     },
     events: {
+      dataPointMouseEnter: function(event) {
+         event.path[0].style.cursor = "pointer";
+      },
       dataPointSelection: function(event, chartContext, config) {
         console.log(config.dataPointIndex)
-      }
+      },
     }
   };
   var chart = document.querySelector('#evaluation-analysis');
@@ -109,7 +112,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       toolbar: {
         show: false
       },
-      fontFamily: 'Inter, sans-serif'
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     dataLabels: {
       enabled: false
@@ -171,7 +174,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       toolbar: {
         show: false
       },
-      fontFamily: 'Inter, sans-serif'
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     dataLabels: {
       enabled: false
@@ -212,7 +215,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   var options = {
     series: [340, 120, 41, 21],
     chart: {
-      type: 'donut'
+      type: 'donut',
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     legend: {
       show: true,
@@ -260,6 +264,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     series: [94, 120, 79, 28, 2],
     chart: {
       type: 'donut',
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     legend: {
       show: true,
@@ -306,7 +311,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   var options = {
     series: [263, 239, 4],
     chart: {
-      type: 'donut'
+      type: 'donut',
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     legend: {
       show: true,
@@ -354,6 +360,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     series: [94, 34, 45, 49, 28, 2],
     chart: {
       type: 'donut',
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     legend: {
       show: true,
@@ -440,7 +447,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       toolbar: {
         show: false
       },
-      fontFamily: 'Inter, sans-serif'
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     dataLabels: {
       enabled: false
@@ -521,7 +528,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       toolbar: {
         show: false
       },
-      fontFamily: 'Inter, sans-serif'
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     dataLabels: {
       enabled: false
@@ -602,7 +609,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       toolbar: {
         show: false
       },
-      fontFamily: 'Inter, sans-serif'
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     dataLabels: {
       enabled: false
@@ -689,7 +696,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       toolbar: {
         show: false
       },
-      fontFamily: 'Inter, sans-serif'
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     dataLabels: {
       enabled: false
@@ -776,7 +783,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       toolbar: {
         show: false
       },
-      fontFamily: 'Inter, sans-serif'
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     dataLabels: {
       enabled: false
@@ -863,7 +870,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       toolbar: {
         show: false
       },
-      fontFamily: 'Inter, sans-serif'
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     dataLabels: {
       enabled: false
@@ -950,7 +957,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       toolbar: {
         show: false
       },
-      fontFamily: 'Inter, sans-serif'
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
     },
     dataLabels: {
       enabled: false
