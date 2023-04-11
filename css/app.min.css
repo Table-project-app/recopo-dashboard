@@ -19933,6 +19933,15 @@ body.dark .login__col:first-child {
   width: 100%;
 }
 
+.empty__image {
+  max-width: 100px;
+  margin: 0 auto 30px;
+}
+
+.empty__image img {
+  width: 100%;
+}
+
 .login__product {
   max-width: 180px;
   margin: 0 auto 10px;
@@ -21066,6 +21075,17 @@ body.dark .qs__progress {
 @media only screen and (max-width: 767px) {
   .qs__foot {
     margin-top: 32px;
+  }
+}
+
+.qs__empty {
+  padding: 140px 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .qs__empty {
+    padding: 80px 0;
   }
 }
 
