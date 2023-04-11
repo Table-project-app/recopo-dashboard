@@ -3763,6 +3763,7 @@ body.dark .select .option.selected {
   cursor: pointer;
 }
 
+
 .create__line .icon {
   fill: var(--recopo-gray-500);
 }
@@ -4899,6 +4900,14 @@ body.dark .page__title .icon {
   width: 24px;
   height: 24px;
   margin-right: 8px;
+}
+
+.page__title .icon_small {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  margin-bottom: 4px;
+  fill: var(--recopo-gray);
 }
 
 @media only screen and (max-width: 767px) {
