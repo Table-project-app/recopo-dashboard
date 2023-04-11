@@ -10607,21 +10607,20 @@ body.dark .demography__item_3 {
     width: 315px;
     margin: 0;
   }
-
-}
-
-@media only screen and (max-width: 767px) {
-  .demography__item_1 {
+  body.dark .demography__item_1 {
     flex: 0 0 315px;
     width: 315px;
+    margin: 0 12px 0 0;
   }
-  .demography__item_2 {
+  body.dark .demography__item_2 {
     flex: 0 0 315px;
     width: 315px;
+    margin: 0 12px 0 0;
   }
-  .demography__item_3 {
+  body.dark .demography__item_3 {
     flex: 0 0 315px;
     width: 315px;
+    margin: 0;
   }
 }
 
