@@ -727,7 +727,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       data: [65, 57, 62, 65, 81, 77, 79]
       }, {
       name: '万吉スープカレー - 大阪府',
-      data: [75, 67, 72, 65, 81, 87, 79]
+      data: [71, 87, 52, 85, 58, 83, 70]
     }],
     chart: {
       height: '100%',
