@@ -562,6 +562,52 @@ $('.summary .checkbox__input').on('change', function () {
   }
 })(); 
 
+// dateSpotPicker
+
+(function () {
+  var dateSpot = $('.js-date-spot');
+
+  if (dateSpot.length) {
+    dateSpot.each(function () {
+      var _this = $(this),
+          single = _this.data('single-month'),
+          container = _this.data('container'),
+          clear = $('.js-date-clear');
+
+      _this.dateRangePicker({
+        inline: true,
+        autoClose: true,
+        format: 'YYYY MM/DD',
+        separator: ' - ',
+        showShortcuts: false,
+        container: container,
+        singleDate: true,
+        language:'ja',
+        singleMonth: single,
+        showTopbar: false,
+        stickyMonths: true,
+        hoveringTooltip: false,
+        alwaysOpen: true,
+        customArrowPrevSymbol: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M14.207 7.793a1 1 0 0 1 0 1.414L11.414 12l2.793 2.793a1 1 0 0 1-1.414 1.414l-3.5-3.5a1 1 0 0 1 0-1.414l3.5-3.5a1 1 0 0 1 1.414 0z" fill="#777e91"/></svg>',
+        customArrowNextSymbol: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M9.793 7.793a1 1 0 0 0 0 1.414L12.586 12l-2.793 2.793a1 1 0 0 0 1.414 1.414l3.5-3.5a1 1 0 0 0 0-1.414l-3.5-3.5a1 1 0 0 0-1.414 0z" fill="#777e91"/></svg>',
+        setValue: function setValue(s) {
+          if ($(this).attr('readonly')) {
+            $(this).val(s);
+          } else {
+            $(this).val(s);
+          }
+        }
+      });
+
+      _this.data('dateRangePicker').setStart('2023-04-10');
+
+      clear.on('click', function () {
+        _this.data('dateRangePicker').setStart(new Date());
+      });
+    });
+  }
+})(); 
+
 // smile
 
 (function () {

@@ -595,6 +595,51 @@
               <option>週単位</option>
               <option>月単位</option>
             </select>
+            <div class="filters ml-8">
+              <button class="button-square-stroke button-small filters__head">
+                <svg class="icon icon-calendar">
+                  <use xlink:href="#icon-calendar"></use>
+                </svg>
+              </button>
+              <div class="filters__body">
+                <div class="filters__top">
+                  <div class="title-orange filters__title">基準日を指定</div>
+                  <button class="filters__close">
+                    <svg class="icon icon-close">
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="filters__group">
+                  <div class="filters__item">
+                    <div class="calendar js-calendar">
+                      <div class="calendar__list">
+                        <div class="calendar__item calendar__item_date js-calendar-item">
+                          <div class="calendar__head js-calendar-head">
+                            <svg class="icon icon-calendar">
+                              <use xlink:href="#icon-calendar"></use>
+                            </svg>
+                            <div class="calendar__details">
+                              <input class="calendar__value js-date-spot" type="text" data-single-month="true" data-container=".js-date-container">
+                            </div>
+                          </div>
+                          <div class="calendar__body js-calendar-body">
+                            <div class="calendar__container js-date-container"></div>
+                            <div class="calendar__foot">
+                              <button class="button-stroke button-small calendar__button js-date-clear">クリア</button>
+                              <button class="button-small calendar__button js-calendar-close">閉じる</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filters__btns">
+                  <button class="button filters__button">適用する</button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="overview">
             <div class="overview__container">
