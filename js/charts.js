@@ -429,13 +429,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       name: '牛鍋 吉田屋 - 大阪府',
       data: [5.5, 7.7, 9.2, 5.5, 5.1, 4.7, 6.9]
       }, {
-      name: '万吉カレーうどん - 東京都',
+      name: '万吉スープカレー - 東京都',
       data: [7.5, 6.7, 8.2, 6.5, 7.1, 5.7, 9.9]
       }, {
-      name: '万吉カレーうどん - 京都府',
+      name: '万吉スープカレー - 京都府',
       data: [4.5, 5.7, 3.2, 6.5, 6.1, 7.7, 7.9]
       }, {
-      name: '万吉カレーうどん - 大阪府',
+      name: '万吉スープカレー - 大阪府',
       data: [7.5, 6.7, 5.2, 4.5, 3.1, 4.7, 5.9]
     }],
     chart: {
@@ -510,13 +510,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       name: '牛鍋 吉田屋 - 大阪府',
       data: [75, 77, 92, 55, 71, 67, 69]
       }, {
-      name: '万吉カレーうどん - 東京都',
+      name: '万吉スープカレー - 東京都',
       data: [75, 67, 82, 65, 71, 77, 99]
       }, {
-      name: '万吉カレーうどん - 京都府',
+      name: '万吉スープカレー - 京都府',
       data: [65, 57, 62, 65, 81, 77, 79]
       }, {
-      name: '万吉カレーうどん - 大阪府',
+      name: '万吉スープカレー - 大阪府',
       data: [75, 67, 72, 65, 81, 87, 79]
     }],
     chart: {
@@ -591,13 +591,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       name: '牛鍋 吉田屋 - 大阪府',
       data: [55, 77, 92, 55, 51, 47, 69]
       }, {
-      name: '万吉カレーうどん - 東京都',
+      name: '万吉スープカレー - 東京都',
       data: [75, 67, 82, 65, 71, 57, 99]
       }, {
-      name: '万吉カレーうどん - 京都府',
+      name: '万吉スープカレー - 京都府',
       data: [45, 57, 32, 65, 61, 77, 79]
       }, {
-      name: '万吉カレーうどん - 大阪府',
+      name: '万吉スープカレー - 大阪府',
       data: [75, 67, 52, 45, 31, 47, 59]
     }],
     chart: {
@@ -658,7 +658,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       show: true,
       position: 'right',
     },
-    colors: ['rgba(154, 159, 165, .6)', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29'],
+    colors: ['rgba(154, 159, 165, .6)', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29'],
     series: [{
       name: '全店舗平均',
       data: [8.5, 7.7, 7.2, 7.5, 8.1, 8.7, 6.9]
@@ -681,10 +681,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       name: '牛鍋 吉田屋 北新地店',
       data: [7.3, 7.9, 6.2, 6.5, 8.2, 9.7, 8.7]
       }, {
-      name: '万吉カレーうどん 心斎橋店',
+      name: '万吉スープカレー 心斎橋店',
       data: [8.5, 8.7, 8.2, 9.5, 9.1, 8.7, 8.9]
       }, {
-      name: '万吉カレーうどん 京都駅前店',
+      name: '万吉スープカレー 梅田店',
+      data: [6.9, 7.3, 6.2, 8.2, 8.3, 7.4, 5.9]
+      }, {
+      name: '万吉スープカレー 京都駅前店',
       data: [9.2, 8.7, 9.2, 9.5, 9.1, 8.7, 6.9]
     }],
     chart: {
@@ -745,7 +748,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       show: true,
       position: 'right',
     },
-    colors: ['rgba(154, 159, 165, .6)', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E'],
+    colors: ['rgba(154, 159, 165, .6)', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E', '#FFA50E'],
     series: [{
       name: '全店舗平均',
       data: [85, 77, 72, 75, 81, 87, 69]
@@ -768,10 +771,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       name: '牛鍋 吉田屋 北新地店',
       data: [73, 79, 62, 65, 82, 97, 87]
       }, {
-      name: '万吉カレーうどん 心斎橋店',
+      name: '万吉スープカレー 心斎橋店',
       data: [85, 87, 82, 95, 91, 87, 89]
       }, {
-      name: '万吉カレーうどん 京都駅前店',
+      name: '万吉スープカレー 梅田店',
+      data: [69, 73, 62, 82, 83, 74, 59]
+      }, {
+      name: '万吉スープカレー 京都駅前店',
       data: [92, 87, 92, 95, 91, 87, 69]
     }],
     chart: {
@@ -832,7 +838,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       show: true,
       position: 'right',
     },
-    colors: ['rgba(154, 159, 165, .6)', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C'],
+    colors: ['rgba(154, 159, 165, .6)', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C'],
     series: [{
       name: '全店舗平均',
       data: [85, 77, 72, 75, 81, 87, 69]
@@ -855,10 +861,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       name: '牛鍋 吉田屋 北新地店',
       data: [73, 79, 62, 65, 82, 97, 87]
       }, {
-      name: '万吉カレーうどん 心斎橋店',
+      name: '万吉スープカレー 心斎橋店',
       data: [85, 87, 82, 95, 91, 87, 89]
       }, {
-      name: '万吉カレーうどん 京都駅前店',
+      name: '万吉スープカレー 梅田店',
+      data: [69, 73, 62, 82, 83, 74, 59]
+      }, {
+      name: '万吉スープカレー 京都駅前店',
       data: [92, 87, 92, 95, 91, 87, 69]
     }],
     chart: {
@@ -919,7 +928,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       show: true,
       position: 'right',
     },
-    colors: ['rgba(154, 159, 165, .6)', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6'],
+    colors: ['rgba(154, 159, 165, .6)', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6', '#C63CC6'],
     series: [{
       name: '全店舗平均',
       data: [85, 77, 72, 75, 81, 87, 69]
@@ -942,10 +951,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       name: '牛鍋 吉田屋 北新地店',
       data: [73, 79, 62, 65, 82, 97, 87]
       }, {
-      name: '万吉カレーうどん 心斎橋店',
+      name: '万吉スープカレー 心斎橋店',
       data: [85, 87, 82, 95, 91, 87, 89]
       }, {
-      name: '万吉カレーうどん 京都駅前店',
+      name: '万吉スープカレー 梅田店',
+      data: [69, 73, 62, 82, 83, 74, 59]
+      }, {
+      name: '万吉スープカレー 京都駅前店',
       data: [92, 87, 92, 95, 91, 87, 69]
     }],
     chart: {
