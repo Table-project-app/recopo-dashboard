@@ -98,7 +98,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     legend: {
       show: false
     },
-    colors: ['#FF507C'],
+    colors: ['#F96D29'],
     series: [{
       name: '回答数',
       data: [84, 23, 49, 94, 58, 83, 40]
@@ -160,7 +160,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     legend: {
       show: false
     },
-    colors: ['#F96D29'],
+    colors: ['#FF507C'],
     series: [{
       name: 'NPS',
       data: [8.5, 8.7, 8.2, 9.5, 9.1, 8.7, 8.9]
@@ -206,6 +206,68 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }
 })(); 
 
+// Score Chart
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: false
+    },
+    colors: ['#FFA50E'],
+    series: [{
+      name: '総合スコア',
+      data: [92, 85, 81, 90, 94, 86, 91]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#score-chart');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
 // number of visits
 
 (function() {
@@ -232,7 +294,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     },
     labels: ['はじめて', '2-3回目', '4回以上', '覚えていない'],
-    colors: ['#C63DC6', '#F96D29', '#FFA50E', '#FF507C'],
+    colors: ['#C63DC6', '#F96D29', '#FFA50E', '#A8ADB1'],
     states: {
       hover: {
         filter: {
@@ -248,6 +310,154 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   };
   var chart = document.querySelector('#visits-chart');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// last visit
+
+(function() {
+  var options = {
+    series: [292, 172, 48, 19],
+    chart: {
+      type: 'donut',
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    legend: {
+      show: true,
+      onItemClick: {
+        toggleDataSeries: true
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '54%'
+        }
+      }
+    },
+    labels: ['はじめて', '2-3回目', '4回以上', '覚えていない'],
+    colors: ['#C63DC6', '#F96D29', '#FFA50E', '#A8ADB1'],
+    states: {
+      hover: {
+        filter: {
+          type: 'darken',
+          value: 0.8
+        }
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#last-chart');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// address prefecture
+
+(function() {
+  var options = {
+    series: [23, 20, 249, 123, 93, 130, 32, 49],
+    chart: {
+      type: 'donut',
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    legend: {
+      show: true,
+      onItemClick: {
+        toggleDataSeries: true
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '54%'
+        }
+      }
+    },
+    labels: ['埼玉県', '千葉県', '東京都', '神奈川県', '京都府', '大阪府', '兵庫県', '奈良県'],
+    theme: {
+      palette: 'palette1'
+    },
+    states: {
+      hover: {
+        filter: {
+          type: 'darken',
+          value: 0.8
+        }
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#address-chart');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// address city
+
+(function() {
+  var options = {
+    series: [23, 20, 249, 123, 93, 130, 32, 49],
+    chart: {
+      type: 'donut',
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    legend: {
+      show: true,
+      onItemClick: {
+        toggleDataSeries: true
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '54%'
+        }
+      }
+    },
+    labels: ['港区', '豊島区', '江東区', '町田市', '新宿区', '千代田区', '品川区', '北区'],
+    theme: {
+      palette: 'palette1'
+    },
+    states: {
+      hover: {
+        filter: {
+          type: 'darken',
+          value: 0.8
+        }
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#address-city-chart');
 
   if (chart != null) {
     new ApexCharts(chart, options).render();
@@ -415,7 +625,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       show: true,
       position: 'right',
     },
-    colors: ['rgba(154, 159, 165, .6)', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29'],
+    colors: ['rgba(154, 159, 165, .6)', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C'],
     series: [{
       name: '全グループ平均',
       data: [6.5, 5.7, 6.2, 7.5, 8.1, 6.7, 5.9]
@@ -577,7 +787,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       show: true,
       position: 'right',
     },
-    colors: ['rgba(154, 159, 165, .6)', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C'],
+    colors: ['rgba(154, 159, 165, .6)', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29'],
     series: [{
       name: '全グループ平均',
       data: [84, 57, 62, 75, 81, 67, 59]
@@ -658,7 +868,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       show: true,
       position: 'right',
     },
-    colors: ['rgba(154, 159, 165, .6)', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29'],
+    colors: ['rgba(154, 159, 165, .6)', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C'],
     series: [{
       name: '全店舗平均',
       data: [8.5, 7.7, 7.2, 7.5, 8.1, 8.7, 6.9]
@@ -838,7 +1048,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       show: true,
       position: 'right',
     },
-    colors: ['rgba(154, 159, 165, .6)', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C', '#FF507C'],
+    colors: ['rgba(154, 159, 165, .6)', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29', '#F96D29'],
     series: [{
       name: '全店舗平均',
       data: [85, 77, 72, 75, 81, 87, 69]
