@@ -513,7 +513,7 @@ html {
 .nice-select.open .list {
   opacity: 1;
   pointer-events: auto;
-  width: 230px;
+  min-width: 100%;
   -webkit-transform: scale(1) translateY(0);
   transform: scale(1) translateY(0);
 }
@@ -3427,11 +3427,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   position: absolute;
   white-space: nowrap;
   text-align: center;
+  margin-top: 2px;
+  font-size: 12px;
 }
 
 .noUi-value-sub {
-  color: #ccc;
-  font-size: 10px;
+  font-size: 12px;
+  margin-top: 2px;
 }
 
 .noUi-marker {
@@ -3441,7 +3443,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 .noUi-marker-large,
 .noUi-marker-sub {
-  background: #AAA;
+  background: #CCC;
 }
 
 .noUi-pips-horizontal {
@@ -3473,7 +3475,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 .noUi-marker-horizontal.noUi-marker-large {
-  height: 15px;
+  height: 10px;
 }
 
 .noUi-pips-vertical {
@@ -3679,7 +3681,6 @@ body.dark .select.open {
 }
 
 .select .list {
-  right: 0;
   margin-top: 2px;
   padding: 8px 0;
   border-radius: 12px;
@@ -4079,7 +4080,7 @@ body.dark .noUi-tooltip:before {
 }
 
 html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
-  right: -12px;
+  right: -8px;
 }
 
 .text-gray {
@@ -12533,7 +12534,7 @@ body.dark .switch__box:before {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.04em;
-  line-height: 1.71429;
+  line-height: 1.51429;
   color: #33383F;
 }
 
@@ -16436,7 +16437,7 @@ body.dark .filters__close .icon {
 }
 
 .filters__range {
-  margin: 20px 0;
+  margin: 20px 8px 60px 8px;
 }
 
 .filters__box {
@@ -20428,8 +20429,31 @@ body.dark .entry {
   background: #1A1D1F;
 }
 
+.review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 48px;
+  background: #FCFCFC;
+}
+
+@media only screen and (max-width: 767px) {
+  .review {
+    padding: 24px;
+  }
+}
+
+body.dark .review {
+  background: #1A1D1F;
+}
+
 .entry__wrapper {
   max-width: 296px;
+}
+
+.review__wrapper {
+  max-width: 346px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -20498,6 +20522,18 @@ body.dark .entry__top {
 
 .entry .field {
   margin-bottom: 12px;
+}
+
+.review .field {
+  margin-bottom: 32px;
+}
+
+.review .field__label_small {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.3333;
+  font-weight: 500;
+  color: #6F767E;
 }
 
 .entry__note {

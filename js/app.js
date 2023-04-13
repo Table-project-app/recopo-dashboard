@@ -712,13 +712,13 @@ $('.summary .checkbox__input').on('change', function () {
   });
 })(); 
 
-// slider
+// slider range
 
 (function () {
-  var slider = $('.js-slider');
+  var rangeSlider = $('.js-slider-range');
 
-  if (slider.length) {
-    slider.each(function () {
+  if (rangeSlider.length) {
+    rangeSlider.each(function () {
       var _this = $(this),
           min = _this.data('min'),
           max = _this.data('max'),
@@ -753,6 +753,63 @@ $('.summary .checkbox__input').on('change', function () {
         range: {
           'min': min,
           'max': max
+        },
+        pips: {
+            mode: 'steps',
+            stepped: false,
+            density: 10
+        },
+        format: wNumb({
+          decimals: 0,
+          prefix: prefix
+        })
+      });
+    });
+  }
+})(); 
+
+// slider spot
+
+(function () {
+  var slider = $('.js-slider-spot');
+
+  if (slider.length) {
+    slider.each(function () {
+      var _this = $(this),
+          min = _this.data('min'),
+          max = _this.data('max'),
+          start = _this.data('start'),
+          end = _this.data('end'),
+          step = _this.data('step'),
+          tooltips = _this.data('tooltips'),
+          prefix = _this.data('prefix');
+
+      var optionStart = [start],
+          optionConnect = [true, false],
+          optionTooltips = false;
+
+      if (end) {
+        optionStart = [start, end];
+        optionConnect = true;
+      }
+
+      if (tooltips) {
+        optionTooltips = [true];
+
+        if (end) {
+          optionTooltips = [true, true];
+        }
+      }
+
+      noUiSlider.create(_this[0], {
+        start: optionStart,
+        connect: optionConnect,
+        step: step,
+        tooltips: optionTooltips,
+        pips: {
+            mode: 'steps',
+            stepped: false,
+            density: 10
         },
         format: wNumb({
           decimals: 0,
