@@ -6266,6 +6266,13 @@ body.dark .card {
   margin-bottom: -10px;
 }
 
+.card__chart_evaluation-score {
+  height: 350px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: -10px;
+}
+
 .card__chart_select-analysis {
   height: 300px;
   margin-left: 0px;
