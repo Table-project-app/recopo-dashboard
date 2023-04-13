@@ -4138,6 +4138,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   margin-bottom: 16px;
 }
 
+.mt-16 {
+  margin-top: 16px;
+}
+
 .mt-32 {
   margin-top: 32px;
 }
