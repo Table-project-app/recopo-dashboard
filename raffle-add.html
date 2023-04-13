@@ -727,9 +727,13 @@
         $(this).slideDown();
       },
   
-      hide: function(deleteElement) {
-        $(this).slideUp(deleteElement);
-      }
+      hide: function (deleteElement) {
+          if(confirm('この景品を削除してもよろしいですか?')) {
+              $(this).slideUp(deleteElement);
+          }
+      },
+      
+      isFirstItemUndeletable: true
     });
   </script>
   <!-- svg sprite-->
