@@ -4647,7 +4647,7 @@ body.dark .status-yellow {
 .balance.minus,
 .balance.plus-re,
 .balance.minus-re svg {
-  margin-right: 2px;
+  margin-right: 0px;
 }
 
 .balance.negative {
@@ -4731,6 +4731,7 @@ body.dark .balance.minus svg {
   height: 24px;
   padding: 0 8px 0 4px;
   border-radius: 8px;
+  margin-bottom: 3px;
 }
 
 .balance.background.plus {
@@ -6314,9 +6315,9 @@ body.dark .card {
 }
 
 .card__chart_demography {
-  height: 160px;
+  min-height: 120px;
   font-size: 8px !important;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1023px) {
