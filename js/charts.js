@@ -1223,7 +1223,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       name: '牛鍋 吉田家 - 東京都',
       data: [58, 94, 85, 42, 95, 83, 74, 90, 93, 72, 82, 84, 90, 79, 83, 68, 78, 92]
     }, {
-      name: '牛鍋 吉田家 - グループ平均',
+      name: '牛鍋 吉田家 - ブランド平均',
     data: [73, 74, 85, 71, 82, 91, 75, 83, 89, 73, 82, 74, 82, 89, 73, 88, 83, 72]
     }],
     chart: {
