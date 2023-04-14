@@ -18440,7 +18440,7 @@ body.dark .settings__item:not(:last-child) {
   .settings__avatar {
     width: 80px;
     height: 80px;
-    margin-right: 16px;
+    margin-right: 32px;
   }
 }
 
