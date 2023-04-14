@@ -11430,11 +11430,46 @@ body.dark .checkbox__text {
   opacity: 0;
 }
 
+.score__input {
+  position: absolute;
+  opacity: 0;
+}
+
 .radio__inner {
   display: flex;
 }
 
 .radio__inner:hover .radio__tick {
+  border-color: var(--recopo-orange);
+}
+
+.score__tick {
+  cursor: pointer;
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  transition: all .2s;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  padding-top: 12px;
+  color: var(--recopo-orange);
+}
+
+.score__tick:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.score__tick:hover {
   border-color: var(--recopo-orange);
 }
 
@@ -11482,6 +11517,21 @@ body.dark .radio__text {
 }
 
 .radio__input:checked+.radio__inner .radio__tick:before {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.score__inner {
+  width: 100%;
+}
+
+.score__input:checked+.score__inner .score__tick {
+  background: var(--recopo-orange);
+  border-color: var(--recopo-orange);
+  color: #FCFCFC;
+}
+
+.score__input:checked+.score__inner .score__tick:before {
   -webkit-transform: translate(-50%, -50%) scale(1);
   transform: translate(-50%, -50%) scale(1);
 }
@@ -17201,6 +17251,32 @@ body.dark .quality__item:not(:first-child) {
   padding-right: 0;
 }
 
+.opinionscale {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -3px;
+}
+
+.score__number__form {
+  font-size: 16px;
+  font-weight: 500;
+  background: rgba(249, 109, 41, 0.08);
+  color: var(--recopo-orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  margin: 0 3px;
+  border-radius: 8px;
+}
+
+.score__number__form:hover {
+  background: rgba(249, 109, 41, 0.16);
+  box-shadow: inset 0 0 0 2px var(--recopo-orange);
+}
+
+
 .score__number {
   font-size: 34px;
   color: #FCFCFC;
@@ -18225,6 +18301,11 @@ body.dark .notification__variants {
 .radio__btns {
   display: flex;
   margin: 16px -6px 0;
+}
+
+.score__btns {
+  display: flex;
+  margin: 16px -6px 16px;
 }
 
 .settings {
@@ -23027,6 +23108,12 @@ body.dark .column__btns .column__button_follow.active {
   flex: 0 0 calc(33.333% - 16px);
   width: calc(33.333% - 16px);
   margin: 0 8px;
+}
+
+.score__button {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2px;
 }
 
 @media only screen and (max-width: 767px) {

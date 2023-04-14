@@ -61,20 +61,37 @@
         <div class="field">
           <div class="field__label required">牛鍋 吉田屋 八丁堀店 を家族や友人にどれくらいおすすめしたいですか?
           </div>
-          <div class="nice-dropdown dropdown">
-            <select name="NPS" class="nice-dropdown-inner">
-              <option  selected disabled>選択してください</option>
-              <option value="10">10点</option>
-              <option value="9">9点</option>
-              <option value="8">8点</option>
-              <option value="7">7点</option>
-              <option value="6">6点</option>
-              <option value="5">5点</option>
-              <option value="4">4点</option>
-              <option value="3">3点</option>
-              <option value="2">2点</option>
-              <option value="1">1点</option>
-            </select>
+          <div class="score__btns">
+            <label class="score__number__form">
+              <input class="score__input" type="radio" name="nps" value="1"><span class="score__inner"><span class="score__tick">1</span></span>
+            </label>
+            <label class="score__number__form">
+              <input class="score__input" type="radio" name="nps" value="2"><span class="score__inner"><span class="score__tick">2</span></span>
+            </label>
+            <label class="score__number__form">
+              <input class="score__input" type="radio" name="nps" value="3"><span class="score__inner"><span class="score__tick">3</span></span>
+            </label>
+            <label class="score__number__form">
+              <input class="score__input" type="radio" name="nps" value="4"><span class="score__inner"><span class="score__tick">4</span></span>
+            </label>
+            <label class="score__number__form">
+              <input class="score__input" type="radio" name="nps" value="5"><span class="score__inner"><span class="score__tick">5</span></span>
+            </label>
+            <label class="score__number__form">
+              <input class="score__input" type="radio" name="nps" value="6"><span class="score__inner"><span class="score__tick">6</span></span>
+            </label>
+            <label class="score__number__form">
+              <input class="score__input" type="radio" name="nps" value="7"><span class="score__inner"><span class="score__tick">7</span></span>
+            </label>
+            <label class="score__number__form">
+              <input class="score__input" type="radio" name="nps" value="8"><span class="score__inner"><span class="score__tick">8</span></span>
+            </label>
+            <label class="score__number__form">
+              <input class="score__input" type="radio" name="nps" value="9"><span class="score__inner"><span class="score__tick">9</span></span>
+            </label>
+            <label class="score__number__form">
+              <input class="score__input" type="radio" name="nps" value="10"><span class="score__inner"><span class="score__tick">10</span></span>
+            </label>
           </div>
           <div class="field__label_small">おすすめ度が高いほど高い点数を選択してください</div>
         </div>
@@ -82,7 +99,7 @@
           <div class="field__label required">牛鍋 吉田屋 八丁堀店 に来たのは何回目ですか?
           </div>
           <div class="nice-dropdown dropdown">
-            <select name="visitCount" class="nice-dropdown-inner">
+            <select name="visitCount" class="nice-dropdown-inner" id="visit" onchange="viewChange();">
               <option  selected disabled>選択してください</option>
               <option value="One">初めて</option>
               <option value="TwoOrThree">2~3回目</option>
@@ -91,11 +108,11 @@
             </select>
           </div>
         </div>
-        <div class="field">
+        <div class="field" id="LastVisit" style="display:none;">
           <div class="field__label required">前回来店いただいたのはいつですか?
           </div>
           <div class="nice-dropdown dropdown">
-            <select name="visitCount" class="nice-dropdown-inner">
+            <select name="lastVisit" class="nice-dropdown-inner">
               <option  selected disabled>選択してください</option>
               <option value="ThisWeek">1週間以内</option>
               <option value="ThisMonth">1ヶ月以内</option>
@@ -120,7 +137,7 @@
           <div class="field__label required">お客さまの年齢を教えて下さい
           </div>
           <div class="field__wrap">
-            <input class="field__input" type="number" name="title" placeholder="年齢を数字で入力" value="" required>
+            <input class="field__input" type="number" name="age" placeholder="年齢を数字で入力" value="" required min="1" max="150">
           </div>
         </div>
         <div class="field">
@@ -209,16 +226,17 @@
           <div class="field__wrap">
             <div class="radio__btns">
               <label class="radio radio__button_3">
-                <input class="radio__input" type="radio" name="customers"><span class="radio__inner"><span class="radio__tick"></span><span class="radio__text ml-16">女性</span></span>
+                <input class="radio__input" type="radio" name="gender"><span class="radio__inner"><span class="radio__tick"></span><span class="radio__text ml-16">女性</span></span>
               </label>
               <label class="radio radio__button_3">
-                <input class="radio__input" type="radio" name="customers" checked=""><span class="radio__inner"><span class="radio__tick"></span><span class="radio__text ml-16">男性</span></span>
+                <input class="radio__input" type="radio" name="gender"><span class="radio__inner"><span class="radio__tick"></span><span class="radio__text ml-16">男性</span></span>
               </label>
               <label class="radio radio__button_3">
-                <input class="radio__input" type="radio" name="customers" checked=""><span class="radio__inner"><span class="radio__tick"></span><span class="radio__text ml-16">無回答</span></span>
+                <input class="radio__input" type="radio" name="gender"><span class="radio__inner"><span class="radio__tick"></span><span class="radio__text ml-16">無回答</span></span>
               </label>
             </div>
           </div>
+          <div class="field">
         </div>
         <div class="entry__fieldset mt-32 mb-16 pt-16">
           <a class="button entry__button" href="#">回答を送信</a>
@@ -242,6 +260,26 @@
   <script src="js/charts.js"></script>
   <script src="js/demo.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    function viewChange(){
+        if(document.getElementById('visit')){
+            id = document.getElementById('visit').value;
+            if(id == 'One'){
+                document.getElementById('LastVisit').style.display = "none";
+            }else if(id == 'TwoOrThree'){
+                document.getElementById('LastVisit').style.display = "";
+            }
+            else if(id == 'OverFour'){
+                document.getElementById('LastVisit').style.display = "";
+            }
+            else if(id == 'Unknown'){
+                document.getElementById('LastVisit').style.display = "none";
+            }
+        }
+    
+    window.onload = viewChange;
+    }
+  </script>
   <!-- svg sprite-->
   <div style="display: none">
     <svg width="0" height="0">
