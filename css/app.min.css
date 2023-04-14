@@ -14948,7 +14948,6 @@ body.dark .released__col:after {
 
 @media only screen and (max-width: 767px) {
   .released__item {
-    align-items: stretch;
   }
 }
 
@@ -14995,7 +14994,7 @@ body.dark .released__item:hover {
   .released__product {
     max-width: 100%;
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.33333;
     letter-spacing: -0.02em;
   }
@@ -15017,7 +15016,7 @@ body.dark .released__item:hover {
 
 @media only screen and (max-width: 1023px) {
   .released__category {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
