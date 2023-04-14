@@ -20755,6 +20755,10 @@ body.dark .entry__top {
   margin-bottom: 32px;
 }
 
+.review .field:last-child {
+  margin-bottom: 16px;
+}
+
 .review .field__label_small {
   margin-top: 12px;
   font-size: 12px;
