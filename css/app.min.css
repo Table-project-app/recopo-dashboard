@@ -4255,7 +4255,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .h2 {
   font-size: 32px;
   line-height: 1;
-  letter-spacing: -.03em;
+  letter-spacing: -.04em;
 }
 
 .h3 {
