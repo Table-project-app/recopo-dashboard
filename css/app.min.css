@@ -4897,6 +4897,7 @@ body.dark .balance.background.negative {
 
 .page__title {
   display: flex;
+  align-items: center;
   margin-bottom: 24px;
 }
 
