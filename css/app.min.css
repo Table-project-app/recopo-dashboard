@@ -4111,40 +4111,45 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   margin-right: auto !important;
 }
 
-.ml-auto {
-  margin-left: autp;
-}
 
 .mr-8 {
-  margin-right: 8px;
+  margin-right: 8px !important;
 }
 
 .ml-8 {
-  margin-left: 8px;
+  margin-left: 8px !important;
 }
 
 .mr-16 {
-  margin-right: 16px;
+  margin-right: 16px !important;
 }
 
 .ml-16 {
-  margin-left: 16px;
+  margin-left: 16px !important;
 }
 
 .mb-32 {
-  margin-bottom: 32px;
+  margin-bottom: 32px !important;
 }
 
 .mb-16 {
-  margin-bottom: 16px;
+  margin-bottom: 16px !important;
 }
 
 .mt-16 {
-  margin-top: 16px;
+  margin-top: 16px !important;
 }
 
 .mt-32 {
-  margin-top: 32px;
+  margin-top: 32px !important;
+}
+
+.pt-16 {
+  padding-top: 16px !important;
+}
+
+.pt-32 {
+  padding-top: 32px !important;
 }
 
 .text-left {
@@ -18121,6 +18126,11 @@ body.dark .notification__variants {
   margin: 0 18px 0 8px;
 }
 
+.radio__btns {
+  display: flex;
+  margin: 16px -6px 0;
+}
+
 .settings {
   display: flex;
   align-items: flex-start;
@@ -22909,6 +22919,12 @@ body.dark .column__btns .column__button_follow.active {
 }
 
 .column__button_3 {
+  flex: 0 0 calc(33.333% - 16px);
+  width: calc(33.333% - 16px);
+  margin: 0 8px;
+}
+
+.radio__button_3 {
   flex: 0 0 calc(33.333% - 16px);
   width: calc(33.333% - 16px);
   margin: 0 8px;

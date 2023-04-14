@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>パスワード再設定 - Recopoダッシュボード</title>
+    <title>レビューフォーム - Recopo</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
@@ -39,26 +39,163 @@
     </script>
     <!-- page-->
     <div class="page page_simple">
-      <div class="entry">
-        <div class="entry__wrapper"><a class="entry__logo" href="#"><img class="some-icon" src="img/logo-dark.svg" alt="Recopo"><img class="some-icon-dark" src="img/logo-light.svg" alt="Recopo"></a>
-          <div class="h2 entry__title">パスワード再設定</div>
-          <div class="entry__note mb-32">ご入力いただいたメールアドレスに､パスワードを再設定するリンクをお送りいたします｡</div>
-          <div class="login__entry">
-            <div class="login__fieldset">
-              <div class="field field_icon">
-                <div class="field__wrap">
-                  <input class="field__input" type="email" name="email" placeholder="メールアドレス">
-                  <div class="field__icon">
-                    <svg class="icon icon-mail">
-                      <use xlink:href="#icon-mail"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <button class="button login__button">メールを送信</button>
+      <div class="review">
+        <div class="review__wrapper"><a class="entry__logo" href="#"><img class="some-icon" src="img/logo-dark.svg" alt="Recopo"><img class="some-icon-dark" src="img/logo-light.svg" alt="Recopo"></a>
+          <div class="h2 entry__title">アンケートフォーム</div>
+          <div class="products__head mb-32 pt-16">
+            <div class="title-orange products__title">牛鍋 吉田屋 八丁堀店 について</div>
+          </div>
+          <div class="field">
+            <div class="field__label required">牛鍋 吉田屋 八丁堀店 を家族や友人にどれくらいおすすめしたいですか?
+            </div>
+            <div class="field__wrap">
+              <select name="NPS" class="select">
+                <option value="" hidden>選択してください</option>
+                <option value="10">10点</option>
+                <option value="9">9点</option>
+                <option value="8">8点</option>
+                <option value="7">7点</option>
+                <option value="6">6点</option>
+                <option value="5">5点</option>
+                <option value="4">4点</option>
+                <option value="3">3点</option>
+                <option value="2">2点</option>
+                <option value="1">1点</option>
+              </select>
+            </div>
+            <div class="field__label_small">おすすめ度が高いほど高い点数を選択してください</div>
+          </div>
+          <div class="field">
+            <div class="field__label required">牛鍋 吉田屋 八丁堀店 に来たのは何回目ですか?
+            </div>
+            <div class="field__wrap">
+              <select name="visitCount" class="select">
+                <option value="" hidden>選択してください</option>
+                <option value="One">初めて</option>
+                <option value="TwoOrThree">2~3回目</option>
+                <option value="OverFour">4回以上</option>
+                <option value="Unknown">覚えていない</option>
+              </select>
             </div>
           </div>
-          <div class="entry__info">ログインは<a href="login.html">こちら</a></div>
+          <div class="field">
+            <div class="field__label required">利用したお店の料理･雰囲気･場所･サービス･価格などについて､より具体的なご意見をお聞かせください｡
+            </div>
+            <div class="field__wrap">
+              <textarea class="editor__textarea field__input" name="detail" placeholder="" spellcheck="false"></textarea>
+            </div>
+            <div class="field__label_small">回答者個人が特定できるような情報(氏名､電話番号､口座情報等)は記載しないでください｡この内容はすぐに店員に表示されません｡</div>
+          </div>
+          <div class="products__head mb-32 pt-16">
+            <div class="title-orange products__title">お客さまについて</div>
+          </div>
+          <div class="field">
+            <div class="field__label required">お客さまの年齢を教えて下さい
+            </div>
+            <div class="field__wrap">
+              <input class="field__input" type="text" name="title" placeholder="年齢を数字で入力" value="" required>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__label required">お住まいの都道府県を教えて下さい
+            </div>
+            <div class="field__wrap">
+              <select name="preCode" class="select">
+                <option value="" hidden>選択してください</option>
+                <option value="1">北海道</option>
+                <option value="2">青森県</option>
+                <option value="3">岩手県</option>
+                <option value="4">宮城県</option>
+                <option value="5">秋田県</option>
+                <option value="6">山形県</option>
+                <option value="7">福島県</option>
+                <option value="8">茨城県</option>
+                <option value="9">栃木県</option>
+                <option value="10">群馬県</option>
+                <option value="11">埼玉県</option>
+                <option value="12">千葉県</option>
+                <option value="13">東京都</option>
+                <option value="14">神奈川県</option>
+                <option value="15">新潟県</option>
+                <option value="16">富山県</option>
+                <option value="17">石川県</option>
+                <option value="18">福井県</option>
+                <option value="19">山梨県</option>
+                <option value="20">長野県</option>
+                <option value="21">岐阜県</option>
+                <option value="22">静岡県</option>
+                <option value="23">愛知県</option>
+                <option value="24">三重県</option>
+                <option value="25">滋賀県</option>
+                <option value="26">京都府</option>
+                <option value="27">大阪府</option>
+                <option value="28">兵庫県</option>
+                <option value="29">奈良県</option>
+                <option value="30">和歌山県</option>
+                <option value="31">鳥取県</option>
+                <option value="32">島根県</option>
+                <option value="33">岡山県</option>
+                <option value="34">広島県</option>
+                <option value="35">山口県</option>
+                <option value="36">徳島県</option>
+                <option value="37">香川県</option>
+                <option value="38">愛媛県</option>
+                <option value="39">高知県</option>
+                <option value="40">福岡県</option>
+                <option value="41">佐賀県</option>
+                <option value="42">長崎県</option>
+                <option value="43">熊本県</option>
+                <option value="44">大分県</option>
+                <option value="45">宮崎県</option>
+                <option value="46">鹿児島県</option>
+                <option value="47">沖縄県</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__label required">お住まいの市区町村を教えて下さい
+            </div>
+            <div class="field__wrap">
+              <select name="cityCode" class="select">
+                <option value="" hidden>選択してください</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__label required">ご職業を教えて下さい
+            </div>
+            <div class="field__wrap">
+              <select name="visitCount" class="select">
+                <option value="" hidden>選択してください</option>
+                <option value="OfficeWorker">会社員</option>
+                <option value="BusinessOwner">会社役員･自営業</option>
+                <option value="PartTimeWorker">パート･アルバイト</option>
+                <option value="Student">学生</option>
+                <option value="FullTimeHouseWife_Husband">専業主婦･主夫</option>
+                <option value="Other">無職</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__label required">性別を教えて下さい
+            </div>
+            <div class="field__wrap">
+              <div class="radio__btns">
+                <label class="radio radio__button_3">
+                  <input class="radio__input" type="radio" name="customers"><span class="radio__inner"><span class="radio__tick"></span><span class="radio__text ml-16">女性</span></span>
+                </label>
+                <label class="radio radio__button_3">
+                  <input class="radio__input" type="radio" name="customers" checked=""><span class="radio__inner"><span class="radio__tick"></span><span class="radio__text ml-16">男性</span></span>
+                </label>
+                <label class="radio radio__button_3">
+                  <input class="radio__input" type="radio" name="customers" checked=""><span class="radio__inner"><span class="radio__tick"></span><span class="radio__text ml-16">無回答</span></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="entry__fieldset mt-32 mb-32">
+           <a class="button entry__button" href="#">回答を送信</a>
+          </div>
         </div>
       </div>
     </div>
