@@ -451,6 +451,10 @@ table {
   position: relative;
 }
 
+.option[selected][disabled] {
+  display: none;
+}
+
 .nice-dropdown-inner {
   appearance: none;
   width: 100%;
