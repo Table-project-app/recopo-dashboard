@@ -11855,8 +11855,8 @@ body.dark .products__item:hover {
 @media only screen and (max-width: 1023px) {
   .products__preview {
     margin-right: 18px;
-    height: 80px;
-    width: 80px;
+    height: 64px;
+    width: 64px;
   }
 }
 
