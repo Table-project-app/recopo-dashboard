@@ -4147,6 +4147,15 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   margin-top: 32px;
 }
 
+.text-left {
+  text-align:left !important
+}
+
+.text-right {
+  text-align:right !important
+}
+
+
 .align-baseline {
   align-items: baseline;
 }
@@ -4731,7 +4740,7 @@ body.dark .balance.minus svg {
   height: 24px;
   padding: 0 8px 0 4px;
   border-radius: 8px;
-  margin-bottom: 3px;
+  margin-bottom: 0px;
 }
 
 .balance.background.plus {
@@ -6332,7 +6341,7 @@ body.dark .card {
     margin: -10px auto 0;
   }
   .card__chart_demography {
-    height: 175px;
+    height: 165px;
   }
 }
 
@@ -6441,6 +6450,7 @@ body.dark .card__sorting .card__link.active .icon {
 @media only screen and (max-width: 767px) {
   .card__nav .card__link {
     flex: 1;
+    padding: 8px 12px;
   }
 }
 
@@ -13887,8 +13897,8 @@ body .dark .schedule__item {
 
 @media only screen and (max-width: 1023px) {
   .schedule__preview {
-    width: 104px;
-    height: 104px;
+    width: 74px;
+    height: 74px;
   }
 }
 
@@ -13986,8 +13996,8 @@ body.dark .schedule__empty {
 
 @media only screen and (max-width: 767px) {
   .schedule__control {
-    left: 124px;
-    margin-top: 34px;
+    right: 0px;
+    margin-top: 18px;
     display: block;
   }
 }
@@ -16152,7 +16162,7 @@ body.dark .customer__row:not(:first-child) .score__col:first-child:hover {
     min-width: 240px;
     display: block;
   }
-  .customer__col:nth-child(3) {
+  .customer__col:nth-child(4) {
     margin-left: auto;
     min-width: 50px;
     display: block !important;
