@@ -15797,6 +15797,12 @@ body.dark .promote .media {
   }
 }
 
+.divider {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #EFEFEF;
+}
+
 .message__item {
   display: flex;
 }
@@ -16269,6 +16275,33 @@ body.dark .customer__row:not(:first-child) .score__col:first-child:hover {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.brand__avatar {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.brand__avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.review__brand {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.review__store {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6F767E;
 }
 
 .customer__user {
