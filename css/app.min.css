@@ -18242,20 +18242,30 @@ body.dark .settings__wrapper>.select {
   box-shadow: 0 0 0 #272B30 inset;
 }
 
+.settings__fieldset {
+ margin-bottom: 32px; 
+}
+
+@media only screen and (max-width: 1023px) {
+  .settings__fieldset {
+   margin-bottom: 24px; 
+  }
+}
+
 .settings__item {
   position: relative;
 }
 
 .settings__item:not(:last-child) {
   margin-bottom: 48px;
-  padding-bottom: 48px;
+  padding-bottom: 0px;
   border-bottom: 1px solid #EFEFEF;
 }
 
 @media only screen and (max-width: 1023px) {
   .settings__item:not(:last-child) {
     margin-bottom: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 0px;
   }
 }
 
@@ -18438,11 +18448,11 @@ body.dark .settings__item:not(:last-child) {
 
 .settings__line {
   display: flex;
-  padding-bottom: 16px;
+  padding-bottom: 24px;
 }
 
 .settings__line:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   border-bottom: 1px solid #EFEFEF;
 }
 
