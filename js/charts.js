@@ -324,7 +324,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 (function() {
   var options = {
-    series: [292, 19, 48, 172, 30],
+    series: [292, 19, 48, 172, 30, 4],
     chart: {
       type: 'donut',
       fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
@@ -345,10 +345,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       }
     },
-    labels: ['初めて', '1週間以内', '1ヶ月以内', '1年以内', '1年以上前'],
-    theme: {
-      palette: 'palette1'
-    },
+    labels: ['初めて', '1週間以内', '1ヶ月以内', '1年以内', '1年以上前', '覚えていない'],
+    colors: ['#C63DC6', '#F96D29', '#FFA50E', "#FF4F7C", '#10C268', '#A8ADB1'],
     states: {
       hover: {
         filter: {
