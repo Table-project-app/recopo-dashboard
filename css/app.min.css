@@ -15798,8 +15798,8 @@ body.dark .promote .media {
 }
 
 .divider {
-  margin-bottom: 24px;
-  padding-bottom: 24px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #EFEFEF;
 }
 
@@ -16294,12 +16294,12 @@ body.dark .customer__row:not(:first-child) .score__col:first-child:hover {
 }
 
 .review__brand {
-  font-size: 16px;
+  font-size: 15px;
   margin-right: 8px;
 }
 
 .review__store {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: #6F767E;
 }
@@ -20554,6 +20554,10 @@ body.dark .review {
 
 .entry__title {
   margin-bottom: 32px;
+}
+
+.form__title {
+  margin-bottom: 16px;
 }
 
 .entry__top {
