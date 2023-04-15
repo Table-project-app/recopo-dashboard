@@ -419,7 +419,7 @@ $(document).ready(function () {
 
 
 $('[data-fancybox]').fancybox({
-  buttons: ['share', 'download', 'fullScreen', 'close']
+  buttons: ['download', 'fullScreen', 'close']
 }); 
 
 // products
