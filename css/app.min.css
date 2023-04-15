@@ -11456,11 +11456,11 @@ body.dark .checkbox__text {
   height: 48px;
   border-radius: 8px;
   transition: all .2s;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   display: block;
   text-align: center;
-  padding-top: 12px;
+  padding-top: 11px;
   color: var(--recopo-orange);
 }
 
