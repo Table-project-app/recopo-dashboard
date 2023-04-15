@@ -9421,7 +9421,7 @@ body.dark .product__gallery .product__button:hover {
 
 .product__preview img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 18px;
 }
 
 .product__preview:not(:first-child) {
