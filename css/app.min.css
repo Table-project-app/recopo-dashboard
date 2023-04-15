@@ -73,7 +73,7 @@
   --recopo-body-bg-rgb: 255, 255, 255;
   --recopo-font-sans-serif: YakuHanJP_Noto, 'MADEOkineSans', 'Noto Sans', 'Noto Sans CJK JP', 'Noto Sans Japanese', "Hiragino Kaku Gothic ProN", Meiryo, Helvetica, Arial, Sans-Serif;
   --recopo-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --recopo-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --recopo-gradient: -webkit-linear-gradient(180deg, #FF507C, #FFA50E);
   --recopo-body-font-family: var(--recopo-font-sans-serif);
   --recopo-body-font-size: 1rem;
   --recopo-body-font-weight: 400;
