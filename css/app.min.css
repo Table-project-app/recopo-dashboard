@@ -4173,11 +4173,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 
 .mr-8 {
-  margin-right: 8px !important;
+  margin-right: 8px;
 }
 
 .ml-8 {
-  margin-left: 8px !important;
+  margin-left: 8px;
 }
 
 .mr-16 {
@@ -13012,6 +13012,7 @@ body.dark .file__input:hover+.file__box {
   font-size: 13px;
   font-weight: 700;
   line-height: 1.6;
+  cursor: pointer;
   transition: border-color .2s;
 }
 
