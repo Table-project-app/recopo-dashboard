@@ -4328,7 +4328,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .h3 {
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: -.06em;
+  letter-spacing: -.04em;
 }
 
 @media only screen and (max-width: 767px) {
