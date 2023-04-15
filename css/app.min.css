@@ -15160,7 +15160,7 @@ body.dark .released__item:hover {
 
 .released__preview {
   flex-shrink: 0;
-  width: 64px;
+  width: 102px;
   height: 64px;
   margin-right: 20px;
   border-radius: 8px;
@@ -15169,7 +15169,7 @@ body.dark .released__item:hover {
 
 @media only screen and (max-width: 1023px) {
   .released__preview {
-    width: 104px;
+    width: 102px;
   }
 }
 
