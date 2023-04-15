@@ -13375,6 +13375,20 @@ body.dark .create__counter span {
   border-radius: 0px;
 }
 
+.raffle__photo {
+  background: var(--recopo-white);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.raffle__photo img {
+  width: 100%;
+  border-radius: 12px;
+}
+
 .brand__photo {
   padding: 20px;
   background: var(--recopo-white);
@@ -23164,6 +23178,16 @@ body.dark .follower__btns .follower__button_follow.active {
 }
 
 .column__btns .icon {
+  height: 22px;
+  width: 22px;
+}
+
+.column__btns__bottom {
+  display: flex;
+  margin: 24px -8px 0px -8px;
+}
+
+.column__btns__bottom .icon {
   height: 22px;
   width: 22px;
 }

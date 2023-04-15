@@ -570,121 +570,150 @@
             </svg>新規抽選設定
           </div>
         </div>
-        <div class="products card">
-          <div class="products__head">
-            <div class="title-purple products__title">抽選設定の編集</div>
-          </div>
-          <div class="settings__row">
-            <div class="field">
-              <div class="field__label">抽選タイトル
-                <div class="tooltip required" title="抽選のタイトルです。お客さまにも表示されます。">
-                  <svg class="icon icon-info">
-                    <use xlink:href="#icon-info"></use>
-                  </svg>
+        <div class="create">
+          <div class="create__row">
+            <div class="create__col">
+              <div class="create__card card">
+                <div class="card__head">
+                  <div class="title-purple card__title">抽選設定の編集</div>
+                </div>
+                <div class="field">
+                  <div class="field__label">抽選タイトル
+                    <div class="tooltip required" title="抽選のタイトルです。お客さまにも表示されます。">
+                      <svg class="icon icon-info">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="field__wrap">
+                    <input class="field__input" type="text" name="title" placeholder="抽選のタイトルです。お客さまにも表示されます" value="" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="field__label">メモ
+                    <div class="tooltip" title="管理用の説明です。お客さまには表示されません。">
+                      <svg class="icon icon-info">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="field__wrap">
+                    <input class="field__input" type="text" name="title" placeholder="管理用の説明です。お客さまには表示されません" value="">
+                  </div>
+                </div>
+                <div class="create__toggle">
+                  <div class="create__info">会社全体に対して抽選設定する
+                    <div class="tooltip" title="この会社全体で抽選を設定するかを選べます。店舗で抽選が設定されている場合は店舗の抽選設定が優先されます。">
+                      <svg class="icon icon-info">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <label class="switch">
+                    <input class="switch__input" type="checkbox" checked="checked"><span class="switch__inner"><span class="switch__box"></span></span>
+                  </label>
                 </div>
               </div>
-              <div class="field__wrap">
-                <input class="field__input" type="text" name="title" placeholder="抽選のタイトルです。お客さまにも表示されます" value="" required>
-              </div>
-            </div>
-            <div class="field">
-              <div class="field__label">メモ
-                <div class="tooltip" title="管理用の説明です。お客さまには表示されません。">
-                  <svg class="icon icon-info">
-                    <use xlink:href="#icon-info"></use>
-                  </svg>
+              <div class="create__card card">
+                <div class="card__head">
+                  <div class="title-purple card__title">抽選の景品</div>
                 </div>
-              </div>
-              <div class="field__wrap">
-                <input class="field__input" type="text" name="title" placeholder="管理用の説明です。お客さまには表示されません" value="">
-              </div>
-            </div>
-          </div>
-          <div class="create__toggle">
-            <div class="create__info">会社全体に対して抽選設定する
-              <div class="tooltip" title="この会社全体で抽選を設定するかを選べます。店舗で抽選が設定されている場合は店舗の抽選設定が優先されます。">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
-              </div>
-            </div>
-            <label class="switch">
-              <input class="switch__input" type="checkbox" checked="checked"><span class="switch__inner"><span class="switch__box"></span></span>
-            </label>
-          </div>
-        </div>
-        <div class="products card">
-          <div class="products__head">
-            <div class="title-purple products__title">抽選の景品</div>
-          </div>
-          <div id="form_repeater_raffle">
-            <div class="form-group">
-              <div data-repeater-list="form_repeater_raffle">
-                <div data-repeater-item class="mb-32">
-                  <div class="row">
-                    <div class="field">
-                      <div class="field__label">景品の名前
-                        <div class="tooltip required" title="お客さまにも表示される景品のタイトルです">
-                          <svg class="icon icon-info">
-                            <use xlink:href="#icon-info"></use>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="field__wrap">
-                        <input class="field__input" type="text" name="title" placeholder="お客さまにも表示される景品のタイトルです" value="" required>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="field__label">景品の説明
-                        <div class="tooltip" title="お客さまにも表示される景品の説明です。">
-                          <svg class="icon icon-info">
-                            <use xlink:href="#icon-info"></use>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="field__wrap">
-                        <input class="field__input" type="text" name="title" placeholder="お客さまにも表示される景品の説明です。" value="">
-                      </div>
-                    </div>
-                    <div class="raffle-group">
-                      <div class="field raffle__item">
-                        <div class="field__label">当選率
-                          <div class="tooltip" title="当選率を1~100(%)で指定してください。この景品がハズレ景品の場合は空欄にしてください">
-                            <svg class="icon icon-info">
-                              <use xlink:href="#icon-info"></use>
-                            </svg>
+                <div id="form_repeater_raffle">
+                  <div class="form-group">
+                    <div data-repeater-list="form_repeater_raffle">
+                      <div data-repeater-item class="mb-32">
+                        <div class="row">
+                          <div class="field">
+                            <div class="field__label">景品の名前
+                              <div class="tooltip required" title="お客さまにも表示される景品のタイトルです">
+                                <svg class="icon icon-info">
+                                  <use xlink:href="#icon-info"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="field__wrap">
+                              <input class="field__input" type="text" name="title" placeholder="お客さまにも表示される景品のタイトルです" value="" required>
+                            </div>
+                          </div>
+                          <div class="field">
+                            <div class="field__label">景品の説明
+                              <div class="tooltip" title="お客さまにも表示される景品の説明です。">
+                                <svg class="icon icon-info">
+                                  <use xlink:href="#icon-info"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="field__wrap">
+                              <input class="field__input" type="text" name="title" placeholder="お客さまにも表示される景品の説明です。" value="">
+                            </div>
+                          </div>
+                          <div class="raffle-group">
+                            <div class="field raffle__item">
+                              <div class="field__label">当選率
+                                <div class="tooltip" title="当選率を1~100(%)で指定してください。この景品がハズレ景品の場合は空欄にしてください">
+                                  <svg class="icon icon-info">
+                                    <use xlink:href="#icon-info"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="field__wrap">
+                                <input class="field__input" type="text" name="title" placeholder="" value="0">
+                              </div>
+                            </div>
+                            <div class="field raffle__item">
+                              <div class="field__label">最大当選数
+                                <div class="tooltip" title="1週間(月曜日~日曜日)で出るあたり本数の上限値です。この景品がハズレ景品の場合は空欄にしてください">
+                                  <svg class="icon icon-info">
+                                    <use xlink:href="#icon-info"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="field__wrap">
+                                <input class="field__input" type="text" name="title" placeholder="" value="0">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mt-16">
+                            <a href="javascript:;" data-repeater-delete class="button-stroke-red panel__button">
+                              削除
+                            </a>
                           </div>
                         </div>
-                        <div class="field__wrap">
-                          <input class="field__input" type="text" name="title" placeholder="当選率を1~100(%)で指定してください。この景品がハズレ景品の場合は空欄にしてください" value="0">
-                        </div>
-                      </div>
-                      <div class="field raffle__item">
-                        <div class="field__label">最大当選数
-                          <div class="tooltip" title="1週間(月曜日~日曜日)で出るあたり本数の上限値です。この景品がハズレ景品の場合は空欄にしてください">
-                            <svg class="icon icon-info">
-                              <use xlink:href="#icon-info"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <div class="field__wrap">
-                          <input class="field__input" type="text" name="title" placeholder="1週間(月曜日~日曜日)で出るあたり本数の上限値です。この景品がハズレ景品の場合は空欄にしてください" value="0">
-                        </div>
                       </div>
                     </div>
-                    <div class="mt-16">
-                      <a href="javascript:;" data-repeater-delete class="button-stroke-red panel__button">
-                        削除
-                      </a>
-                    </div>
+                  </div>
+                  <div class="sidebar__foot">
+                    <a href="javascript:;" data-repeater-create class="button panel__button">
+                      景品を追加
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="sidebar__foot">
-              <a href="javascript:;" data-repeater-create class="button panel__button">
-                景品を追加
-              </a>
+            <div class="create__col">
+              <div class="create__preview">
+                <div class="card">
+                  <div class="card__head">
+                    <div class="title-purple card__title">景品サムネイル</div>
+                  </div>
+                  <div class="file__wrap">
+                    <input class="file__input" type="file"/>
+                    <div class="file__box">
+                      <svg class="icon icon-upload">
+                        <use xlink:href="#icon-upload"></use>
+                      </svg>クリック / ドラッグ&ドロップ
+                    </div>
+                  </div>
+                  <div class="column__btns__bottom">
+                    <button class="button-stroke column__button_2"><svg class="icon icon-download">
+                        <use xlink:href="#icon-edit"></use>
+                      </svg></button>
+                    <button class="button-stroke column__button_2 disabled"><svg class="icon icon-show">
+                        <use xlink:href="#icon-trash"></use>
+                      </svg></button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
