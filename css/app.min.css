@@ -14060,7 +14060,6 @@ body .dark .schedule__item {
 }
 
 .schedule__item:hover {
-  color: var(--recopo-orange);
 }
 
 .schedule__item .schedule__price,
