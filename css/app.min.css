@@ -13491,13 +13491,13 @@ body.dark .panel:before {
   box-shadow: inset 1px 0px 0px #111315;
 }
 
-.review__title {
+.reviewform__title {
   font-size: 18px;
   color: var(--recopo-black);
   align-items: center;
 }
 
-.review__title .icon {
+.reviewform__title .icon {
   width: 32px;
   height: 32px;
   margin-right: 6px;
