@@ -13543,7 +13543,21 @@ body.dark .panel:before {
   font-size: 13px;
 }
 
-.panel__info {
+.form__error {
+  font-size: 12px;
+  font-weight: 500;
+  align-items: baseline;
+  line-height: 1.5;
+  color: var(--recopo-red);
+}
+
+@media only screen and (max-width: 767px) {
+  .form__info {
+    margin: 0 0 24px;
+  }
+}
+
+.panel__error {
   margin-right: auto;
   font-size: 13px;
   font-weight: 500;
