@@ -4196,6 +4196,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   margin-bottom: 16px !important;
 }
 
+.mb-8 {
+  margin-bottom: 8px !important;
+}
+
 .mt-16 {
   margin-top: 16px !important;
 }
@@ -20794,6 +20798,10 @@ body.dark .entry__top {
 
 .entry__fieldset .entry__button {
   width: 100%;
+}
+
+.entry__fieldset .entry__button img {
+  margin-right: 10px;
 }
 
 .entry .field {
