@@ -4321,7 +4321,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 .h2 {
   font-size: 32px;
-  line-height: 1;
+  line-height: 1.2;
   letter-spacing: -.04em;
 }
 
@@ -13517,12 +13517,20 @@ body.dark .panel:before {
   fill: var(--recopo-orange);
 }
 
+.form__text {
+  font-size: 12px;
+  font-weight: 400;
+  align-items: baseline;
+  line-height: 1.5;
+  color: var(--recopo-gray-800);
+}
+
 .form__info {
   margin-right: auto;
   font-size: 12px;
   font-weight: 500;
   align-items: baseline;
-  line-height: 1;
+  line-height: 1.5;
   color: #6F767E;
 }
 
@@ -20843,6 +20851,7 @@ body.dark .entry__top {
   font-size: 12px;
   line-height: 1.3333;
   font-weight: 500;
+  line-height: 1.5;
   color: #6F767E;
 }
 
