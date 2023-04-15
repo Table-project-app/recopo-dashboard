@@ -3603,10 +3603,10 @@ body {
   font-feature-settings: "palt";
   font-size: 14px;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: -.01em;
+  letter-spacing: -.02em;
   color: #1A1D1F;
 }
 

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>フォーム紹介 - レビューフォーム - Recopo</title>
+  <title>フォーム送信後: 抽選あり - レビューフォーム - Recopo</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -48,23 +48,26 @@
         <div class="brand__item">
           <div class="brand__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
           <div class="customer__description text-left">
-            <div class="review__brand">牛鍋 吉田屋</div>
-          </div>
-          <div class="customer__description text-left">
-            <div class="review__store">八丁堀店</div>
+            <div class="review__brand">牛鍋 吉田屋 八丁堀店</div>
           </div>
         </div>
         <div class="divider"></div>
-        
-        <div class="products__head mb-16 pt-16">
-          <div class="media__content">ご来店ありがとうございます｡お客様からの素直なご意見をお待ちしております｡回答いただいた方には<span style="color: var(--recopo-orange); font-weight: 700;"> 抽選でアイス1つ無料プレゼント </span>を提供いたします!</div>
+        <div class="reviewform__title mt-32 mb-16">
+          <svg class="icon icon-check_circled">
+            <use xlink:href="#icon-check_circled"></use>
+          </svg>ご回答ありがとうございました
         </div>
-        <div class="entry__fieldset mb-16 pt-16">
-          <a class="button entry__button" href="review-form.html">アンケート回答へ進む</a>
+        <div class="form__info mb-32">
+          回答日時: <span>2023/4/14 19:32</span>
         </div>
-        <div class="entry__info"><a href="agreement.html">アンケート投稿に関する承諾事項</a>にご同意の上､ご利用ください</div>
+        <div class="summary__title">回答いただいたお礼に､抽選で<span style="color: var(--recopo-orange); font-weight: 700;"> アイス1つ無料プレゼント </span>をご用意しております｡</div>
+        <div class="product__gallery mt-16">
+          <div class="product__box"><div class="product__preview" style="cursor: auto;"><img src="img/content/chance.svg" alt="Chance" ></div></div>
+        </div>
+        <div class="entry__fieldset mb-32 mt-32">
+          <a class="button entry__button" href="review-form-post-raffle-win.html">抽選にチャレンジする</a>
+        </div>
       </div>
-      
     </div>
   </div>
   <!-- scripts-->
@@ -364,6 +367,10 @@
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-leaderboard">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 8V5.33333C10.6667 4.22876 9.77128 3.33333 8.66671 3.33333H7.33337C6.2288 3.33333 5.33337 4.22876 5.33337 5.33333V6.66667H3.33337C2.2288 6.66667 1.33337 7.5621 1.33337 8.66667V12C1.33337 12.3682 1.63185 12.6667 2.00004 12.6667H14C14.3682 12.6667 14.6667 12.3682 14.6667 12V10C14.6667 8.89543 13.7713 8 12.6667 8H10.6667ZM8.66671 4.66667H7.33337C6.96518 4.66667 6.66671 4.96514 6.66671 5.33333V11.3333H9.33337V5.33333C9.33337 4.96514 9.0349 4.66667 8.66671 4.66667ZM10.6667 9.33333V11.3333H13.3334V10C13.3334 9.63181 13.0349 9.33333 12.6667 9.33333H10.6667ZM3.33337 8H5.33337V11.3333H2.66671V8.66667C2.66671 8.29848 2.96518 8 3.33337 8Z" />
       </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-check_circled">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6667 8C14.6667 11.6819 11.6819 14.6667 8.00004 14.6667C4.31814 14.6667 1.33337 11.6819 1.33337 8C1.33337 4.3181 4.31814 1.33333 8.00004 1.33333C11.6819 1.33333 14.6667 4.3181 14.6667 8ZM13.3334 8C13.3334 10.9455 10.9456 13.3333 8.00004 13.3333C5.05452 13.3333 2.66671 10.9455 2.66671 8C2.66671 5.05448 5.05452 2.66667 8.00004 2.66667C9.57216 2.66667 10.9854 3.34688 11.9615 4.42905L7.33337 9.05719L5.47145 7.19526C5.2111 6.93491 4.78899 6.93491 4.52864 7.19526C4.26829 7.45561 4.26829 7.87772 4.52864 8.13807L6.39057 10C6.91127 10.5207 7.75548 10.5207 8.27618 10L12.7343 5.54184C13.1171 6.27744 13.3334 7.11346 13.3334 8Z"/>
+      </symbol>
+
     </svg>
   </div>
 </body>
