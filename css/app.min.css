@@ -13240,7 +13240,7 @@ body.dark .create__label {
 .create__list {
   display: flex;
   flex-wrap: wrap;
-  margin: -4px -16px 32px 0;
+  margin: -4px -16px 16px 0;
 }
 
 @media only screen and (max-width: 1259px) {
@@ -18753,7 +18753,7 @@ body.dark .settings__line:not(:last-child) {
 .settings__label {
   margin-right: 24px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.71429;
   color: #33383F;
 }
