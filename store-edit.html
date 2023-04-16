@@ -667,8 +667,29 @@
                   </div>
                   <textarea class="editor__textarea field__input" name="description" placeholder="例: アイスプレゼントキャンペーン中 (1月末まで)" style="overflow: hidden; overflow-wrap: break-word; height: 100px;" spellcheck="false"></textarea>
                 </div>
+                <div class="create__toggle mb-16">
+                  <div class="create__info">選択式アンケートを設定する
+                    <div class="tooltip" title="この店舗で選択式アンケートを設定します">
+                      <svg class="icon icon-info">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <label class="switch">
+                    <input class="switch__input" type="checkbox" checked="checked"><span class="switch__inner"><span class="switch__box"></span></span>
+                  </label>
+                </div>
+                <div class="field">
+                  <div class="field__label">抽選設定
+                  </div>
+                  <div class="field__wrap">
+                    <select class="select">
+                      <option>抽選なし</option>
+                      <option selected="">アイス1つ無料プレゼント</option>
+                    </select>
+                  </div>
+                </div>
               </div>
-
             </div>
             <div class="create__col">
               <div class="create__preview js-preview">
@@ -707,7 +728,7 @@
         <div class="panel__info">
           <svg class="icon icon-check-all">
             <use xlink:href="#icon-check-all"></use>
-          </svg>最終更新日　<span>2023/03/18 23:32</span>
+          </svg>最終更新日　<span style="font-size: 13px; color: #6F767E;">2023/03/18 23:32</span>
         </div>
         <div class="panel__btns">
           <button class="button-stroke panel__button">回答受付を停止</button>

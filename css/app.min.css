@@ -13492,7 +13492,7 @@ body.dark .create__text span {
   .panel {
     display: block;
     margin: auto -16px -24px;
-    padding: 40px 16px 16px;
+    padding: 50px 16px 32px;
   }
 }
 
@@ -13520,7 +13520,7 @@ body.dark .panel:before {
 }
 
 .reviewform__title {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--recopo-black);
   align-items: center;
 }
@@ -13581,6 +13581,12 @@ body.dark .panel:before {
   font-weight: 500;
   line-height: 1.23077;
   color: #6F767E;
+}
+
+.panel__info {
+  color: #6F767E;
+  font-weight: 500;
+  font-size: 13px;
 }
 
 @media only screen and (max-width: 767px) {
