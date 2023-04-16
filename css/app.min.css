@@ -18502,6 +18502,7 @@ body.dark .settings__link.active {
 
 .settings__wrapper>.settings__button {
   margin-top: 48px;
+  margin-bottom: 16px;
 }
 
 @media only screen and (max-width: 1023px) {
