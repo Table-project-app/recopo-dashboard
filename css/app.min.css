@@ -10687,6 +10687,11 @@ body.dark .share__input {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  
+  .demography__list:last-child {
+    display: flex;
+    margin: 0 -24px 0px;
+  }
 
   .demography__list::-webkit-scrollbar {
     display: none;
@@ -10701,7 +10706,7 @@ body.dark .share__input {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 467px) {
   .demography__list {
     display: block;
     margin: 0;
@@ -10910,69 +10915,57 @@ body.dark .demography__item_6 {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 467px) {
   .demography__list:last-child {
     display: block;
     margin: 0;
   }
   .demography__item_1 {
     width: 100%;
-    max-width: 330px;
     margin: 0 0 10px 0;
   }
   .demography__item_2 {
     width: 100%;
-    max-width: 330px;
     margin: 0 0 10px 0;
   }
   .demography__item_3 {
     width: 100%;
-    max-width: 330px;
     margin: 0 0 10px 0;
   }
   .demography__item_4 {
     width: 100%;
-    max-width: 330px;
     margin: 0 0 10px 0;
   }
   .demography__item_5 {
     width: 100%;
-    max-width: 330px;
     margin: 0 0 10px 0;
   }
   .demography__item_6 {
     width: 100%;
-    max-width: 330px;
     margin: 0;
   }
   body.dark .demography__item_1 {
     width: 100%;
-    max-width: 330px;
     margin: 0 12px 0 0;
   }
   body.dark .demography__item_2 {
     width: 100%;
-    max-width: 330px;
     margin: 0 12px 0 0;
   }
   body.dark .demography__item_3 {
     width: 100%;
-    max-width: 330px;
     margin: 0;
   }
   body.dark .demography__item_4 {
     width: 100%;
-    max-width: 330px;
     margin: 0 12px 0 0;
   }
   body.dark .demography__item_5 {
     width: 100%;
-    max-width: 330px;
     margin: 0 12px 0 0;
   }
   body.dark .demography__item_6 {
     width: 100%;
-    max-width: 330px;
     margin: 0;
   }
 }
