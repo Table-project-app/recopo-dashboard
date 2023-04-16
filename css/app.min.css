@@ -4809,7 +4809,7 @@ body.dark .balance.minus svg {
   height: 24px;
   padding: 0 8px 0 4px;
   border-radius: 8px;
-  margin-bottom: 0px;
+  margin-bottom: 2px;
 }
 
 .balance.background.plus {
@@ -10917,50 +10917,62 @@ body.dark .demography__item_6 {
   }
   .demography__item_1 {
     width: 100%;
+    max-width: 315px;
     margin: 0 0 10px 0;
   }
   .demography__item_2 {
     width: 100%;
+    max-width: 315px;
     margin: 0 0 10px 0;
   }
   .demography__item_3 {
     width: 100%;
+    max-width: 315px;
     margin: 0 0 10px 0;
   }
   .demography__item_4 {
     width: 100%;
+    max-width: 315px;
     margin: 0 0 10px 0;
   }
   .demography__item_5 {
     width: 100%;
+    max-width: 315px;
     margin: 0 0 10px 0;
   }
   .demography__item_6 {
     width: 100%;
+    max-width: 315px;
     margin: 0;
   }
   body.dark .demography__item_1 {
     width: 100%;
+    max-width: 315px;
     margin: 0 12px 0 0;
   }
   body.dark .demography__item_2 {
     width: 100%;
+    max-width: 315px;
     margin: 0 12px 0 0;
   }
   body.dark .demography__item_3 {
     width: 100%;
+    max-width: 315px;
     margin: 0;
   }
   body.dark .demography__item_4 {
     width: 100%;
+    max-width: 315px;
     margin: 0 12px 0 0;
   }
   body.dark .demography__item_5 {
     width: 100%;
+    max-width: 315px;
     margin: 0 12px 0 0;
   }
   body.dark .demography__item_6 {
     width: 100%;
+    max-width: 315px;
     margin: 0;
   }
 }
