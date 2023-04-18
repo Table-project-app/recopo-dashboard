@@ -14253,11 +14253,11 @@ body.dark .schedule__empty {
 @media only screen and (max-width: 767px) {
   .action__control {
     right: 0px;
-    top: 36%;
+    top: 38px;
     display: block;
   }
   .company__mobile {
-    top: 54% !important;
+    top: 48px !important;
   }
 }
 
