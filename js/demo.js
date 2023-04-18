@@ -72,11 +72,11 @@ $('.creators__link').on('click', function(e) {
 
 // drafts
 (function() {
-  $('.schedule__row:first-child .checkbox__input').on('click', function() {
+  $('.list__row:first-child .checkbox__input').on('click', function() {
     if ($(this).is(':checked')) {
-      $(this).parents('.schedule__table').find('.schedule__row .checkbox__input').prop('checked', true).attr('checked', 'checked');
+      $(this).parents('.schedule__table').find('.list__row .checkbox__input').prop('checked', true).attr('checked', 'checked');
     } else {
-      $(this).parents('.schedule__table').find('.schedule__row .checkbox__input').prop('checked', false).removeAttr('checked');
+      $(this).parents('.schedule__table').find('.list__row .checkbox__input').prop('checked', false).removeAttr('checked');
     }
   });
 })(); 
