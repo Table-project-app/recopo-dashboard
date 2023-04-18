@@ -3633,7 +3633,7 @@ button,
 input,
 textarea {
   font-family: var(--recopo-font-sans-serif);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
 }
 
 svg,
@@ -14126,7 +14126,7 @@ body .dark .list__item {
 
 @media only screen and (max-width: 767px) {
   .company__details {
-    align-items: center;
+    align-items: top;
     vertical-align: middle;
     display: flex;
   }
@@ -14247,6 +14247,9 @@ body.dark .schedule__empty {
     right: 0px;
     top: 36%;
     display: block;
+  }
+  .company__mobile {
+    top: 54% !important;
   }
 }
 
