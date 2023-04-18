@@ -20682,10 +20682,19 @@ body.dark .login__top {
 
 .login__note {
   margin-top: 32px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  line-height: 1.71429;
+  line-height: 1.41429;
   color: var(--recopo-gray-500);
+}
+
+.login__note a {
+  font-weight: 700;
+  color: var(--recopo-black);
+}
+
+.login__note a:hover {
+  color: var(--recopo-orange);
 }
 
 .login__code {
