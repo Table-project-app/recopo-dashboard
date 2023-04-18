@@ -13537,6 +13537,14 @@ body.dark .panel:before {
   fill: var(--recopo-orange);
 }
 
+.terms__text {
+  font-size: 13px;
+  font-weight: 400;
+  align-items: baseline;
+  line-height: 1.5;
+  color: var(--recopo-gray-800);
+}
+
 .form__text {
   font-size: 12px;
   font-weight: 400;
@@ -20812,6 +20820,10 @@ body.dark .review {
   max-width: 346px;
 }
 
+.terms__wrapper {
+  max-width: 686px;
+}
+
 @media only screen and (max-width: 767px) {
   .entry__wrapper {
     max-width: 100%;
@@ -23369,3 +23381,7 @@ body.dark .score_text_s {
 .apexcharts-bar-series {
   cursor: pointer;
 } 
+
+p {
+   margin: 0.5rem 0px;
+}
