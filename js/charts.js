@@ -47,7 +47,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     yaxis: {
       labels: {
-        show: false
+        show: true
       }
     },
     grid: {
