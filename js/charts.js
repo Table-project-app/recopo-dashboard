@@ -51,7 +51,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     },
     grid: {
-      show: false,
+      show: true,
       strokeDashArray: 0,
       padding: {
         top: -20,
@@ -1260,14 +1260,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     yaxis: {
       labels: {
-        show: false
+        show: true
       }
     },
     grid: {
-      show: false,
+      show: true,
       strokeDashArray: 0,
       padding: {
-        top: -20,
+        top: 0,
         right: 0,
         bottom: 20,
         left: 50
