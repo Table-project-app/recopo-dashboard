@@ -148,6 +148,213 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }
 })(); 
 
+// Answer Chart Comparison
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: false
+    },
+    colors: ['#F96C2A', 'rgba(154, 159, 165, .3)'],
+    series: [{
+      name: '牛鍋 吉田家 東京都',
+      data: [84, 23, 49, 94, 58, 83, 40]
+      }, {
+      name: '全店舗平均',
+      data: [68, 57, 42, 67, 42, 73, 68]
+    }],
+    chart: {
+      height: '100%',
+      type: 'bar',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 0
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    tooltip: {
+      shared: true,
+      intersect: false,
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#answer-chart-compare');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// Answer Chart Comparison Store
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: false
+    },
+    colors: ['#F96C2A', 'rgba(154, 159, 165, .3)'],
+    series: [{
+      name: '牛鍋 吉田家 八丁堀店',
+      data: [84, 23, 49, 94, 58, 83, 40]
+      }, {
+      name: '全店舗平均',
+      data: [68, 57, 42, 67, 42, 73, 68]
+    }],
+    chart: {
+      height: '100%',
+      type: 'bar',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 0
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    tooltip: {
+      shared: true,
+      intersect: false,
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#answer-chart-compare-store');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// Answer Chart Comparison Brand
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: false
+    },
+    colors: ['#F96C2A', 'rgba(154, 159, 165, .3)'],
+    series: [{
+      name: '牛鍋 吉田家',
+      data: [84, 23, 49, 94, 58, 83, 40]
+      }, {
+      name: '全店舗平均',
+      data: [68, 57, 42, 67, 42, 73, 68]
+    }],
+    chart: {
+      height: '100%',
+      type: 'bar',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 0
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    tooltip: {
+      shared: true,
+      intersect: false,
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#answer-chart-compare-brand');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
 // NPS Chart
 
 (function() {
@@ -210,6 +417,201 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }
 })(); 
 
+// NPS Chart Comparison
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: false
+    },
+    colors: ['#FF507C', 'rgba(154, 159, 165, .3)'],
+    series: [{
+      name: '牛鍋 吉田家 東京都',
+      data: [8.5, 8.7, 8.2, 9.5, 9.1, 8.7, 8.9]
+      }, {
+      name: '全店舗平均',
+      data: [8.2, 9.0, 8.7, 9.0, 8.7, 7.9, 8.5]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#nps-chart-compare');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// NPS Chart Comparison Store
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: false
+    },
+    colors: ['#FF507C', 'rgba(154, 159, 165, .3)'],
+    series: [{
+      name: '牛鍋 吉田家 八丁堀店',
+      data: [8.5, 8.7, 8.2, 9.5, 9.1, 8.7, 8.9]
+      }, {
+      name: '全店舗平均',
+      data: [8.2, 9.0, 8.7, 9.0, 8.7, 7.9, 8.5]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#nps-chart-compare-store');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// NPS Chart Comparison Brand
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: false
+    },
+    colors: ['#FF507C', 'rgba(154, 159, 165, .3)'],
+    series: [{
+      name: '牛鍋 吉田家',
+      data: [8.5, 8.7, 8.2, 9.5, 9.1, 8.7, 8.9]
+      }, {
+      name: '全店舗平均',
+      data: [8.2, 9.0, 8.7, 9.0, 8.7, 7.9, 8.5]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#nps-chart-compare-brand');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
 // Score Chart
 
 (function() {
@@ -266,6 +668,266 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   };
   var chart = document.querySelector('#score-chart');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// Score Chart Comparison
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: false
+    },
+    colors: ['#FFA50E', 'rgba(154, 159, 165, .3)'],
+    series: [{
+      name: '牛鍋 吉田家 東京都',
+      data: [92, 85, 81, 90, 94, 86, 91]
+      }, {
+      name: '全店舗平均',
+      data: [88, 89, 84, 85, 90, 83, 84]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#score-chart-compare');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// Score Chart Comparison Store
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: false
+    },
+    colors: ['#FFA50E', 'rgba(154, 159, 165, .3)'],
+    series: [{
+      name: '牛鍋 吉田家 八丁堀店',
+      data: [92, 85, 81, 90, 94, 86, 91]
+      }, {
+      name: '全店舗平均',
+      data: [88, 89, 84, 85, 90, 83, 84]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#score-chart-compare-store');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// Select Chart Comparison Store
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: false
+    },
+    colors: ['#C63CC6', 'rgba(154, 159, 165, .3)'],
+    series: [{
+      name: '牛鍋 吉田家 八丁堀店',
+      data: [94, 81, 82, 75, 94, 76, 92]
+      }, {
+      name: '全店舗平均',
+      data: [88, 89, 84, 85, 90, 83, 84]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#select-chart-compare-store');
+
+  if (chart != null) {
+    new ApexCharts(chart, options).render();
+  }
+})(); 
+
+// Score Chart Comparison Brand
+
+(function() {
+  var options = {
+    grid: {
+      strokeDashArray: 0,
+      padding: {
+        top: -20,
+        right: 0,
+        bottom: 0,
+        left: 10
+      }
+    },
+    legend: {
+      show: false
+    },
+    colors: ['#FFA50E', 'rgba(154, 159, 165, .3)'],
+    series: [{
+      name: '牛鍋 吉田家',
+      data: [92, 85, 81, 90, 94, 86, 91]
+      }, {
+      name: '全店舗平均',
+      data: [88, 89, 84, 85, 90, 83, 84]
+    }],
+    chart: {
+      height: '100%',
+      type: 'area',
+      toolbar: {
+        show: false
+      },
+      fontFamily: 'MADEOkineSans, Noto Sans Japanese, Sans-Serif'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      width: 4
+    },
+    xaxis: {
+      type: 'category',
+      categories: ["3/15", "3/16", "3/17", "3/18", "3/19", "3/20", "3/21"],
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      },
+      tooltip: {
+        enabled: false
+      }
+    },
+    events: {
+      dataPointSelection: function(event, chartContext, config) {
+        console.log(config.dataPointIndex)
+      }
+    }
+  };
+  var chart = document.querySelector('#score-chart-compare-brand');
 
   if (chart != null) {
     new ApexCharts(chart, options).render();

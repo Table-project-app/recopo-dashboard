@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>グループ編集 - Recopoダッシュボード</title>
+  <title>ブランド設定 - Recopoダッシュボード</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -345,19 +345,19 @@
         </a>
         <a class="sidebar__item" href="brands.html">
           <svg class="icon icon-flag">
-            <use xlink:href="#icon-flag"></use>
+          <use xlink:href="#icon-flag"></use>
           </svg>
           ブランド一覧
         </a>
         <a class="sidebar__item" href="groups.html">
           <svg class="icon icon-category">
-            <use xlink:href="#icon-category"></use>
+          <use xlink:href="#icon-category"></use>
           </svg>
           店舗グループ一覧
         </a>
         <a class="sidebar__item" href="stores.html">
           <svg class="icon icon-store">
-            <use xlink:href="#icon-store"></use>
+          <use xlink:href="#icon-store"></use>
           </svg>
           店舗一覧
         </a>
@@ -372,13 +372,13 @@
           </svg>
           </button>
           <div class="sidebar__body">
-          <a class="sidebar__link" href="setting-brand.html">
+          <a class="sidebar__link active" href="setting-brand.html">
             ブランド設定
             <svg class="icon icon-arrow-next">
             <use xlink:href="#icon-arrow-next"></use>
             </svg>
           </a>
-          <a class="sidebar__link active" href="setting-group.html">
+          <a class="sidebar__link" href="setting-group.html">
             店舗グループ設定
             <svg class="icon icon-arrow-next">
             <use xlink:href="#icon-arrow-next"></use>
@@ -499,167 +499,168 @@
     <div class="page__inner">
       <div class="page__container">
         <div class="page__title h3">
-          <svg class="icon icon-list">
+          <svg class="icon icon-setting">
             <use xlink:href="#icon-setting"></use>
           </svg>
-          <div class="h3">牛鍋 吉田家 <small class="ml-16">東京都</small></div>
-          <div class="store__info">
-            <a href="setting-group.html">店舗グループ設定</a>
-          </div>
-          <div class="store__subinfo">
-            <svg class="icon icon-chevron-forward">
-              <use xlink:href="#icon-chevron-forward"></use>
-            </svg>東京都
-          </div>
+          <div class="h3">ブランド設定</div>
         </div>
-        <div class="card">
-          <div class="card__head">
-            <div class="title-red card__title">店舗グループの編集</div>
-            <a class="button-stroke button-small card__button" href="setting-group.html">
-            <svg class="icon icon-arrow-left">
-              <use xlink:href="#icon-arrow-left"></use>
-            </svg><span>戻る</span></a>
-          </div>
-          <div class="settings__row">
-            <div class="field">
-              <div class="field__label"> ブランド
-              </div>
-              <div class="field__wrap">
-                <select class="select" id="brand" onchange="viewChange();">
-                  <option disabled>選択してください</option>
-                  <option selected value="Yoshidaya">牛鍋 吉田屋</option>
-                  <option value="Mankichi">万吉スープカレー</option>
-                </select>
-              </div>
+        <div class="products card">
+            <div class="products__head">
+              <div class="title-purple products__title">ブランド一覧</div>
+              <a class="button-stroke button-small card__button"data-popup=".js-popup-addbrand">
+              <svg class="icon icon-add">
+                <use xlink:href="#icon-add"></use>
+              </svg><span>新規追加</span></a>
             </div>
-            <div class="field">
-              <div class="field__label">グループタイプ
-              </div>
-              <div class="field__wrap">
-                <select class="select">
-                  <option selected disabled>選択してください</option>
-                  <option selected>エリア</option>
-                  <option>SV</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="settings__row">
-            <div class="field">
-              <div class="field__label">店舗グループ名
-                <div class="tooltip required" title="店舗グループの名前です。お客さまには表示されません">
-                  <svg class="icon icon-info">
-                    <use xlink:href="#icon-info"></use>
-                  </svg>
+            <div class="products__container">
+              <div class="products__wrapper">
+                <div class="products__table">
+                  <div class="products__row">
+                    <div class="products__col">ブランド</div>
+                    <div class="products__col text-end">グループ数</div>
+                  </div>
+                  <div class="types__row" data-popup=".js-popup-editbrand">
+                    <div class="customer__col">
+                      <div class="customer__item">
+                        <div class="logo__preview"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
+                        <div class="customer__description text-left">
+                          <div class="customer__user">牛鍋 吉田屋</div>
+                          <div class="customer__login">吉田ダイニンググループ</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="customer__col text-end">
+                      3
+                    </div>
+                  </div>
+                  <div class="types__row" data-popup=".js-popup-editbrand">
+                    <div class="customer__col">
+                      <div class="customer__item">
+                        <div class="logo__preview"><img src="img/content/mankichi.jpg" alt="万吉スープカレー"></div>
+                        <div class="customer__description text-left">
+                          <div class="customer__user">万吉スープカレー</div>
+                          <div class="customer__login">吉田ダイニンググループ</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="customer__col text-end">
+                      3
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="field__wrap">
-                <input class="field__input" type="text" name="title" placeholder="店舗グループの名前です。お客さまには表示されません" value="東京都" required>
-              </div>
             </div>
-            <div class="field">
-              <div class="field__label">説明
-                <div class="tooltip" title="管理用の説明です。お客さまには表示されません">
-                  <svg class="icon icon-info">
-                    <use xlink:href="#icon-info"></use>
-                  </svg>
+          </div>
+        </div>
+    </div>
+    <div class="popup popup_brands js-popup js-popup-editbrand">
+      <div class="popup__overlay js-popup-overlay"></div>
+      <div class="popup__wrap js-popup-wrap">
+        <div class="description">
+          <div class="title-purple description__title">ブランドの編集</div>
+          <div class="description__row">
+            <div class="description__col">
+                <div class="file">
+                  <div class="file__label">ブランドロゴデータ
+                    <div class="tooltip" title="JPG, PNGのみ" data-position="right">
+                      <svg class="icon icon-info">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="brand__photo"><img src="img/content/yoshidaya.jpg" alt="BrandLogo"></div>
+                  <div class="column__btns__bottom">
+                    <button class="button-stroke column__button_2"><svg class="icon icon-upload">
+                        <use xlink:href="#icon-upload"></use>
+                      </svg></button>
+                    <button class="button-stroke column__button_2"><svg class="icon icon-show">
+                        <use xlink:href="#icon-trash"></use>
+                      </svg></button>
+                  </div>
+                </div>
+            </div>
+            <div class="description__col">
+              <div class="field">
+                <div class="field__label">ブランド名
+                  <div class="tooltip required" title="ブランドの名前です">
+                    <svg class="icon icon-info">
+                      <use xlink:href="#icon-info"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="field__wrap">
+                  <input class="field__input" type="text" name="title" placeholder="ブランド名" value="牛鍋 吉田屋" required>
                 </div>
               </div>
-              <div class="field__wrap">
-                <input class="field__input" type="text" name="title" placeholder="管理用の説明です。お客さまには表示されません" value="東京都内立地の店舗">
+              <div class="description__btns">
+                
+                <button class="button-stroke-red description__button"><span>ブランド削除</span>
+                </button>
+                <button class="button description__button">保存</button>
               </div>
-            </div>
-          </div>
-          <div class="field" id="BrandYoshidaya" style="display:;">
-            <div class="create__label">店舗グループの店舗
-              <div class="tooltip" title="この店舗グループに属している店舗を選択してください。店舗は複数指定できます。">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="create__list">
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" checked><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">代々木店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" checked><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">青山店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" checked><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">丸の内店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">北新地店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" checked><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">池袋店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">京都駅前店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">梅田店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">北二条店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" checked><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">八丁堀店</span></span>
-              </label>
-            </div>
-          </div>
-          <div class="field" id="BrandMankichi" style="display:none;">
-            <div class="create__label">店舗グループの店舗
-              <div class="tooltip" title="この店舗グループに属している店舗を選択してください。店舗は複数指定できます。">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="create__list">
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">心斎橋店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">京都駅前店</span></span>
-              </label>
-            </div>
-          </div>
-          <div class="create__toggle mb-16">
-            <div class="create__info">店舗グループ全体に選択式アンケートを設定
-              <div class="tooltip" title="この店舗グループに選択式アンケートを設定します">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
-              </div>
-            </div>
-            <label class="switch">
-              <input class="switch__input" type="checkbox" checked="checked"><span class="switch__inner"><span class="switch__box"></span></span>
-            </label>
-          </div>
-          <div class="field">
-            <div class="field__label">店舗グループ全体の抽選設定
-            </div>
-            <div class="field__wrap">
-              <select class="select">
-                <option >抽選なし</option>
-                <option selected="">アイス1つ無料プレゼント</option>
-              </select>
             </div>
           </div>
         </div>
-      </div>
-      <div class="panel">
-        <div class="panel__btns">
-          <button class="button-stroke-red panel__button"><span>グループを削除</span>
-            <svg class="icon icon-trash">
-              <use xlink:href="#icon-trash"></use>
-            </svg>
-          </button>
-          <button class="button panel__button">保存</button>
-        </div>
+        <button class="popup__close js-popup-close">
+          <svg class="icon icon-close">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
+    <div class="popup popup_brands js-popup js-popup-addbrand">
+      <div class="popup__overlay js-popup-overlay"></div>
+      <div class="popup__wrap js-popup-wrap">
+        <div class="description">
+          <div class="title-purple description__title">ブランドの追加</div>
+          <div class="description__row">
+            <div class="description__col">
+                <div class="file">
+                  <div class="file__label">ブランドロゴデータ
+                    <div class="tooltip" title="JPG, PNGのみ" data-position="right">
+                      <svg class="icon icon-info">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="file__wrap">
+                    <input class="file__input" type="file"/>
+                     <div class="file__box">
+                       <svg class="icon icon-upload">
+                         <use xlink:href="#icon-upload"></use>
+                       </svg>アップロード
+                     </div>
+                  </div>
+                </div>
+            </div>
+            <div class="description__col">
+              <div class="field">
+                <div class="field__label">ブランド名
+                  <div class="tooltip required" title="ブランドの名前です">
+                    <svg class="icon icon-info">
+                      <use xlink:href="#icon-info"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="field__wrap">
+                  <input class="field__input" type="text" name="title" placeholder="ブランド名" value="" required>
+                </div>
+              </div>
+              <div class="description__btns">
+                <button class="button-stroke description__button">キャンセル</button>
+                <button class="button description__button">作成</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="popup__close js-popup-close">
+          <svg class="icon icon-close">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
   </div>
   <!-- scripts-->
   <script src="js/lib/jquery.min.js"></script>
@@ -677,22 +678,6 @@
   <script src="js/charts.js"></script>
   <script src="js/demo.js"></script>
   <script src="js/app.js"></script>
-  <script>
-    function viewChange() {
-      if (document.getElementById('brand')) {
-        id = document.getElementById('brand').value;
-        if (id == 'Yoshidaya') {
-          document.getElementById('BrandYoshidaya').style.display = "";
-          document.getElementById('BrandMankichi').style.display = "none";
-        } else if (id == 'Mankichi') {
-          document.getElementById('BrandYoshidaya').style.display = "none";
-          document.getElementById('BrandMankichi').style.display = "";
-        }
-      }
-  
-      window.onload = viewChange;
-    }
-  </script>
   <!-- svg sprite-->
   <div style="display: none">
     <svg width="0" height="0">
@@ -949,35 +934,40 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10H10.6666C10.2984 10 9.99996 10.2985 9.99996 10.6667V12C9.99996 12.3682 10.2984 12.6667 10.6666 12.6667H12C12.3681 12.6667 12.6666 12.3682 12.6666 12V10.6667C12.6666 10.2985 12.3681 10 12 10ZM10.6666 8.66666C9.56206 8.66666 8.66663 9.56209 8.66663 10.6667V12C8.66663 13.1046 9.56206 14 10.6666 14H12C13.1045 14 14 13.1046 14 12V10.6667C14 9.56209 13.1045 8.66666 12 8.66666H10.6666Z" />
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-good">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM8.00499 10.3441C8.32395 10.3441 8.63959 10.2794 8.93277 10.1537C9.22595 10.0281 9.49055 9.84422 9.71051 9.61325C9.89891 9.41543 10.212 9.40779 10.4098 9.59618C10.6076 9.78457 10.6153 10.0977 10.4269 10.2955C10.1145 10.6235 9.73874 10.8846 9.32241 11.063C8.90607 11.2414 8.45783 11.3334 8.00487 11.3333C7.55192 11.3333 7.1037 11.2412 6.6874 11.0627C6.2711 10.8842 5.89541 10.623 5.58311 10.2949C5.39476 10.097 5.40248 9.78396 5.60034 9.59562C5.7982 9.40727 6.11128 9.41499 6.29963 9.61285C6.51954 9.84387 6.7841 10.0278 7.07725 10.1535C7.3704 10.2792 7.68603 10.344 8.00499 10.3441ZM7.04749 6.76662C7.04749 7.18252 6.71034 7.51967 6.29444 7.51967C5.87854 7.51967 5.54138 7.18252 5.54138 6.76662C5.54138 6.35072 5.87854 6.01357 6.29444 6.01357C6.71034 6.01357 7.04749 6.35072 7.04749 6.76662ZM9.71332 7.51967C10.1292 7.51967 10.4664 7.18252 10.4664 6.76662C10.4664 6.35072 10.1292 6.01357 9.71332 6.01357C9.29742 6.01357 8.96027 6.35072 8.96027 6.76662C8.96027 7.18252 9.29742 7.51967 9.71332 7.51967Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM8.00499 10.3441C8.32395 10.3441 8.63959 10.2794 8.93277 10.1537C9.22595 10.0281 9.49055 9.84422 9.71051 9.61325C9.89891 9.41543 10.212 9.40779 10.4098 9.59618C10.6076 9.78457 10.6153 10.0977 10.4269 10.2955C10.1145 10.6235 9.73874 10.8846 9.32241 11.063C8.90607 11.2414 8.45783 11.3334 8.00487 11.3333C7.55192 11.3333 7.1037 11.2412 6.6874 11.0627C6.2711 10.8842 5.89541 10.623 5.58311 10.2949C5.39476 10.097 5.40248 9.78396 5.60034 9.59562C5.7982 9.40727 6.11128 9.41499 6.29963 9.61285C6.51954 9.84387 6.7841 10.0278 7.07725 10.1535C7.3704 10.2792 7.68603 10.344 8.00499 10.3441ZM7.04749 6.76662C7.04749 7.18252 6.71034 7.51967 6.29444 7.51967C5.87854 7.51967 5.54138 7.18252 5.54138 6.76662C5.54138 6.35072 5.87854 6.01357 6.29444 6.01357C6.71034 6.01357 7.04749 6.35072 7.04749 6.76662ZM9.71332 7.51967C10.1292 7.51967 10.4664 7.18252 10.4664 6.76662C10.4664 6.35072 10.1292 6.01357 9.71332 6.01357C9.29742 6.01357 8.96027 6.35072 8.96027 6.76662C8.96027 7.18252 9.29742 7.51967 9.71332 7.51967Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-bad">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM8.00499 9.78093C8.32395 9.78089 8.63959 9.84566 8.93277 9.97129C9.22595 10.0969 9.49055 10.2808 9.71051 10.5118C9.89891 10.7096 10.212 10.7172 10.4098 10.5288C10.6076 10.3404 10.6153 10.0274 10.4269 9.82954C10.1145 9.50154 9.73874 9.24041 9.32241 9.062C8.90607 8.8836 8.45783 8.79163 8.00487 8.79168C7.55192 8.79174 7.1037 8.88381 6.6874 9.06231C6.2711 9.24081 5.89541 9.50203 5.58311 9.83011C5.39476 10.028 5.40248 10.3411 5.60034 10.5294C5.7982 10.7177 6.11128 10.71 6.29963 10.5122C6.51954 10.2811 6.7841 10.0972 7.07725 9.9715C7.3704 9.8458 7.68603 9.78097 8.00499 9.78093ZM7.04749 6.76662C7.04749 7.18252 6.71034 7.51967 6.29444 7.51967C5.87854 7.51967 5.54138 7.18252 5.54138 6.76662C5.54138 6.35072 5.87854 6.01357 6.29444 6.01357C6.71034 6.01357 7.04749 6.35072 7.04749 6.76662ZM9.71332 7.51967C10.1292 7.51967 10.4664 7.18252 10.4664 6.76662C10.4664 6.35072 10.1292 6.01357 9.71332 6.01357C9.29742 6.01357 8.96027 6.35072 8.96027 6.76662C8.96027 7.18252 9.29742 7.51967 9.71332 7.51967Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM8.00499 9.78093C8.32395 9.78089 8.63959 9.84566 8.93277 9.97129C9.22595 10.0969 9.49055 10.2808 9.71051 10.5118C9.89891 10.7096 10.212 10.7172 10.4098 10.5288C10.6076 10.3404 10.6153 10.0274 10.4269 9.82954C10.1145 9.50154 9.73874 9.24041 9.32241 9.062C8.90607 8.8836 8.45783 8.79163 8.00487 8.79168C7.55192 8.79174 7.1037 8.88381 6.6874 9.06231C6.2711 9.24081 5.89541 9.50203 5.58311 9.83011C5.39476 10.028 5.40248 10.3411 5.60034 10.5294C5.7982 10.7177 6.11128 10.71 6.29963 10.5122C6.51954 10.2811 6.7841 10.0972 7.07725 9.9715C7.3704 9.8458 7.68603 9.78097 8.00499 9.78093ZM7.04749 6.76662C7.04749 7.18252 6.71034 7.51967 6.29444 7.51967C5.87854 7.51967 5.54138 7.18252 5.54138 6.76662C5.54138 6.35072 5.87854 6.01357 6.29444 6.01357C6.71034 6.01357 7.04749 6.35072 7.04749 6.76662ZM9.71332 7.51967C10.1292 7.51967 10.4664 7.18252 10.4664 6.76662C10.4664 6.35072 10.1292 6.01357 9.71332 6.01357C9.29742 6.01357 8.96027 6.35072 8.96027 6.76662C8.96027 7.18252 9.29742 7.51967 9.71332 7.51967Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-show">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 11.3333C10.7414 11.3333 12.3911 9.28866 13.122 8.06982C13.1387 8.04197 13.1433 8.01851 13.1433 7.99999C13.1433 7.98148 13.1387 7.95802 13.122 7.93017C12.3911 6.71133 10.7414 4.66666 8.00004 4.66666C5.25868 4.66666 3.60899 6.71133 2.87804 7.93017C2.86134 7.95802 2.85677 7.98148 2.85677 8C2.85677 8.01851 2.86134 8.04197 2.87804 8.06982C3.60899 9.28866 5.25868 11.3333 8.00004 11.3333ZM14.2655 8.75557C13.4733 10.0765 11.4767 12.6667 8.00004 12.6667C4.52336 12.6667 2.52676 10.0765 1.73457 8.75557C1.45306 8.28616 1.45306 7.71383 1.73457 7.24442C2.52676 5.92347 4.52336 3.33333 8.00004 3.33333C11.4767 3.33333 13.4733 5.92347 14.2655 7.24442C14.547 7.71383 14.547 8.28616 14.2655 8.75557Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 11.3333C10.7414 11.3333 12.3911 9.28866 13.122 8.06982C13.1387 8.04197 13.1433 8.01851 13.1433 7.99999C13.1433 7.98148 13.1387 7.95802 13.122 7.93017C12.3911 6.71133 10.7414 4.66666 8.00004 4.66666C5.25868 4.66666 3.60899 6.71133 2.87804 7.93017C2.86134 7.95802 2.85677 7.98148 2.85677 8C2.85677 8.01851 2.86134 8.04197 2.87804 8.06982C3.60899 9.28866 5.25868 11.3333 8.00004 11.3333ZM14.2655 8.75557C13.4733 10.0765 11.4767 12.6667 8.00004 12.6667C4.52336 12.6667 2.52676 10.0765 1.73457 8.75557C1.45306 8.28616 1.45306 7.71383 1.73457 7.24442C2.52676 5.92347 4.52336 3.33333 8.00004 3.33333C11.4767 3.33333 13.4733 5.92347 14.2655 7.24442C14.547 7.71383 14.547 8.28616 14.2655 8.75557Z"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 8.66667C8.36819 8.66667 8.66667 8.36819 8.66667 8C8.66667 7.63181 8.36819 7.33333 8 7.33333C7.63181 7.33333 7.33333 7.63181 7.33333 8C7.33333 8.36819 7.63181 8.66667 8 8.66667ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" />
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-clipboard">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.666672C8.73638 0.666672 9.33333 1.26363 9.33333 2.00001H12C13.1046 2.00001 14 2.89544 14 4.00001V12.6667C14 13.7712 13.1046 14.6667 12 14.6667H4C2.89543 14.6667 2 13.7712 2 12.6667V4.00001C2 2.89544 2.89543 2.00001 4 2.00001H6.66667C6.66667 1.26363 7.26362 0.666672 8 0.666672ZM5.33333 3.33334H4C3.63181 3.33334 3.33333 3.63182 3.33333 4.00001V12.6667C3.33333 13.0349 3.63181 13.3333 4 13.3333H12C12.3682 13.3333 12.6667 13.0349 12.6667 12.6667V4.00001C12.6667 3.63182 12.3682 3.33334 12 3.33334H10.6667V4.00001C10.6667 4.3682 10.3682 4.66667 10 4.66667H6C5.63181 4.66667 5.33333 4.3682 5.33333 4.00001V3.33334Z" />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 7.33334C4.66663 6.96515 4.9651 6.66667 5.33329 6.66667L10.6666 6.66667C11.0348 6.66667 11.3333 6.96515 11.3333 7.33334C11.3333 7.70153 11.0348 8.00001 10.6666 8.00001L5.33329 8.00001C4.9651 8.00001 4.66663 7.70153 4.66663 7.33334Z" />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 10C4.66663 9.63181 4.9651 9.33333 5.33329 9.33333H7.99996C8.36815 9.33333 8.66663 9.63181 8.66663 10C8.66663 10.3682 8.36815 10.6667 7.99996 10.6667H5.33329C4.9651 10.6667 4.66663 10.3682 4.66663 10Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 7.33334C4.66663 6.96515 4.9651 6.66667 5.33329 6.66667L10.6666 6.66667C11.0348 6.66667 11.3333 6.96515 11.3333 7.33334C11.3333 7.70153 11.0348 8.00001 10.6666 8.00001L5.33329 8.00001C4.9651 8.00001 4.66663 7.70153 4.66663 7.33334Z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 10C4.66663 9.63181 4.9651 9.33333 5.33329 9.33333H7.99996C8.36815 9.33333 8.66663 9.63181 8.66663 10C8.66663 10.3682 8.36815 10.6667 7.99996 10.6667H5.33329C4.9651 10.6667 4.66663 10.3682 4.66663 10Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-chevron-forward">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.36189 12.8047C5.10154 12.5444 5.10154 12.1223 5.36189 11.8619L9.22382 8L5.36189 4.13807C5.10154 3.87772 5.10154 3.45561 5.36189 3.19526C5.62224 2.93491 6.04435 2.93491 6.3047 3.19526L10.1666 7.05719C10.6873 7.57789 10.6873 8.42211 10.1666 8.94281L6.3047 12.8047C6.04435 13.0651 5.62224 13.0651 5.36189 12.8047Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.36189 12.8047C5.10154 12.5444 5.10154 12.1223 5.36189 11.8619L9.22382 8L5.36189 4.13807C5.10154 3.87772 5.10154 3.45561 5.36189 3.19526C5.62224 2.93491 6.04435 2.93491 6.3047 3.19526L10.1666 7.05719C10.6873 7.57789 10.6873 8.42211 10.1666 8.94281L6.3047 12.8047C6.04435 13.0651 5.62224 13.0651 5.36189 12.8047Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-warning">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 10C8.36823 10 8.66671 9.70152 8.66671 9.33333V6.00001C8.66671 5.63182 8.36823 5.33334 8.00004 5.33334C7.63185 5.33334 7.33337 5.63182 7.33337 6.00001V9.33333C7.33337 9.70152 7.63185 10 8.00004 10Z" fill="#6F767E" />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1159 11.6699L8.57925 3.70927C8.3235 3.26049 7.67657 3.26049 7.42082 3.70927L2.88418 11.6699C2.63091 12.1143 2.95186 12.6667 3.4634 12.6667H12.5367C13.0482 12.6667 13.3692 12.1143 13.1159 11.6699ZM9.73768 3.0491C8.97042 1.70277 7.02965 1.70277 6.2624 3.0491L1.72576 11.0097C0.965929 12.343 1.92879 14 3.4634 14H12.5367C14.0713 14 15.0342 12.343 14.2743 11.0097L9.73768 3.0491Z" />
-        <path d="M8.66671 11.3333C8.66671 11.7015 8.36823 12 8.00004 12C7.63185 12 7.33337 11.7015 7.33337 11.3333C7.33337 10.9651 7.63185 10.6667 8.00004 10.6667C8.36823 10.6667 8.66671 10.9651 8.66671 11.3333Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 10C8.36823 10 8.66671 9.70152 8.66671 9.33333V6.00001C8.66671 5.63182 8.36823 5.33334 8.00004 5.33334C7.63185 5.33334 7.33337 5.63182 7.33337 6.00001V9.33333C7.33337 9.70152 7.63185 10 8.00004 10Z" fill="#6F767E"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1159 11.6699L8.57925 3.70927C8.3235 3.26049 7.67657 3.26049 7.42082 3.70927L2.88418 11.6699C2.63091 12.1143 2.95186 12.6667 3.4634 12.6667H12.5367C13.0482 12.6667 13.3692 12.1143 13.1159 11.6699ZM9.73768 3.0491C8.97042 1.70277 7.02965 1.70277 6.2624 3.0491L1.72576 11.0097C0.965929 12.343 1.92879 14 3.4634 14H12.5367C14.0713 14 15.0342 12.343 14.2743 11.0097L9.73768 3.0491Z"/>
+        <path d="M8.66671 11.3333C8.66671 11.7015 8.36823 12 8.00004 12C7.63185 12 7.33337 11.7015 7.33337 11.3333C7.33337 10.9651 7.63185 10.6667 8.00004 10.6667C8.36823 10.6667 8.66671 10.9651 8.66671 11.3333Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-leaderboard">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 8V5.33333C10.6667 4.22876 9.77128 3.33333 8.66671 3.33333H7.33337C6.2288 3.33333 5.33337 4.22876 5.33337 5.33333V6.66667H3.33337C2.2288 6.66667 1.33337 7.5621 1.33337 8.66667V12C1.33337 12.3682 1.63185 12.6667 2.00004 12.6667H14C14.3682 12.6667 14.6667 12.3682 14.6667 12V10C14.6667 8.89543 13.7713 8 12.6667 8H10.6667ZM8.66671 4.66667H7.33337C6.96518 4.66667 6.66671 4.96514 6.66671 5.33333V11.3333H9.33337V5.33333C9.33337 4.96514 9.0349 4.66667 8.66671 4.66667ZM10.6667 9.33333V11.3333H13.3334V10C13.3334 9.63181 13.0349 9.33333 12.6667 9.33333H10.6667ZM3.33337 8H5.33337V11.3333H2.66671V8.66667C2.66671 8.29848 2.96518 8 3.33337 8Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 8V5.33333C10.6667 4.22876 9.77128 3.33333 8.66671 3.33333H7.33337C6.2288 3.33333 5.33337 4.22876 5.33337 5.33333V6.66667H3.33337C2.2288 6.66667 1.33337 7.5621 1.33337 8.66667V12C1.33337 12.3682 1.63185 12.6667 2.00004 12.6667H14C14.3682 12.6667 14.6667 12.3682 14.6667 12V10C14.6667 8.89543 13.7713 8 12.6667 8H10.6667ZM8.66671 4.66667H7.33337C6.96518 4.66667 6.66671 4.96514 6.66671 5.33333V11.3333H9.33337V5.33333C9.33337 4.96514 9.0349 4.66667 8.66671 4.66667ZM10.6667 9.33333V11.3333H13.3334V10C13.3334 9.63181 13.0349 9.33333 12.6667 9.33333H10.6667ZM3.33337 8H5.33337V11.3333H2.66671V8.66667C2.66671 8.29848 2.96518 8 3.33337 8Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-flag">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33333 1.99999C3.33333 1.63181 3.03486 1.33333 2.66667 1.33333C2.29848 1.33333 2 1.63181 2 1.99999V14C2 14.3682 2.29848 14.6667 2.66667 14.6667C3.03486 14.6667 3.33333 14.3682 3.33333 14V10H6.68422C7.11415 10 7.54127 10.0693 7.94913 10.2053L8.71753 10.4614C9.1254 10.5974 9.55252 10.6667 9.98244 10.6667H12C13.1046 10.6667 14 9.77123 14 8.66666V4.66666C14 3.56209 13.1046 2.66666 12 2.66666H9.98244C9.55252 2.66666 9.1254 2.59735 8.71753 2.46139L7.94913 2.20526C7.54127 2.06931 7.11415 1.99999 6.68422 1.99999H3.33333ZM3.33333 3.33333V8.66666H6.68422C7.25746 8.66666 7.82695 8.75908 8.37077 8.94035L9.13917 9.19648C9.41108 9.28712 9.69583 9.33333 9.98244 9.33333H12C12.3682 9.33333 12.6667 9.03485 12.6667 8.66666V4.66666C12.6667 4.29847 12.3682 3.99999 12 3.99999H9.98244C9.40921 3.99999 8.83972 3.90758 8.2959 3.72631L7.5275 3.47017C7.25559 3.37954 6.97084 3.33333 6.68422 3.33333H3.33333Z"/>
-      </symbol> 
-
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33333 1.99999C3.33333 1.63181 3.03486 1.33333 2.66667 1.33333C2.29848 1.33333 2 1.63181 2 1.99999V14C2 14.3682 2.29848 14.6667 2.66667 14.6667C3.03486 14.6667 3.33333 14.3682 3.33333 14V10H6.68422C7.11415 10 7.54127 10.0693 7.94913 10.2053L8.71753 10.4614C9.1254 10.5974 9.55252 10.6667 9.98244 10.6667H12C13.1046 10.6667 14 9.77123 14 8.66666V4.66666C14 3.56209 13.1046 2.66666 12 2.66666H9.98244C9.55252 2.66666 9.1254 2.59735 8.71753 2.46139L7.94913 2.20526C7.54127 2.06931 7.11415 1.99999 6.68422 1.99999H3.33333ZM3.33333 3.33333V8.66666H6.68422C7.25746 8.66666 7.82695 8.75908 8.37077 8.94035L9.13917 9.19648C9.41108 9.28712 9.69583 9.33333 9.98244 9.33333H12C12.3682 9.33333 12.6667 9.03485 12.6667 8.66666V4.66666C12.6667 4.29847 12.3682 3.99999 12 3.99999H9.98244C9.40921 3.99999 8.83972 3.90758 8.2959 3.72631L7.5275 3.47017C7.25559 3.37954 6.97084 3.33333 6.68422 3.33333H3.33333Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-layers">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68343 3.45791C8.24191 3.29736 7.75797 3.29736 7.31646 3.45791L2.61739 5.16666L7.31646 6.87542C7.75797 7.03597 8.24191 7.03597 8.68343 6.87542L13.3825 5.16666L8.68343 3.45791ZM6.8608 2.20485C7.59666 1.93727 8.40323 1.93727 9.13909 2.20485L13.8382 3.91361C15.0084 4.33915 15.0084 5.99418 13.8382 6.41972L9.13909 8.12847C8.40323 8.39606 7.59666 8.39606 6.8608 8.12847L2.16173 6.41972C0.991495 5.99418 0.991503 4.33914 2.16173 3.91361L6.8608 2.20485Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.37184 8.26332C1.49518 7.9164 1.8764 7.73517 2.22332 7.85851L7.5533 9.75362C7.84223 9.85635 8.15773 9.85635 8.44666 9.75362L13.7766 7.85851C14.1236 7.73517 14.5048 7.9164 14.6281 8.26332C14.7515 8.61023 14.5702 8.99145 14.2233 9.1148L8.89334 11.0099C8.31548 11.2154 7.68447 11.2154 7.10662 11.0099L1.77664 9.1148C1.42972 8.99145 1.24849 8.61023 1.37184 8.26332Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.37184 11.0967C1.49518 10.7497 1.8764 10.5685 2.22332 10.6919L7.5533 12.587C7.84223 12.6897 8.15773 12.6897 8.44666 12.587L13.7766 10.6919C14.1236 10.5685 14.5048 10.7497 14.6281 11.0967C14.7515 11.4436 14.5702 11.8248 14.2233 11.9481L8.89334 13.8432C8.31548 14.0487 7.68447 14.0487 7.10662 13.8432L1.77664 11.9481C1.42972 11.8248 1.24849 11.4436 1.37184 11.0967Z" />
+      </symbol>
+      
     </svg>
   </div>
 </body>

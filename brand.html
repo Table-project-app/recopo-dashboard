@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>グループ編集 - Recopoダッシュボード</title>
+  <title>牛鍋 吉田屋 - ブランド一覧 - Recopoダッシュボード</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -48,7 +48,7 @@
       <select class="mobile-hide select mr-16">
         <option>吉田ダイニンググループ</option>
         <option>吉本屋フーズ</option>
-        <option>Lucky Dining Group</option>
+        <option>Lucky Diners Group</option>
       </select>
       <div class="search">
         <div class="search__head">
@@ -343,7 +343,7 @@
           </svg>
           選択式アンケートスコア
         </a>
-        <a class="sidebar__item" href="brands.html">
+        <a class="sidebar__item active" href="brands.html">
           <svg class="icon icon-flag">
             <use xlink:href="#icon-flag"></use>
           </svg>
@@ -361,7 +361,7 @@
           </svg>
           店舗一覧
         </a>
-        <div class="sidebar__item sidebar__item_dropdown visible">
+        <div class="sidebar__item sidebar__item_dropdown">
           <button class="sidebar__head">
           <svg class="icon icon-setting">
             <use xlink:href="#icon-setting"></use>
@@ -378,7 +378,7 @@
             <use xlink:href="#icon-arrow-next"></use>
             </svg>
           </a>
-          <a class="sidebar__link active" href="setting-group.html">
+          <a class="sidebar__link" href="setting-group.html">
             店舗グループ設定
             <svg class="icon icon-arrow-next">
             <use xlink:href="#icon-arrow-next"></use>
@@ -498,166 +498,849 @@
     <!-- inner-->
     <div class="page__inner">
       <div class="page__container">
-        <div class="page__title h3">
-          <svg class="icon icon-list">
-            <use xlink:href="#icon-setting"></use>
-          </svg>
-          <div class="h3">牛鍋 吉田家 <small class="ml-16">東京都</small></div>
-          <div class="store__info">
-            <a href="setting-group.html">店舗グループ設定</a>
-          </div>
-          <div class="store__subinfo">
-            <svg class="icon icon-chevron-forward">
-              <use xlink:href="#icon-chevron-forward"></use>
-            </svg>東京都
+        <div class="page__head">
+          <div class="page__title h3">
+            <svg class="icon icon-flag">
+              <use xlink:href="#icon-flag"></use>
+            </svg>
+            <div class="h3">牛鍋 吉田家</div>
+            <div class="store__info">
+              <a href="brands.html">ブランド一覧</a>
+            </div>
+            <div class="store__subinfo">
+              <svg class="icon icon-chevron-forward">
+                <use xlink:href="#icon-chevron-forward"></use>
+              </svg>牛鍋 吉田屋
+            </div>
           </div>
         </div>
         <div class="card">
           <div class="card__head">
-            <div class="title-red card__title">店舗グループの編集</div>
-            <a class="button-stroke button-small card__button" href="setting-group.html">
-            <svg class="icon icon-arrow-left">
-              <use xlink:href="#icon-arrow-left"></use>
-            </svg><span>戻る</span></a>
-          </div>
-          <div class="settings__row">
-            <div class="field">
-              <div class="field__label"> ブランド
-              </div>
-              <div class="field__wrap">
-                <select class="select" id="brand" onchange="viewChange();">
-                  <option disabled>選択してください</option>
-                  <option selected value="Yoshidaya">牛鍋 吉田屋</option>
-                  <option value="Mankichi">万吉スープカレー</option>
-                </select>
-              </div>
-            </div>
-            <div class="field">
-              <div class="field__label">グループタイプ
-              </div>
-              <div class="field__wrap">
-                <select class="select">
-                  <option selected disabled>選択してください</option>
-                  <option selected>エリア</option>
-                  <option>SV</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="settings__row">
-            <div class="field">
-              <div class="field__label">店舗グループ名
-                <div class="tooltip required" title="店舗グループの名前です。お客さまには表示されません">
-                  <svg class="icon icon-info">
-                    <use xlink:href="#icon-info"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="field__wrap">
-                <input class="field__input" type="text" name="title" placeholder="店舗グループの名前です。お客さまには表示されません" value="東京都" required>
-              </div>
-            </div>
-            <div class="field">
-              <div class="field__label">説明
-                <div class="tooltip" title="管理用の説明です。お客さまには表示されません">
-                  <svg class="icon icon-info">
-                    <use xlink:href="#icon-info"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="field__wrap">
-                <input class="field__input" type="text" name="title" placeholder="管理用の説明です。お客さまには表示されません" value="東京都内立地の店舗">
-              </div>
-            </div>
-          </div>
-          <div class="field" id="BrandYoshidaya" style="display:;">
-            <div class="create__label">店舗グループの店舗
-              <div class="tooltip" title="この店舗グループに属している店舗を選択してください。店舗は複数指定できます。">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="create__list">
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" checked><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">代々木店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" checked><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">青山店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" checked><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">丸の内店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">北新地店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" checked><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">池袋店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">京都駅前店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">梅田店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">北二条店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" checked><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">八丁堀店</span></span>
-              </label>
-            </div>
-          </div>
-          <div class="field" id="BrandMankichi" style="display:none;">
-            <div class="create__label">店舗グループの店舗
-              <div class="tooltip" title="この店舗グループに属している店舗を選択してください。店舗は複数指定できます。">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="create__list">
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">心斎橋店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">京都駅前店</span></span>
-              </label>
-            </div>
-          </div>
-          <div class="create__toggle mb-16">
-            <div class="create__info">店舗グループ全体に選択式アンケートを設定
-              <div class="tooltip" title="この店舗グループに選択式アンケートを設定します">
-                <svg class="icon icon-info">
-                  <use xlink:href="#icon-info"></use>
-                </svg>
-              </div>
-            </div>
-            <label class="switch">
-              <input class="switch__input" type="checkbox" checked="checked"><span class="switch__inner"><span class="switch__box"></span></span>
-            </label>
-          </div>
-          <div class="field">
-            <div class="field__label">店舗グループ全体の抽選設定
-            </div>
-            <div class="field__wrap">
-              <select class="select">
-                <option >抽選なし</option>
-                <option selected="">アイス1つ無料プレゼント</option>
+            <div class="title-orange card__title">サマリー</div>
+            <div class="card__select">
+              <select class="select select_small">
+                <option selected>直近7日</option>
+                <option>直近30日</option>
+                <option>直近3ヶ月</option>
+                <option>直近1年</option>
+                <option>全期間</option>
               </select>
+            </div>
+            <div class="card__select ml-8 mobile-hide">
+              <select class="select select_small">
+                <option selected>単位: 日</option>
+                <option>単位: 週</option>
+                <option>単位: 月</option>
+              </select>
+            </div>
+            <div class="filters ml-8 mobile-hide">
+              <button class="button-square-stroke button-small filters__head">
+                <svg class="icon icon-calendar">
+                  <use xlink:href="#icon-calendar"></use>
+                </svg>
+              </button>
+              <div class="filters__body">
+                <div class="filters__top">
+                  <div class="title-orange filters__title">基準日を指定</div>
+                  <button class="filters__close">
+                    <svg class="icon icon-close">
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="filters__group">
+                  <div class="filters__item">
+                    <div class="calendar js-calendar">
+                      <div class="calendar__list">
+                        <div class="calendar__item calendar__item_date js-calendar-item">
+                          <div class="calendar__head js-calendar-head">
+                            <svg class="icon icon-calendar">
+                              <use xlink:href="#icon-calendar"></use>
+                            </svg>
+                            <div class="calendar__details">
+                              <input class="calendar__value js-date-spot" type="text" data-single-month="true" data-container=".js-date-container">
+                            </div>
+                          </div>
+                          <div class="calendar__body js-calendar-body">
+                            <div class="calendar__container js-date-container"></div>
+                            <div class="calendar__foot">
+                              <button class="button-stroke button-small calendar__button js-date-clear">クリア</button>
+                              <button class="button-small calendar__button js-calendar-close">閉じる</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filters__btns">
+                  <button class="button filters__button">適用する</button>
+                </div>
+              </div>
+            </div>
+            <button class="button-small card__button button-stroke ml-16 mobile-hide">
+              <svg class="icon icon-download">
+                <use xlink:href="#icon-download"></use>
+              </svg>
+              <span>回答ダウンロード</span>
+            </button>
+          </div>
+          <div class="overview js-tabs">
+            <div class="overview__nav">
+              <a class="overview__link js-tabs-link active" href="#">
+                <div class="overview__icon_yellow">
+                  <svg class="icon icon-smile">
+                    <use xlink:href="#icon-smile"></use>
+                  </svg>
+                </div>
+                <div class="overview__details">
+                  <div class="overview__subtitle">総合スコア
+                    <div class="tooltip mobile-hide" title="評価項目別分析全数に対するポジティブ評価割合">
+                      <svg class="icon icon-info">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="overview__counter">86</div>
+                </div>
+                <div class="balance background positive">
+                  <svg class="icon icon-arrow-top">
+                    <use xlink:href="#icon-arrow-top"></use>
+                  </svg>1.9%
+                </div>
+              </a>
+              <a class="overview__link js-tabs-link active" href="#">
+                <div class="overview__icon_red">
+                  <svg class="icon icon-love">
+                    <use xlink:href="#icon-love"></use>
+                  </svg>
+                </div>
+                <div class="overview__details">
+                  <div class="overview__subtitle">NPS
+                    <div class="tooltip mobile-hide" title="NPS (Net Promoter Score)は､顧客満足度を測定するための指標の一つ">
+                      <svg class="icon icon-info">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="overview__counter">8.5</div>
+                </div>
+                <div class="balance background negative">
+                  <svg class="icon icon-arrow-bottom">
+                    <use xlink:href="#icon-arrow-bottom"></use>
+                  </svg>3.8%
+                </div>
+              </a>
+              <a class="overview__link js-tabs-link" href="#">
+                <div class="overview__icon_orange">
+                  <svg class="icon icon-message">
+                    <use xlink:href="#icon-message"></use>
+                  </svg>
+                </div>
+                <div class="overview__details">
+                  <div class="overview__subtitle">回答数
+                    <div class="tooltip mobile-hide" title="期間中の合計アンケート回答回収数">
+                      <svg class="icon icon-info">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="overview__counter">512</div>
+                </div>
+                <div class="balance background positive">
+                  <svg class="icon icon-arrow-top">
+                    <use xlink:href="#icon-arrow-top"></use>
+                  </svg>2.7%
+                </div>
+              </a>
+            </div>
+            <div class="overview__container">
+              <div class="overview__item js-tabs-item" style="display: block;">
+                <div class="overview__chart">
+                  <div id="score-chart-compare-brand"></div>
+                </div>
+              </div>
+              <div class="overview__item js-tabs-item" style="display: block;">
+                <div class="overview__chart">
+                  <div id="nps-chart-compare-brand"></div>
+                </div>
+              </div>
+              <div class="overview__item js-tabs-item">
+                <div class="overview__chart">
+                  <div id="answer-chart-compare-brand"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__head">
+            <div class="title-yellow card__title">評価項目別分析</div>
+            <div class="card__select">
+              <select class="select select_small">
+                <option>直近7日</option>
+                <option>直近30日</option>
+                <option selected>直近3ヶ月</option>
+                <option>直近1年</option>
+                <option>全期間</option>
+              </select>
+            </div>
+          </div>
+          <div class="card__chart card__chart_evaluation-analysis">
+            <div id="evaluation-analysis"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__head">
+            <div class="title-yellow card__title">評価項目別スコア</div>
+            <div class="card__select">
+              <select class="select select_small">
+                <option>直近7日</option>
+                <option>直近30日</option>
+                <option selected>直近3ヶ月</option>
+                <option>直近1年</option>
+                <option>全期間</option>
+              </select>
+            </div>
+            <div class="card__select ml-8 mobile-hide">
+              <select class="select select_small">
+                <option selected>比較:ブランド平均</option>
+                <option>比較:全店舗平均</option>
+              </select>
+            </div>
+          </div>
+          <div class="card__chart card__chart_evaluation-score">
+            <div id="evaluation-score-group"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__head">
+            <div class="title-red card__title">回答者属性</div>
+            <div class="card__select">
+              <select class="select select_small">
+                <option selected>直近7日</option>
+                <option>直近30日</option>
+                <option>直近3ヶ月</option>
+                <option>直近1年</option>
+                <option>全期間</option>
+              </select>
+            </div>
+          </div>
+          <div class="demography">
+            <div class="demography__list">
+              <div class="demography__item_1">
+                <div class="demography__subtitle_1">年齢</div>
+                <div class="card__chart card__chart_demography">
+                  <div id="age-chart"></div>
+                </div>
+              </div>
+              <div class="demography__item_2">
+                <div class="demography__subtitle_2">性別</div>
+                <div class="card__chart card__chart_demography">
+                  <div id="gender-chart"></div>
+                </div>
+              </div>
+              <div class="demography__item_3">
+                <div class="demography__subtitle_3">職業</div>
+                <div class="card__chart card__chart_demography">
+                  <div id="occupation-chart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="demography__list">
+              <div class="demography__item_4">
+                <div class="demography__subtitle_4">来店回数</div>
+                <div class="card__chart card__chart_demography">
+                  <div id="visits-chart"></div>
+                </div>
+              </div>
+              <div class="demography__item_5">
+                <div class="demography__subtitle_5">前回来店</div>
+                <div class="card__chart card__chart_demography">
+                  <div id="last-chart"></div>
+                </div>
+              </div>
+              <div class="demography__item_6">
+                <div class="demography__subtitle_6">居住エリア</div>
+                <div class="card__chart card__chart_demography">
+                  <div id="address-city-chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__head">
+            <div class="title-orange card__title">直近のアンケート回答</div>
+            <a class="button-stroke button-small card__button" href="group-reviews.html">
+              <span>回答一覧</span>
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="qs__wrapper">
+            <div class="qs__table">
+              <div class="qs__row">
+                <div class="qs__col">回答内容</div>
+                <div class="qs__col">店舗</div>
+                <div class="qs__col text-end">回答日時</div>
+              </div>
+              <div class="qs__row" data-popup=".js-popup-qs">
+                <div class="qs__col">
+                  <div class="qs__item">
+                    <div class="score__number score__middle">
+                      8
+                    </div>
+                    <div class="qs__details">
+                      <div class="qs__comment">テーブルの間隔が狭くて、あまり食事に集中できませんでした。せめて隣に気を遣わずに通れるくらいの幅にしていただきたいです。これでは飲み物のグラスとかを倒してしまいそうで怖いです。食事は美味しかったです。</div>
+                      <div class="balance background plus">
+                        <svg class="icon icon-good">
+                          <use xlink:href="#icon-good"></use>
+                        </svg>
+                        料理#味
+                      </div>
+                      <div class="balance background minus">
+                        <svg class="icon icon-bad">
+                          <use xlink:href="#icon-bad"></use>
+                        </svg>
+                        雰囲気#店内･席
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="qs__col">
+                  <div class="qs__user">
+                    <div class="qs__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉野家"></div>
+                    牛鍋 吉田屋<br>代々木店
+                  </div>
+                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
+              </div>
+              <div class="qs__row" data-popup=".js-popup-qs">
+                <div class="qs__col">
+                  <div class="qs__item">
+                    <div class="score__number score__low">
+                      4
+                    </div>
+                    <div class="qs__details">
+                      <div class="qs__comment">子供の声がうるさく、あまり食事に集中できませんでした。ファミレスのような感じでした。店員さんが注意してくれたらなと思ったんですが、忙しそうで言えませんでした。せっかくオシャレなのだから、うるさいお客さんとかは注意しても良いのでは。ご飯は美味しかったです。</div>
+                      <div class="balance background plus">
+                        <svg class="icon icon-good">
+                          <use xlink:href="#icon-good"></use>
+                        </svg>
+                        雰囲気#装飾･雰囲気
+                      </div>
+                      <div class="balance background plus">
+                        <svg class="icon icon-good">
+                          <use xlink:href="#icon-good"></use>
+                        </svg>
+                        料理#味
+                      </div>
+                      <div class="balance background minus">
+                        <svg class="icon icon-bad">
+                          <use xlink:href="#icon-bad"></use>
+                        </svg>
+                        雰囲気#音楽･ノイズ
+                      </div>
+                      <div class="balance background minus">
+                        <svg class="icon icon-bad">
+                          <use xlink:href="#icon-bad"></use>
+                        </svg>
+                        サービス#接客
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="qs__col">
+                  <div class="qs__user">
+                    <div class="qs__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉野家"></div>
+                    牛鍋 吉田屋<br>青山店
+                  </div>
+                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
+              </div>
+              <div class="qs__row" data-popup=".js-popup-qs">
+                <div class="qs__col">
+                  <div class="qs__item">
+                    <div class="score__number score__high">
+                      9
+                    </div>
+                    <div class="qs__details">
+                      <div class="qs__comment">記念日での利用だったが、スマートな接客で、ここを選んでよかったです。飲み物をこぼしてしまった時の対応も、気遣いがしっかりしていて、食事を楽しめました。コース料理がもう少しゆっくり出てきても良い気がしましたが、全体的には大満足です。</div>
+                      <div class="balance background plus">
+                        <svg class="icon icon-good">
+                          <use xlink:href="#icon-good"></use>
+                        </svg>
+                        サービス#接客
+                      </div>
+                      <div class="balance background minus">
+                        <svg class="icon icon-bad">
+                          <use xlink:href="#icon-bad"></use>
+                        </svg>
+                        サービス#料理の提供時間
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="qs__col">
+                  <div class="qs__user">
+                    <div class="qs__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉野家"></div>
+                    牛鍋 吉田屋<br>丸の内店
+                  </div>
+                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
+              </div>
+              <div class="qs__row" data-popup=".js-popup-qs">
+                <div class="qs__col">
+                  <div class="qs__item">
+                    <div class="score__number score__high">
+                      10
+                    </div>
+                    <div class="qs__details">
+                      <div class="qs__comment">スタッフがとても親切で好印象でした。注文した料理はとても美味しく、3000円台とは思えないクオリティでした。
+                      </div>
+                      <div class="balance background plus">
+                        <svg class="icon icon-good">
+                          <use xlink:href="#icon-good"></use>
+                        </svg>
+                        雰囲気#装飾･雰囲気
+                      </div>
+                      <div class="balance background plus">
+                        <svg class="icon icon-good">
+                          <use xlink:href="#icon-good"></use>
+                        </svg>
+                        価格#コストパフォーマンス
+                      </div>
+                      <div class="balance background plus">
+                        <svg class="icon icon-good">
+                          <use xlink:href="#icon-good"></use>
+                        </svg>
+                        サービス#接客
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="qs__col">
+                  <div class="qs__user">
+                    <div class="qs__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉野家"></div>
+                    牛鍋 吉田屋<br>池袋店
+                  </div>
+                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
+              </div>
+              <div class="qs__row" data-popup=".js-popup-qs">
+                <div class="qs__col">
+                  <div class="qs__item">
+                    <div class="score__number score__middle">
+                      7
+                    </div>
+                    <div class="qs__details">
+                      <div class="qs__comment">店員さんが生き生きしていました。グラスを割ってしまったのも、丁寧に対応してくれたので良かったです。キッチンの人は忙しそうで、もっと楽しそうだったらこちらも気分が上がると思います。</div>
+                      <div class="balance background plus">
+                        <svg class="icon icon-good">
+                          <use xlink:href="#icon-good"></use>
+                        </svg>
+                        サービス#接客
+                      </div>
+                      <div class="balance background minus">
+                        <svg class="icon icon-bad">
+                          <use xlink:href="#icon-bad"></use>
+                        </svg>
+                        雰囲気#装飾･雰囲気
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="qs__col">
+                  <div class="qs__user">
+                    <div class="qs__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉野家"></div>
+                    牛鍋 吉田屋<br>八丁堀店
+                  </div>
+                </div>
+                <div class="qs__col text-gray text-end">2023/2/13 17:51</div>
+              </div>
+            </div>
+          </div>
+          <div class="qs__foot">
+            <button class="button-stroke button-small qs__button">
+              <div class="loader"></div>
+              <span>もっと見る</span>
+            </button>
+          </div>
+        </div>
+        <div class="refunds customer card">
+          <div class="card__head">
+            <div class="title-orange card__title">ブランド店舗</div>
+            <div class="card__select mr-8 ml-auto">
+              <select class="select select_small">
+                <option selected>直近7日</option>
+                <option>直近30日</option>
+                <option>直近3ヶ月</option>
+                <option>直近1年</option>
+                <option>全期間</option>
+              </select>
+            </div>
+            <div class="card__select">
+              <select class="select select_small">
+                <option selected>総合スコア ↓</option>
+                <option>総合スコア ↑</option>
+                <option>NPS ↓</option>
+                <option>NPS ↑</option>
+                <option>回答数 ↓</option>
+                <option>回答数 ↑</option>
+              </select>
+            </div>
+          </div>
+        
+          <div class="table-responsive">
+            <div class="customer__inner">
+              <div class="customer__container">
+                <div class="customer__table">
+                  <div class="customer__row">
+                    <div class="customer__col" style="text-align:left !important">店舗名</div>
+                    <div class="customer__col">回答数</div>
+                    <div class="customer__col">NPS</div>
+                    <div class="customer__col">総合スコア</div>
+                    <div class="customer__col score_header">雰囲気#<br>雰囲気･装飾</div>
+                    <div class="customer__col score_header">雰囲気#<br>音楽･ノイズ</div>
+                    <div class="customer__col score_header">雰囲気#<br>清潔感</div>
+                    <div class="customer__col score_header">雰囲気#<br>店内･席</div>
+                    <div class="customer__col score_header">料理#<br>見た目</div>
+                    <div class="customer__col score_header">料理#<br>分量</div>
+                    <div class="customer__col score_header">料理#<br>おすすめできるか</div>
+                    <div class="customer__col score_header">料理#<br>味</div>
+                    <div class="customer__col score_header">立地#<br>都心･繁華街にあるか</div>
+                    <div class="customer__col score_header">立地#<br>見つけやすいか</div>
+                    <div class="customer__col score_header">立地#<br>アクセスの良さ</div>
+                    <div class="customer__col score_header">価格#<br>コストパフォーマンス</div>
+                    <div class="customer__col score_header">価格#<br>割引について</div>
+                    <div class="customer__col score_header">価格#<br>水準</div>
+                    <div class="customer__col score_header">サービス#<br>接客</div>
+                    <div class="customer__col score_header">サービス#<br>駐車場の利便性</div>
+                    <div class="customer__col score_header">サービス#<br>入店までの待ち時間</div>
+                    <div class="customer__col score_header">サービス#<br>料理の提供時間</div>
+                  </div>
+                  <a class="customer__row" href="store.html">
+                    <div class="customer__col">
+                      <div class="customer__item">
+                        <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
+                        <div class="customer__description text-left">
+                          <div class="customer__user">牛鍋 吉田屋 八丁堀店</div>
+                          <div class="customer__login">東京都の店舗</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="customer__col">16</div>
+                    <div class="customer__col">
+                      <div class="status-orange customer__purchase">8.2</div>
+                    </div>
+                    <div class="customer__col">
+                      <div class="status-yellow customer__purchase">78</div>
+                    </div>
+                    <div class="customer__col score_text_p">16</div>
+                    <div class="customer__col score_text_p">27</div>
+                    <div class="customer__col score_text_p">4</div>
+                    <div class="customer__col score_text_n">-8</div>
+                    <div class="customer__col score_text_p">5</div>
+                    <div class="customer__col score_text_p">17</div>
+                    <div class="customer__col score_text_n">-5</div>
+                    <div class="customer__col score_text_p">41</div>
+                    <div class="customer__col score_text_p">28</div>
+                    <div class="customer__col score_text_n">-2</div>
+                    <div class="customer__col score_text_p">15</div>
+                    <div class="customer__col score_text_p">3</div>
+                    <div class="customer__col score_text_p">29</div>
+                    <div class="customer__col score_text_p">18</div>
+                    <div class="customer__col score_text_p">27</div>
+                    <div class="customer__col score_text_n">-13</div>
+                    <div class="customer__col score_text_p">21</div>
+                    <div class="customer__col score_text_p">8</div>
+                  </a>
+                  
+                  <a class="customer__row" href="store.html">
+                    <div class="customer__col">
+                      <div class="customer__item">
+                        <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
+                        <div class="customer__description text-left">
+                          <div class="customer__user">牛鍋 吉田屋 青山店</div>
+                          <div class="customer__login">東京都の店舗</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="customer__col">39</div>
+                    <div class="customer__col">
+                      <div class="status-orange customer__purchase">8.9</div>
+                    </div>
+                    <div class="customer__col">
+                      <div class="status-yellow customer__purchase">89</div>
+                    </div>
+                    <div class="customer__col score_text_p">8</div>
+                    <div class="customer__col score_text_p">31</div>
+                    <div class="customer__col score_text_n">-3</div>
+                    <div class="customer__col score_text_n">-8</div>
+                    <div class="customer__col score_text_p">5</div>
+                    <div class="customer__col score_text_p">17</div>
+                    <div class="customer__col score_text_n">-5</div>
+                    <div class="customer__col score_text_p">41</div>
+                    <div class="customer__col score_text_p">28</div>
+                    <div class="customer__col score_text_n">-2</div>
+                    <div class="customer__col score_text_p">15</div>
+                    <div class="customer__col score_text_p">3</div>
+                    <div class="customer__col score_text_p">29</div>
+                    <div class="customer__col score_text_p">18</div>
+                    <div class="customer__col score_text_p">27</div>
+                    <div class="customer__col score_text_n">-13</div>
+                    <div class="customer__col score_text_p">21</div>
+                    <div class="customer__col score_text_p">8</div>
+                  </a>
+                  <a class="customer__row" href="store.html">
+                    <div class="customer__col">
+                      <div class="customer__item">
+                        <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
+                        <div class="customer__description text-left">
+                          <div class="customer__user">牛鍋 吉田屋 池袋店</div>
+                          <div class="customer__login">東京都の店舗</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="customer__col">23</div>
+                    <div class="customer__col">
+                      <div class="status-orange customer__purchase">7.6</div>
+                    </div>
+                    <div class="customer__col">
+                      <div class="status-yellow customer__purchase">67</div>
+                    </div>
+                    <div class="customer__col score_text_p">29</div>
+                    <div class="customer__col score_text_n">-10</div>
+                    <div class="customer__col score_text_p">7</div>
+                    <div class="customer__col score_text_n">-2</div>
+                    <div class="customer__col score_text_p">5</div>
+                    <div class="customer__col score_text_p">17</div>
+                    <div class="customer__col score_text_n">-5</div>
+                    <div class="customer__col score_text_p">41</div>
+                    <div class="customer__col score_text_p">28</div>
+                    <div class="customer__col score_text_n">-2</div>
+                    <div class="customer__col score_text_p">15</div>
+                    <div class="customer__col score_text_p">3</div>
+                    <div class="customer__col score_text_p">29</div>
+                    <div class="customer__col score_text_p">18</div>
+                    <div class="customer__col score_text_p">27</div>
+                    <div class="customer__col score_text_n">-13</div>
+                    <div class="customer__col score_text_p">21</div>
+                    <div class="customer__col score_text_p">8</div>
+                  </a>
+                  
+                  <a class="customer__row" href="store.html">
+                    <div class="customer__col">
+                      <div class="customer__item">
+                        <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
+                        <div class="customer__description text-left">
+                          <div class="customer__user">牛鍋 吉田屋 丸の内店</div>
+                          <div class="customer__login">東京都の店舗</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="customer__col">29</div>
+                    <div class="customer__col">
+                      <div class="status-orange customer__purchase">6.9</div>
+                    </div>
+                    <div class="customer__col">
+                      <div class="status-yellow customer__purchase">91</div>
+                    </div>
+                    <div class="customer__col score_text_p">10</div>
+                    <div class="customer__col score_text_p">17</div>
+                    <div class="customer__col score_text_p">11</div>
+                    <div class="customer__col score_text_n">-8</div>
+                    <div class="customer__col score_text_p">5</div>
+                    <div class="customer__col score_text_p">17</div>
+                    <div class="customer__col score_text_n">-5</div>
+                    <div class="customer__col score_text_p">41</div>
+                    <div class="customer__col score_text_p">28</div>
+                    <div class="customer__col score_text_n">-2</div>
+                    <div class="customer__col score_text_p">15</div>
+                    <div class="customer__col score_text_p">3</div>
+                    <div class="customer__col score_text_p">29</div>
+                    <div class="customer__col score_text_p">18</div>
+                    <div class="customer__col score_text_p">27</div>
+                    <div class="customer__col score_text_n">-13</div>
+                    <div class="customer__col score_text_p">21</div>
+                    <div class="customer__col score_text_p">8</div>
+                  </a>
+                  
+                  <a class="customer__row" href="store.html">
+                    <div class="customer__col">
+                      <div class="customer__item">
+                        <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
+                        <div class="customer__description text-left">
+                          <div class="customer__user">牛鍋 吉田屋 代々木店</div>
+                          <div class="customer__login">東京都の店舗</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="customer__col">39</div>
+                    <div class="customer__col">
+                      <div class="status-orange customer__purchase">8.9</div>
+                    </div>
+                    <div class="customer__col">
+                      <div class="status-yellow customer__purchase">79</div>
+                    </div>
+                    <div class="customer__col score_text_p">8</div>
+                    <div class="customer__col score_text_p">31</div>
+                    <div class="customer__col score_text_n">-3</div>
+                    <div class="customer__col score_text_n">-8</div>
+                    <div class="customer__col score_text_p">5</div>
+                    <div class="customer__col score_text_p">17</div>
+                    <div class="customer__col score_text_n">-5</div>
+                    <div class="customer__col score_text_p">41</div>
+                    <div class="customer__col score_text_p">28</div>
+                    <div class="customer__col score_text_n">-2</div>
+                    <div class="customer__col score_text_p">15</div>
+                    <div class="customer__col score_text_p">3</div>
+                    <div class="customer__col score_text_p">29</div>
+                    <div class="customer__col score_text_p">18</div>
+                    <div class="customer__col score_text_p">27</div>
+                    <div class="customer__col score_text_n">-13</div>
+                    <div class="customer__col score_text_p">21</div>
+                    <div class="customer__col score_text_p">8</div>
+                  </a>
+                  
+                  <a class="customer__row" href="store.html">
+                    <div class="customer__col">
+                      <div class="customer__item">
+                        <div class="customer__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田屋"></div>
+                        <div class="customer__description text-left">
+                          <div class="customer__user">牛鍋 吉田屋 北新地店</div>
+                          <div class="customer__login">大阪府の店舗</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="customer__col">12</div>
+                    <div class="customer__col">
+                      <div class="status-orange customer__purchase">9.2</div>
+                    </div>
+                    <div class="customer__col">
+                      <div class="status-yellow customer__purchase">83</div>
+                    </div>
+                    <div class="customer__col score_text_p">9</div>
+                    <div class="customer__col score_text_p">14</div>
+                    <div class="customer__col score_text_n">-2</div>
+                    <div class="customer__col score_text_n">-10</div>
+                    <div class="customer__col score_text_p">5</div>
+                    <div class="customer__col score_text_p">17</div>
+                    <div class="customer__col score_text_n">-5</div>
+                    <div class="customer__col score_text_p">41</div>
+                    <div class="customer__col score_text_p">28</div>
+                    <div class="customer__col score_text_n">-2</div>
+                    <div class="customer__col score_text_p">15</div>
+                    <div class="customer__col score_text_p">3</div>
+                    <div class="customer__col score_text_p">29</div>
+                    <div class="customer__col score_text_p">18</div>
+                    <div class="customer__col score_text_p">27</div>
+                    <div class="customer__col score_text_n">-13</div>
+                    <div class="customer__col score_text_p">21</div>
+                    <div class="customer__col score_text_p">8</div>
+                  </a>
+      
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="panel">
-        <div class="panel__btns">
-          <button class="button-stroke-red panel__button"><span>グループを削除</span>
-            <svg class="icon icon-trash">
-              <use xlink:href="#icon-trash"></use>
-            </svg>
-          </button>
-          <button class="button panel__button">保存</button>
+    </div>
+    <div class="popup popup_refunds js-popup js-popup-qs">
+      <div class="popup__overlay js-popup-overlay"></div>
+      <div class="popup__wrap js-popup-wrap">
+        <div class="description">
+          <div class="title-orange description__title">アンケートデータ</div>
+          <div class="description__row">
+            <div class="description__col">
+              <div class="description__box">
+                <a class="description__store" href="store.html">
+                  <div class="description__avatar"><img src="img/content/yoshidaya.jpg" alt="牛鍋 吉田家">
+                  </div>
+                  牛鍋 吉田屋 八丁堀店
+                </a>
+                <div class="description__comment">テーブルの間隔が狭くて、あまり食事に集中できませんでした。せめて隣に気を遣わずに通れるくらいの幅にしていただきたいです。これでは飲み物のグラスとかを倒してしまいそうで怖いです。食事は美味しいかったです。</div>
+                <div class="balance background plus-re">
+                  <svg class="icon icon-good">
+                    <use xlink:href="#icon-good"></use>
+                  </svg>
+                  料理#味
+                </div>
+                <div class="balance background minus-re">
+                  <svg class="icon icon-bad">
+                    <use xlink:href="#icon-bad"></use>
+                  </svg>
+                  雰囲気#店内･席
+                </div>
+              </div>
+            </div>
+            <div class="description__col">
+              <ul class="description__parameters">
+                <li>
+                  <div class="description__label">
+                    NPS
+                    <div class="tooltip" title="顧客満足度を測定する指標">
+                      <svg class="icon icon-info-stroke">
+                        <use xlink:href="#icon-info-stroke"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="description__nps">8/10</div>
+                </li>
+                <li>
+                  <div class="description__label">
+                    来店回数
+                    <div class="tooltip" title="これまでの来店回数の累積合計">
+                      <svg class="icon icon-info-stroke">
+                        <use xlink:href="#icon-info-stroke"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="description__content">4回以上</div>
+                </li>
+                <li>
+                  <div class="description__label">
+                    前回来店
+                    <div class="tooltip" title="前回店舗に来店したタイミング">
+                      <svg class="icon icon-info-stroke">
+                        <use xlink:href="#icon-info-stroke"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="description__content">1ヶ月以内</div>
+                </li>
+                <li>
+                  <div class="description__label">年齢</div>
+                  <div class="description__content">50歳</div>
+                </li>
+                <li>
+                  <div class="description__label">性別</div>
+                  <div class="description__content">男性</div>
+                </li>
+                <li>
+                  <div class="description__label">職業</div>
+                  <div class="description__content">会社員</div>
+                </li>
+                <li>
+                  <div class="description__label">居住エリア</div>
+                  <div class="description__content">神奈川県 横浜市保土ケ谷区</div>
+                </li>
+                <li>
+                  <div class="description__label">回答送信日時</div>
+                  <div class="description__content">2023/2/13 17:51</div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <button class="popup__close js-popup-close">
+          <svg class="icon icon-close">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -677,22 +1360,6 @@
   <script src="js/charts.js"></script>
   <script src="js/demo.js"></script>
   <script src="js/app.js"></script>
-  <script>
-    function viewChange() {
-      if (document.getElementById('brand')) {
-        id = document.getElementById('brand').value;
-        if (id == 'Yoshidaya') {
-          document.getElementById('BrandYoshidaya').style.display = "";
-          document.getElementById('BrandMankichi').style.display = "none";
-        } else if (id == 'Mankichi') {
-          document.getElementById('BrandYoshidaya').style.display = "none";
-          document.getElementById('BrandMankichi').style.display = "";
-        }
-      }
-  
-      window.onload = viewChange;
-    }
-  </script>
   <!-- svg sprite-->
   <div style="display: none">
     <svg width="0" height="0">
@@ -888,9 +1555,6 @@
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-star-fill">
         <path d="M6.758 2.563c.415-1.194 2.104-1.194 2.519 0l.63 1.813c.183.527.675.884 1.232.895l1.919.039c1.264.026 1.786 1.632.778 2.396l-1.53 1.16c-.444.337-.632.915-.471 1.449l.556 1.838c.366 1.21-1 2.203-2.038 1.481l-1.576-1.097c-.458-.319-1.065-.319-1.523 0L5.68 13.633c-1.038.722-2.404-.271-2.038-1.481l.556-1.838c.161-.534-.026-1.112-.471-1.449l-1.53-1.16c-1.007-.764-.486-2.37.778-2.396l1.919-.039c.558-.011 1.049-.369 1.232-.895l.63-1.813z"></path>
       </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-smile">
-        <path d="M8 1.333A6.67 6.67 0 0 1 14.666 8 6.67 6.67 0 0 1 8 14.666 6.67 6.67 0 0 1 1.333 8 6.67 6.67 0 0 1 8 1.333zm0 1.333C5.054 2.666 2.666 5.054 2.666 8S5.054 13.333 8 13.333 13.333 10.945 13.333 8 10.945 2.666 8 2.666zm3.323 6.056c.337.147.491.54.344.878a4 4 0 0 1-7.334 0c-.147-.337.007-.73.344-.878s.73.007.878.344c.412.943 1.353 1.6 2.445 1.6s2.033-.657 2.445-1.6c.147-.337.54-.491.878-.344zm-5.99-3.389c.368 0 .667.298.667.667s-.298.667-.667.667-.667-.298-.667-.667.298-.667.667-.667zm5.333 0c.368 0 .667.298.667.667s-.298.667-.667.667S10 6.368 10 6s.298-.667.667-.667z"></path>
-      </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-repeat">
         <path d="M10.805 1.862a.67.67 0 0 0-.943 0c-.261.26-.26.682 0 .943l.526.526H6.667A4.67 4.67 0 0 0 2 7.998v.667c0 .368.298.667.667.667s.667-.299.667-.667v-.667c0-1.841 1.492-3.333 3.333-3.333h3.724l-.529.529a.67.67 0 0 0 0 .943c.26.261.682.26.943 0l1.43-1.43a1 1 0 0 0 0-1.414l-1.43-1.43zM9.332 12.667A4.67 4.67 0 0 0 13.999 8v-.667c0-.368-.298-.667-.667-.667s-.667.298-.667.667V8c0 1.841-1.492 3.333-3.333 3.333H5.608l.529-.529a.67.67 0 0 0 0-.943c-.26-.261-.682-.26-.943 0l-1.43 1.43a1 1 0 0 0 0 1.414l1.43 1.43a.67.67 0 0 0 .943 0c.261-.26.26-.682 0-.943l-.526-.526h3.721z"></path>
       </symbol>
@@ -949,35 +1613,43 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10H10.6666C10.2984 10 9.99996 10.2985 9.99996 10.6667V12C9.99996 12.3682 10.2984 12.6667 10.6666 12.6667H12C12.3681 12.6667 12.6666 12.3682 12.6666 12V10.6667C12.6666 10.2985 12.3681 10 12 10ZM10.6666 8.66666C9.56206 8.66666 8.66663 9.56209 8.66663 10.6667V12C8.66663 13.1046 9.56206 14 10.6666 14H12C13.1045 14 14 13.1046 14 12V10.6667C14 9.56209 13.1045 8.66666 12 8.66666H10.6666Z" />
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-good">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM8.00499 10.3441C8.32395 10.3441 8.63959 10.2794 8.93277 10.1537C9.22595 10.0281 9.49055 9.84422 9.71051 9.61325C9.89891 9.41543 10.212 9.40779 10.4098 9.59618C10.6076 9.78457 10.6153 10.0977 10.4269 10.2955C10.1145 10.6235 9.73874 10.8846 9.32241 11.063C8.90607 11.2414 8.45783 11.3334 8.00487 11.3333C7.55192 11.3333 7.1037 11.2412 6.6874 11.0627C6.2711 10.8842 5.89541 10.623 5.58311 10.2949C5.39476 10.097 5.40248 9.78396 5.60034 9.59562C5.7982 9.40727 6.11128 9.41499 6.29963 9.61285C6.51954 9.84387 6.7841 10.0278 7.07725 10.1535C7.3704 10.2792 7.68603 10.344 8.00499 10.3441ZM7.04749 6.76662C7.04749 7.18252 6.71034 7.51967 6.29444 7.51967C5.87854 7.51967 5.54138 7.18252 5.54138 6.76662C5.54138 6.35072 5.87854 6.01357 6.29444 6.01357C6.71034 6.01357 7.04749 6.35072 7.04749 6.76662ZM9.71332 7.51967C10.1292 7.51967 10.4664 7.18252 10.4664 6.76662C10.4664 6.35072 10.1292 6.01357 9.71332 6.01357C9.29742 6.01357 8.96027 6.35072 8.96027 6.76662C8.96027 7.18252 9.29742 7.51967 9.71332 7.51967Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM8.00499 10.3441C8.32395 10.3441 8.63959 10.2794 8.93277 10.1537C9.22595 10.0281 9.49055 9.84422 9.71051 9.61325C9.89891 9.41543 10.212 9.40779 10.4098 9.59618C10.6076 9.78457 10.6153 10.0977 10.4269 10.2955C10.1145 10.6235 9.73874 10.8846 9.32241 11.063C8.90607 11.2414 8.45783 11.3334 8.00487 11.3333C7.55192 11.3333 7.1037 11.2412 6.6874 11.0627C6.2711 10.8842 5.89541 10.623 5.58311 10.2949C5.39476 10.097 5.40248 9.78396 5.60034 9.59562C5.7982 9.40727 6.11128 9.41499 6.29963 9.61285C6.51954 9.84387 6.7841 10.0278 7.07725 10.1535C7.3704 10.2792 7.68603 10.344 8.00499 10.3441ZM7.04749 6.76662C7.04749 7.18252 6.71034 7.51967 6.29444 7.51967C5.87854 7.51967 5.54138 7.18252 5.54138 6.76662C5.54138 6.35072 5.87854 6.01357 6.29444 6.01357C6.71034 6.01357 7.04749 6.35072 7.04749 6.76662ZM9.71332 7.51967C10.1292 7.51967 10.4664 7.18252 10.4664 6.76662C10.4664 6.35072 10.1292 6.01357 9.71332 6.01357C9.29742 6.01357 8.96027 6.35072 8.96027 6.76662C8.96027 7.18252 9.29742 7.51967 9.71332 7.51967Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-bad">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM8.00499 9.78093C8.32395 9.78089 8.63959 9.84566 8.93277 9.97129C9.22595 10.0969 9.49055 10.2808 9.71051 10.5118C9.89891 10.7096 10.212 10.7172 10.4098 10.5288C10.6076 10.3404 10.6153 10.0274 10.4269 9.82954C10.1145 9.50154 9.73874 9.24041 9.32241 9.062C8.90607 8.8836 8.45783 8.79163 8.00487 8.79168C7.55192 8.79174 7.1037 8.88381 6.6874 9.06231C6.2711 9.24081 5.89541 9.50203 5.58311 9.83011C5.39476 10.028 5.40248 10.3411 5.60034 10.5294C5.7982 10.7177 6.11128 10.71 6.29963 10.5122C6.51954 10.2811 6.7841 10.0972 7.07725 9.9715C7.3704 9.8458 7.68603 9.78097 8.00499 9.78093ZM7.04749 6.76662C7.04749 7.18252 6.71034 7.51967 6.29444 7.51967C5.87854 7.51967 5.54138 7.18252 5.54138 6.76662C5.54138 6.35072 5.87854 6.01357 6.29444 6.01357C6.71034 6.01357 7.04749 6.35072 7.04749 6.76662ZM9.71332 7.51967C10.1292 7.51967 10.4664 7.18252 10.4664 6.76662C10.4664 6.35072 10.1292 6.01357 9.71332 6.01357C9.29742 6.01357 8.96027 6.35072 8.96027 6.76662C8.96027 7.18252 9.29742 7.51967 9.71332 7.51967Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM8.00499 9.78093C8.32395 9.78089 8.63959 9.84566 8.93277 9.97129C9.22595 10.0969 9.49055 10.2808 9.71051 10.5118C9.89891 10.7096 10.212 10.7172 10.4098 10.5288C10.6076 10.3404 10.6153 10.0274 10.4269 9.82954C10.1145 9.50154 9.73874 9.24041 9.32241 9.062C8.90607 8.8836 8.45783 8.79163 8.00487 8.79168C7.55192 8.79174 7.1037 8.88381 6.6874 9.06231C6.2711 9.24081 5.89541 9.50203 5.58311 9.83011C5.39476 10.028 5.40248 10.3411 5.60034 10.5294C5.7982 10.7177 6.11128 10.71 6.29963 10.5122C6.51954 10.2811 6.7841 10.0972 7.07725 9.9715C7.3704 9.8458 7.68603 9.78097 8.00499 9.78093ZM7.04749 6.76662C7.04749 7.18252 6.71034 7.51967 6.29444 7.51967C5.87854 7.51967 5.54138 7.18252 5.54138 6.76662C5.54138 6.35072 5.87854 6.01357 6.29444 6.01357C6.71034 6.01357 7.04749 6.35072 7.04749 6.76662ZM9.71332 7.51967C10.1292 7.51967 10.4664 7.18252 10.4664 6.76662C10.4664 6.35072 10.1292 6.01357 9.71332 6.01357C9.29742 6.01357 8.96027 6.35072 8.96027 6.76662C8.96027 7.18252 9.29742 7.51967 9.71332 7.51967Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-show">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 11.3333C10.7414 11.3333 12.3911 9.28866 13.122 8.06982C13.1387 8.04197 13.1433 8.01851 13.1433 7.99999C13.1433 7.98148 13.1387 7.95802 13.122 7.93017C12.3911 6.71133 10.7414 4.66666 8.00004 4.66666C5.25868 4.66666 3.60899 6.71133 2.87804 7.93017C2.86134 7.95802 2.85677 7.98148 2.85677 8C2.85677 8.01851 2.86134 8.04197 2.87804 8.06982C3.60899 9.28866 5.25868 11.3333 8.00004 11.3333ZM14.2655 8.75557C13.4733 10.0765 11.4767 12.6667 8.00004 12.6667C4.52336 12.6667 2.52676 10.0765 1.73457 8.75557C1.45306 8.28616 1.45306 7.71383 1.73457 7.24442C2.52676 5.92347 4.52336 3.33333 8.00004 3.33333C11.4767 3.33333 13.4733 5.92347 14.2655 7.24442C14.547 7.71383 14.547 8.28616 14.2655 8.75557Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 11.3333C10.7414 11.3333 12.3911 9.28866 13.122 8.06982C13.1387 8.04197 13.1433 8.01851 13.1433 7.99999C13.1433 7.98148 13.1387 7.95802 13.122 7.93017C12.3911 6.71133 10.7414 4.66666 8.00004 4.66666C5.25868 4.66666 3.60899 6.71133 2.87804 7.93017C2.86134 7.95802 2.85677 7.98148 2.85677 8C2.85677 8.01851 2.86134 8.04197 2.87804 8.06982C3.60899 9.28866 5.25868 11.3333 8.00004 11.3333ZM14.2655 8.75557C13.4733 10.0765 11.4767 12.6667 8.00004 12.6667C4.52336 12.6667 2.52676 10.0765 1.73457 8.75557C1.45306 8.28616 1.45306 7.71383 1.73457 7.24442C2.52676 5.92347 4.52336 3.33333 8.00004 3.33333C11.4767 3.33333 13.4733 5.92347 14.2655 7.24442C14.547 7.71383 14.547 8.28616 14.2655 8.75557Z"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 8.66667C8.36819 8.66667 8.66667 8.36819 8.66667 8C8.66667 7.63181 8.36819 7.33333 8 7.33333C7.63181 7.33333 7.33333 7.63181 7.33333 8C7.33333 8.36819 7.63181 8.66667 8 8.66667ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" />
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-clipboard">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.666672C8.73638 0.666672 9.33333 1.26363 9.33333 2.00001H12C13.1046 2.00001 14 2.89544 14 4.00001V12.6667C14 13.7712 13.1046 14.6667 12 14.6667H4C2.89543 14.6667 2 13.7712 2 12.6667V4.00001C2 2.89544 2.89543 2.00001 4 2.00001H6.66667C6.66667 1.26363 7.26362 0.666672 8 0.666672ZM5.33333 3.33334H4C3.63181 3.33334 3.33333 3.63182 3.33333 4.00001V12.6667C3.33333 13.0349 3.63181 13.3333 4 13.3333H12C12.3682 13.3333 12.6667 13.0349 12.6667 12.6667V4.00001C12.6667 3.63182 12.3682 3.33334 12 3.33334H10.6667V4.00001C10.6667 4.3682 10.3682 4.66667 10 4.66667H6C5.63181 4.66667 5.33333 4.3682 5.33333 4.00001V3.33334Z" />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 7.33334C4.66663 6.96515 4.9651 6.66667 5.33329 6.66667L10.6666 6.66667C11.0348 6.66667 11.3333 6.96515 11.3333 7.33334C11.3333 7.70153 11.0348 8.00001 10.6666 8.00001L5.33329 8.00001C4.9651 8.00001 4.66663 7.70153 4.66663 7.33334Z" />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 10C4.66663 9.63181 4.9651 9.33333 5.33329 9.33333H7.99996C8.36815 9.33333 8.66663 9.63181 8.66663 10C8.66663 10.3682 8.36815 10.6667 7.99996 10.6667H5.33329C4.9651 10.6667 4.66663 10.3682 4.66663 10Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 7.33334C4.66663 6.96515 4.9651 6.66667 5.33329 6.66667L10.6666 6.66667C11.0348 6.66667 11.3333 6.96515 11.3333 7.33334C11.3333 7.70153 11.0348 8.00001 10.6666 8.00001L5.33329 8.00001C4.9651 8.00001 4.66663 7.70153 4.66663 7.33334Z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66663 10C4.66663 9.63181 4.9651 9.33333 5.33329 9.33333H7.99996C8.36815 9.33333 8.66663 9.63181 8.66663 10C8.66663 10.3682 8.36815 10.6667 7.99996 10.6667H5.33329C4.9651 10.6667 4.66663 10.3682 4.66663 10Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-chevron-forward">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.36189 12.8047C5.10154 12.5444 5.10154 12.1223 5.36189 11.8619L9.22382 8L5.36189 4.13807C5.10154 3.87772 5.10154 3.45561 5.36189 3.19526C5.62224 2.93491 6.04435 2.93491 6.3047 3.19526L10.1666 7.05719C10.6873 7.57789 10.6873 8.42211 10.1666 8.94281L6.3047 12.8047C6.04435 13.0651 5.62224 13.0651 5.36189 12.8047Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.36189 12.8047C5.10154 12.5444 5.10154 12.1223 5.36189 11.8619L9.22382 8L5.36189 4.13807C5.10154 3.87772 5.10154 3.45561 5.36189 3.19526C5.62224 2.93491 6.04435 2.93491 6.3047 3.19526L10.1666 7.05719C10.6873 7.57789 10.6873 8.42211 10.1666 8.94281L6.3047 12.8047C6.04435 13.0651 5.62224 13.0651 5.36189 12.8047Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-warning">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 10C8.36823 10 8.66671 9.70152 8.66671 9.33333V6.00001C8.66671 5.63182 8.36823 5.33334 8.00004 5.33334C7.63185 5.33334 7.33337 5.63182 7.33337 6.00001V9.33333C7.33337 9.70152 7.63185 10 8.00004 10Z" fill="#6F767E" />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1159 11.6699L8.57925 3.70927C8.3235 3.26049 7.67657 3.26049 7.42082 3.70927L2.88418 11.6699C2.63091 12.1143 2.95186 12.6667 3.4634 12.6667H12.5367C13.0482 12.6667 13.3692 12.1143 13.1159 11.6699ZM9.73768 3.0491C8.97042 1.70277 7.02965 1.70277 6.2624 3.0491L1.72576 11.0097C0.965929 12.343 1.92879 14 3.4634 14H12.5367C14.0713 14 15.0342 12.343 14.2743 11.0097L9.73768 3.0491Z" />
-        <path d="M8.66671 11.3333C8.66671 11.7015 8.36823 12 8.00004 12C7.63185 12 7.33337 11.7015 7.33337 11.3333C7.33337 10.9651 7.63185 10.6667 8.00004 10.6667C8.36823 10.6667 8.66671 10.9651 8.66671 11.3333Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 10C8.36823 10 8.66671 9.70152 8.66671 9.33333V6.00001C8.66671 5.63182 8.36823 5.33334 8.00004 5.33334C7.63185 5.33334 7.33337 5.63182 7.33337 6.00001V9.33333C7.33337 9.70152 7.63185 10 8.00004 10Z" fill="#6F767E"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1159 11.6699L8.57925 3.70927C8.3235 3.26049 7.67657 3.26049 7.42082 3.70927L2.88418 11.6699C2.63091 12.1143 2.95186 12.6667 3.4634 12.6667H12.5367C13.0482 12.6667 13.3692 12.1143 13.1159 11.6699ZM9.73768 3.0491C8.97042 1.70277 7.02965 1.70277 6.2624 3.0491L1.72576 11.0097C0.965929 12.343 1.92879 14 3.4634 14H12.5367C14.0713 14 15.0342 12.343 14.2743 11.0097L9.73768 3.0491Z"/>
+        <path d="M8.66671 11.3333C8.66671 11.7015 8.36823 12 8.00004 12C7.63185 12 7.33337 11.7015 7.33337 11.3333C7.33337 10.9651 7.63185 10.6667 8.00004 10.6667C8.36823 10.6667 8.66671 10.9651 8.66671 11.3333Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-leaderboard">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 8V5.33333C10.6667 4.22876 9.77128 3.33333 8.66671 3.33333H7.33337C6.2288 3.33333 5.33337 4.22876 5.33337 5.33333V6.66667H3.33337C2.2288 6.66667 1.33337 7.5621 1.33337 8.66667V12C1.33337 12.3682 1.63185 12.6667 2.00004 12.6667H14C14.3682 12.6667 14.6667 12.3682 14.6667 12V10C14.6667 8.89543 13.7713 8 12.6667 8H10.6667ZM8.66671 4.66667H7.33337C6.96518 4.66667 6.66671 4.96514 6.66671 5.33333V11.3333H9.33337V5.33333C9.33337 4.96514 9.0349 4.66667 8.66671 4.66667ZM10.6667 9.33333V11.3333H13.3334V10C13.3334 9.63181 13.0349 9.33333 12.6667 9.33333H10.6667ZM3.33337 8H5.33337V11.3333H2.66671V8.66667C2.66671 8.29848 2.96518 8 3.33337 8Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 8V5.33333C10.6667 4.22876 9.77128 3.33333 8.66671 3.33333H7.33337C6.2288 3.33333 5.33337 4.22876 5.33337 5.33333V6.66667H3.33337C2.2288 6.66667 1.33337 7.5621 1.33337 8.66667V12C1.33337 12.3682 1.63185 12.6667 2.00004 12.6667H14C14.3682 12.6667 14.6667 12.3682 14.6667 12V10C14.6667 8.89543 13.7713 8 12.6667 8H10.6667ZM8.66671 4.66667H7.33337C6.96518 4.66667 6.66671 4.96514 6.66671 5.33333V11.3333H9.33337V5.33333C9.33337 4.96514 9.0349 4.66667 8.66671 4.66667ZM10.6667 9.33333V11.3333H13.3334V10C13.3334 9.63181 13.0349 9.33333 12.6667 9.33333H10.6667ZM3.33337 8H5.33337V11.3333H2.66671V8.66667C2.66671 8.29848 2.96518 8 3.33337 8Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-smile">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 13.3333C10.9456 13.3333 13.3334 10.9455 13.3334 7.99999C13.3334 5.05448 10.9456 2.66666 8.00004 2.66666C5.05452 2.66666 2.66671 5.05448 2.66671 7.99999C2.66671 10.9455 5.05452 13.3333 8.00004 13.3333ZM8.00004 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 7.99999C14.6667 4.3181 11.6819 1.33333 8.00004 1.33333C4.31814 1.33333 1.33337 4.3181 1.33337 7.99999C1.33337 11.6819 4.31814 14.6667 8.00004 14.6667Z"/>
+        <path d="M8.00506 10.3441C8.32402 10.3441 8.63967 10.2794 8.93284 10.1537C9.22602 10.0281 9.49062 9.84421 9.71059 9.61324C9.89898 9.41542 10.2121 9.40778 10.4099 9.59617C10.6077 9.78456 10.6153 10.0976 10.427 10.2955C10.1146 10.6235 9.73882 10.8846 9.32248 11.063C8.90614 11.2414 8.4579 11.3334 8.00495 11.3333C7.55199 11.3333 7.10377 11.2412 6.68747 11.0627C6.27118 10.8842 5.89548 10.623 5.58318 10.2949C5.39484 10.097 5.40255 9.78396 5.60041 9.59561C5.79827 9.40726 6.11136 9.41498 6.2997 9.61284C6.51962 9.84387 6.78417 10.0278 7.07732 10.1535C7.37047 10.2792 7.6861 10.344 8.00506 10.3441Z"/>
+        <path d="M7.04756 6.76661C7.04756 7.18251 6.71041 7.51967 6.29451 7.51967C5.87861 7.51967 5.54146 7.18251 5.54146 6.76661C5.54146 6.35071 5.87861 6.01356 6.29451 6.01356C6.71041 6.01356 7.04756 6.35071 7.04756 6.76661Z"/>
+        <path d="M9.7134 7.51967C10.1293 7.51967 10.4664 7.18251 10.4664 6.76661C10.4664 6.35071 10.1293 6.01356 9.7134 6.01356C9.2975 6.01356 8.96034 6.35071 8.96034 6.76661C8.96034 7.18251 9.2975 7.51967 9.7134 7.51967Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-love">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.91518 4.40958C5.94325 3.41902 4.37278 3.41902 3.40085 4.40958C2.42199 5.4072 2.42199 7.0298 3.40085 8.02742L7.52418 12.2298C7.78552 12.4961 8.21456 12.4961 8.4759 12.2298L12.5992 8.02742C13.5781 7.0298 13.5781 5.4072 12.5992 4.40958C11.6273 3.41902 10.0568 3.41902 9.08491 4.40958L8.4759 5.03026C8.35053 5.15803 8.17904 5.23002 8.00004 5.23002C7.82103 5.23002 7.64955 5.15803 7.52418 5.03026L6.91518 4.40958ZM7.86689 3.47577L8.00004 3.61147L8.13319 3.47577C9.62779 1.95252 12.0564 1.95252 13.551 3.47577C15.0386 4.99196 15.0386 7.44504 13.551 8.96124L9.42762 13.1636C8.64361 13.9626 7.35647 13.9626 6.57247 13.1636L2.44913 8.96124C0.961455 7.44504 0.961455 4.99196 2.44913 3.47577C3.94373 1.95252 6.37229 1.95252 7.86689 3.47577Z"/>
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-flag">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33333 1.99999C3.33333 1.63181 3.03486 1.33333 2.66667 1.33333C2.29848 1.33333 2 1.63181 2 1.99999V14C2 14.3682 2.29848 14.6667 2.66667 14.6667C3.03486 14.6667 3.33333 14.3682 3.33333 14V10H6.68422C7.11415 10 7.54127 10.0693 7.94913 10.2053L8.71753 10.4614C9.1254 10.5974 9.55252 10.6667 9.98244 10.6667H12C13.1046 10.6667 14 9.77123 14 8.66666V4.66666C14 3.56209 13.1046 2.66666 12 2.66666H9.98244C9.55252 2.66666 9.1254 2.59735 8.71753 2.46139L7.94913 2.20526C7.54127 2.06931 7.11415 1.99999 6.68422 1.99999H3.33333ZM3.33333 3.33333V8.66666H6.68422C7.25746 8.66666 7.82695 8.75908 8.37077 8.94035L9.13917 9.19648C9.41108 9.28712 9.69583 9.33333 9.98244 9.33333H12C12.3682 9.33333 12.6667 9.03485 12.6667 8.66666V4.66666C12.6667 4.29847 12.3682 3.99999 12 3.99999H9.98244C9.40921 3.99999 8.83972 3.90758 8.2959 3.72631L7.5275 3.47017C7.25559 3.37954 6.97084 3.33333 6.68422 3.33333H3.33333Z"/>
       </symbol> 
-
     </svg>
   </div>
 </body>
