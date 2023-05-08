@@ -517,10 +517,29 @@
         <div class="refunds customer card">
           <div class="card__head">
             <div class="card__select">
+              <select class="select select_small" id="brand" onchange="viewChange();">
+                <option selected value="All">全ブランド</option>
+                <option value="Yoshidaya">牛鍋 吉田屋</option>
+                <option value="Mankichi">万吉スープカレー</option>
+              </select>
+            </div>
+            <div class="card__select ml-8" id="BrandYoshidaya" style="display:none;">
               <select class="select select_small">
-                <option selected>全ブランド</option>
-                <option>牛鍋 吉田屋</option>
-                <option>万吉スープカレー</option>
+                <option selected>全店舗グループ</option>
+                <option>エリア - 東京都</option>
+                <option>エリア - 京都府</option>
+                <option>エリア - 大阪府</option>
+                <option>SV - SV1</option>
+                <option>SV - SV2</option>
+              </select>
+            </div>
+            <div class="card__select ml-8" id="BrandMankichi" style="display:none;">
+              <select class="select select_small">
+                <option selected>全店舗グループ</option>
+                <option>エリア - 東京都</option>
+                <option>エリア - 京都府</option>
+                <option>エリア - 大阪府</option>
+                <option>SV - SV1</option>
               </select>
             </div>
             <div class="card__select mr-8 ml-auto">
@@ -874,6 +893,25 @@
   <script src="js/charts.js"></script>
   <script src="js/demo.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    function viewChange() {
+      if (document.getElementById('brand')) {
+        id = document.getElementById('brand').value;
+        if (id == 'Yoshidaya') {
+          document.getElementById('BrandYoshidaya').style.display = "";
+          document.getElementById('BrandMankichi').style.display = "none";
+        } else if (id == 'Mankichi') {
+          document.getElementById('BrandYoshidaya').style.display = "none";
+          document.getElementById('BrandMankichi').style.display = "";
+        } else if (id == 'All') {
+          document.getElementById('BrandYoshidaya').style.display = "none";
+          document.getElementById('BrandMankichi').style.display = "none";
+        }
+      }
+  
+      window.onload = viewChange;
+    }
+  </script>
   <!-- svg sprite-->
   <div style="display: none">
     <svg width="0" height="0">
