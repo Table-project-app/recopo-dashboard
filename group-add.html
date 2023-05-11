@@ -16,6 +16,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" media="all" href="css/webfonts/custom.css">
   <link rel="stylesheet" media="all" href="css/app.min.css">
+  <link rel="stylesheet" media="all" href="css/select2.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp-noto.min.css">
   <script>
     var viewportmeta = document.querySelector('meta[name="viewport"]');
@@ -567,59 +568,40 @@
             </div>
           </div>
           <div class="field" id="BrandYoshidaya" style="display:none;">
-            <div class="create__label">店舗グループの店舗
-              <div class="tooltip" title="この店舗グループに属している店舗を選択してください。店舗は複数指定できます。">
+            <div class="field__label">店舗グループの店舗
+              <div class="tooltip required" title="この店舗グループに属している店舗を選択してください。店舗は複数指定できます。">
                 <svg class="icon icon-info">
                   <use xlink:href="#icon-info"></use>
                 </svg>
               </div>
-            </div>
-            <div class="create__list">
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">代々木店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">青山店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">丸の内店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">北新地店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">池袋店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">京都駅前店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">梅田店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">北二条店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">八丁堀店</span></span>
-              </label>
-            </div>
+            </div>            
+            <div class="field__wrap">
+              <select class="select store-select-multiple" multiple="multiple">
+                <option>代々木店</option>
+                <option>丸の内店</option>
+                <option>北新地店</option>
+                <option>池袋店</option>
+                <option>京都駅前店</option>
+                <option>梅田店</option>
+                <option>北二条店</option>
+                <option>八丁堀店</option>
+              </select>
+            </div>  
           </div>
           <div class="field" id="BrandMankichi" style="display:none;">
-            <div class="create__label">店舗グループの店舗
-              <div class="tooltip" title="この店舗グループに属している店舗を選択してください。店舗は複数指定できます。">
+            <div class="field__label">店舗グループの店舗
+              <div class="tooltip required" title="この店舗グループに属している店舗を選択してください。店舗は複数指定できます。">
                 <svg class="icon icon-info">
                   <use xlink:href="#icon-info"></use>
                 </svg>
               </div>
-            </div>
-            <div class="create__list">
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">心斎橋店</span></span>
-              </label>
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__inner"><span class="checkbox__tick"></span><span class="checkbox__text">京都駅前店</span></span>
-              </label>
-            </div>
+            </div>            
+            <div class="field__wrap">
+              <select class="select store-select-multiple" multiple="multiple">
+                <option>心斎橋店</option>
+                <option>京都駅前店</option>
+              </select>
+            </div>  
           </div>
           <div class="create__toggle mb-16">
             <div class="create__info">店舗グループ全体に選択式アンケートを設定
@@ -669,7 +651,9 @@
   <script src="js/charts.js"></script>
   <script src="js/demo.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/select2.full.js"></script>
   <script>
+    // Change store select options
     function viewChange() {
       if (document.getElementById('brand')) {
         id = document.getElementById('brand').value;
@@ -681,10 +665,16 @@
           document.getElementById('BrandMankichi').style.display = "";
         }
       }
-  
       window.onload = viewChange;
     }
+    // Multi-select boxes (pillbox)
+    $('.store-select-multiple').select2( {
+       multiple: true,
+       placeholder: "グループに設定する店舗を選択してください",
+       allowClear: true,
+    });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <!-- svg sprite-->
   <div style="display: none">
     <svg width="0" height="0">
