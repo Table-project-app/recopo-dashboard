@@ -4926,19 +4926,19 @@ S2.define('select2/i18n/en',[],function () {
       return message;
     },
     noResults: function () {
-      return 'No results found';
+      return '該当するものが見つかりません';
     },
     searching: function () {
-      return 'Searching…';
+      return '検索中…';
     },
     removeAllItems: function () {
-      return 'Remove all items';
+      return 'すべての選択内容を削除';
     },
     removeItem: function () {
-      return 'Remove item';
+      return '選択した内容を削除';
     },
     search: function() {
-      return 'Search';
+      return '検索';
     }
   };
 });
