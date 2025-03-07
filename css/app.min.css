@@ -13630,6 +13630,7 @@ body.dark .panel:before {
   font-size: 20px;
   color: var(--recopo-black);
   align-items: center;
+  display: flex;
 }
 
 .reviewform__title .icon {
