@@ -919,8 +919,19 @@ $('.summary .checkbox__input').on('change', function () {
 
 $('.creators__button:first-child').on('click', function () {
   $(this).toggleClass('active');
-}); // follower
+}); 
+
+
+// follower
 
 $('.follower__button_follow').on('click', function () {
   $(this).toggleClass('active');
 });
+
+// show message after email signup
+
+$(".sign-up-entry .btn-entry").on("click", function () {
+  $(".sign-up-entry").fadeOut(200, function () {
+    return $(".sign-up-message").fadeIn(200);
+  });
+}); 

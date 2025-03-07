@@ -25131,3 +25131,6 @@ font-size: 12px !important; }
   .g-xxl-8,
   .gy-xxl-8 {
     --bs-gutter-y: 3rem; } }
+    
+.sign-up-message {
+  display: none; }
